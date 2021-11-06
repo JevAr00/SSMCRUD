@@ -7,7 +7,7 @@ using CapaLogica;
 
 namespace CapaDatos
 {
-    class DoctoresDatos : ICrud
+    class DoctoresDatos : ICrud<Doctor>
     {
     }
 }
