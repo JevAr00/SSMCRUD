@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
 using CapaLogica;
-using System.Windows.Forms;
+
 
 namespace CapaDatos
 {
