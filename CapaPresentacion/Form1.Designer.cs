@@ -52,7 +52,7 @@ namespace CapaPresentacion
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(140, 484);
+            this.pnlMenu.Size = new System.Drawing.Size(140, 503);
             this.pnlMenu.TabIndex = 0;
             // 
             // btn_citas
@@ -64,7 +64,7 @@ namespace CapaPresentacion
             this.btn_citas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_citas.Image = global::CapaPresentacion.Properties.Resources.icons8_calendario_48;
             this.btn_citas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_citas.Location = new System.Drawing.Point(0, 356);
+            this.btn_citas.Location = new System.Drawing.Point(0, 365);
             this.btn_citas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_citas.Name = "btn_citas";
             this.btn_citas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -84,7 +84,7 @@ namespace CapaPresentacion
             this.btn_doctores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_doctores.Image = global::CapaPresentacion.Properties.Resources.icons8_doctor_48;
             this.btn_doctores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_doctores.Location = new System.Drawing.Point(0, 234);
+            this.btn_doctores.Location = new System.Drawing.Point(0, 243);
             this.btn_doctores.Margin = new System.Windows.Forms.Padding(2);
             this.btn_doctores.Name = "btn_doctores";
             this.btn_doctores.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -104,7 +104,7 @@ namespace CapaPresentacion
             this.btn_areas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_areas.Image = global::CapaPresentacion.Properties.Resources.icons8_caduceo_48;
             this.btn_areas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_areas.Location = new System.Drawing.Point(0, 113);
+            this.btn_areas.Location = new System.Drawing.Point(0, 122);
             this.btn_areas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_areas.Name = "btn_areas";
             this.btn_areas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -132,7 +132,7 @@ namespace CapaPresentacion
             this.pnlTitulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnlTitulo.Location = new System.Drawing.Point(140, 0);
             this.pnlTitulo.Name = "pnlTitulo";
-            this.pnlTitulo.Size = new System.Drawing.Size(699, 60);
+            this.pnlTitulo.Size = new System.Drawing.Size(871, 60);
             this.pnlTitulo.TabIndex = 1;
             // 
             // lbl_titulo
@@ -141,7 +141,7 @@ namespace CapaPresentacion
             this.lbl_titulo.AutoSize = true;
             this.lbl_titulo.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(291, 16);
+            this.lbl_titulo.Location = new System.Drawing.Point(377, 16);
             this.lbl_titulo.Name = "lbl_titulo";
             this.lbl_titulo.Size = new System.Drawing.Size(77, 27);
             this.lbl_titulo.TabIndex = 0;
@@ -152,14 +152,14 @@ namespace CapaPresentacion
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(140, 60);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(699, 424);
+            this.pnlContenedor.Size = new System.Drawing.Size(871, 443);
             this.pnlContenedor.TabIndex = 2;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(839, 484);
+            this.ClientSize = new System.Drawing.Size(1011, 503);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlMenu);
