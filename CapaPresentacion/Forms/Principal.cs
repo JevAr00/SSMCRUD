@@ -4,14 +4,14 @@ using System.Windows.Forms;
 
 namespace CapaPresentacion
 {
-    public partial class Form1 : Form
+    public partial class Principal : Form
     {
         private Button currentButton;
         private Random random;
         private int tempInex;
         private Form activeForm;
 
-        public Form1()
+        public Principal()
         {
             InitializeComponent();
             random = new Random();
@@ -88,8 +88,6 @@ namespace CapaPresentacion
             string color = ThemeColors.Colorlist[2];
             pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
-
-
 
         }
 
