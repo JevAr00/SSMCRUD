@@ -59,7 +59,7 @@ namespace CapaDatos
 
         }
 
-        public bool Read(Doctor obj)
+        public void Read(Doctor obj)
         {
             string sentenciaSql = "select * from  ";
 
@@ -67,14 +67,7 @@ namespace CapaDatos
 
             SqlDataReader registro = command.ExecuteReader();
 
-            if (command.ExecuteNonQuery() == 1)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            command.ExecuteNonQuery();
 
             Conexion.Close();
 
@@ -101,11 +94,6 @@ namespace CapaDatos
 
 
 
-        }
-
-        void ICrud<Doctor>.Create(Doctor obj)
-        {
-            throw new NotImplementedException();
         }
     }
 }

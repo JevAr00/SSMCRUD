@@ -13,16 +13,19 @@ namespace CapaLogica
     /// <typeparam name="T">Entidad de base de datos</typeparam>
     public interface ICrud<T>
     {
+        ///<summary>
+        ///Inserta datos en la tabla <see cref="ICrud"/>
+        ///</summary>
         /// <param name="obj">Objeto de tipo <typeparamref name="T"/></param>
-        void Create(T obj);
+        bool Create(T obj);
 
         /// <param name="obj">Objeto de tipo <typeparamref name="T"/></param>
         void Read(T obj);
 
         /// <param name="obj">Objeto de tipo <typeparamref name="T"/></param>
-        void Update(T obj);
+        bool Update(T obj);
 
         /// <param name="obj">Objeto de tipo <typeparamref name="T"/></param>
-        void Delete(T obj);
+        bool Delete(T obj);
     }
 }
