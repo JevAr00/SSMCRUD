@@ -6,15 +6,13 @@ namespace CapaPresentacion
 {
     public partial class Principal : Form
     {
-        private Button currentButton;
-        private Random random;
-        private int tempInex;
+
         private Form activeForm;
 
         public Principal()
         {
             InitializeComponent();
-            random = new Random();
+
         }
 
         private void Form1_Load(object sender, EventArgs e)

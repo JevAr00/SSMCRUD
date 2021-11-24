@@ -12,6 +12,8 @@ namespace CapaPresentacion
 {
     public partial class Login : Form
     {
+        Principal principal = new Principal();
+
         public Login()
         {
             InitializeComponent();
@@ -21,5 +23,65 @@ namespace CapaPresentacion
         {
             Application.Exit();
         }
+
+        private void lbl_registrar_Click(object sender, EventArgs e)
+        {
+
+            lbl_registrar.Visible = false;
+            lbl_titulo.Visible = false;
+            btn_sesion.Visible = false;
+            lbl_registro.Visible = true;
+            lbl_ini.Visible = true;
+            btn_registro.Visible = true;
+            pnl_login.BackgroundImage = Properties.Resources.light_wave;
+
+        }
+
+        private void lbl_ini_Click(object sender, EventArgs e)
+        {
+
+            lbl_registrar.Visible = true;
+            lbl_titulo.Visible = true;
+            btn_sesion.Visible = true;
+            lbl_registro.Visible = false;
+            lbl_ini.Visible = false;
+            btn_registro.Visible = false;
+            pnl_login.BackgroundImage = Properties.Resources.wave;
+
+        }
+
+        private void btn_sesion_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            principal.Show();
+        }
+
+        private void btn_registro_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txt_contraseña_TextChanged(object sender, EventArgs e)
+        {
+
+            if (txt_contraseña.PlaceholderText == "Contraseña" || txt_contraseña.Text == "")
+            {
+                txt_contraseña.PasswordChar = '\0';
+
+                if (txt_contraseña.Text != "")
+                {
+                    txt_contraseña.PasswordChar = '*';
+                }
+            }
+
+        }
+
+       
+
     }
 }
