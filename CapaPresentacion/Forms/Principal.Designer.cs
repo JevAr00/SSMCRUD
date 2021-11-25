@@ -32,18 +32,18 @@ namespace CapaPresentacion
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.pnlMenu = new System.Windows.Forms.Panel();
+            this.btn_citas = new System.Windows.Forms.Button();
+            this.btn_doctores = new System.Windows.Forms.Button();
+            this.btn_areas = new System.Windows.Forms.Button();
             this.pnlLogo = new System.Windows.Forms.Panel();
             this.pnlTitulo = new System.Windows.Forms.Panel();
-            this.lbl_titulo = new System.Windows.Forms.Label();
-            this.pnlContenedor = new System.Windows.Forms.Panel();
-            this.PrincipalDragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.btn_minimizarPrincipal = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btn_maximizarPrincipal = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btn_cerrarPrincipal = new Bunifu.UI.WinForms.BunifuImageButton();
             this.btn_closeChild = new System.Windows.Forms.Button();
-            this.btn_citas = new System.Windows.Forms.Button();
-            this.btn_doctores = new System.Windows.Forms.Button();
-            this.btn_areas = new System.Windows.Forms.Button();
+            this.lbl_titulo = new System.Windows.Forms.Label();
+            this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.PrincipalDragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
@@ -62,6 +62,66 @@ namespace CapaPresentacion
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(140, 580);
             this.pnlMenu.TabIndex = 0;
+            // 
+            // btn_citas
+            // 
+            this.btn_citas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_citas.FlatAppearance.BorderSize = 0;
+            this.btn_citas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_citas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_citas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_citas.Image = global::CapaPresentacion.Properties.Resources.icons8_calendario_48;
+            this.btn_citas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_citas.Location = new System.Drawing.Point(0, 404);
+            this.btn_citas.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_citas.Name = "btn_citas";
+            this.btn_citas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_citas.Size = new System.Drawing.Size(165, 49);
+            this.btn_citas.TabIndex = 3;
+            this.btn_citas.Text = "Citas";
+            this.btn_citas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_citas.UseVisualStyleBackColor = true;
+            this.btn_citas.Click += new System.EventHandler(this.btn_citas_Click);
+            // 
+            // btn_doctores
+            // 
+            this.btn_doctores.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_doctores.FlatAppearance.BorderSize = 0;
+            this.btn_doctores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_doctores.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_doctores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_doctores.Image = global::CapaPresentacion.Properties.Resources.icons8_doctor_48;
+            this.btn_doctores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_doctores.Location = new System.Drawing.Point(0, 282);
+            this.btn_doctores.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_doctores.Name = "btn_doctores";
+            this.btn_doctores.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_doctores.Size = new System.Drawing.Size(165, 49);
+            this.btn_doctores.TabIndex = 2;
+            this.btn_doctores.Text = "Doctores";
+            this.btn_doctores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_doctores.UseVisualStyleBackColor = true;
+            this.btn_doctores.Click += new System.EventHandler(this.btn_doctores_Click);
+            // 
+            // btn_areas
+            // 
+            this.btn_areas.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.btn_areas.FlatAppearance.BorderSize = 0;
+            this.btn_areas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_areas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_areas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_areas.Image = global::CapaPresentacion.Properties.Resources.icons8_caduceo_48;
+            this.btn_areas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btn_areas.Location = new System.Drawing.Point(0, 161);
+            this.btn_areas.Margin = new System.Windows.Forms.Padding(2);
+            this.btn_areas.Name = "btn_areas";
+            this.btn_areas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
+            this.btn_areas.Size = new System.Drawing.Size(165, 49);
+            this.btn_areas.TabIndex = 1;
+            this.btn_areas.Text = "Áreas";
+            this.btn_areas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btn_areas.UseVisualStyleBackColor = true;
+            this.btn_areas.Click += new System.EventHandler(this.btn_areas_Click);
             // 
             // pnlLogo
             // 
@@ -87,34 +147,6 @@ namespace CapaPresentacion
             this.pnlTitulo.Size = new System.Drawing.Size(871, 60);
             this.pnlTitulo.TabIndex = 1;
             // 
-            // lbl_titulo
-            // 
-            this.lbl_titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.lbl_titulo.AutoSize = true;
-            this.lbl_titulo.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
-            this.lbl_titulo.Location = new System.Drawing.Point(377, 16);
-            this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(77, 27);
-            this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "HOME";
-            // 
-            // pnlContenedor
-            // 
-            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnlContenedor.Location = new System.Drawing.Point(140, 60);
-            this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(871, 520);
-            this.pnlContenedor.TabIndex = 2;
-            // 
-            // PrincipalDragControl
-            // 
-            this.PrincipalDragControl.Fixed = true;
-            this.PrincipalDragControl.Horizontal = true;
-            this.PrincipalDragControl.TargetControl = this.pnlTitulo;
-            this.PrincipalDragControl.Vertical = true;
-            // 
             // btn_minimizarPrincipal
             // 
             this.btn_minimizarPrincipal.ActiveImage = null;
@@ -137,7 +169,7 @@ namespace CapaPresentacion
             this.btn_minimizarPrincipal.ImageSize = new System.Drawing.Size(24, 24);
             this.btn_minimizarPrincipal.ImageZoomSize = new System.Drawing.Size(44, 44);
             this.btn_minimizarPrincipal.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_minimizarPrincipal.InitialImage")));
-            this.btn_minimizarPrincipal.Location = new System.Drawing.Point(749, 0);
+            this.btn_minimizarPrincipal.Location = new System.Drawing.Point(752, 0);
             this.btn_minimizarPrincipal.Name = "btn_minimizarPrincipal";
             this.btn_minimizarPrincipal.Rotation = 0;
             this.btn_minimizarPrincipal.ShowActiveImage = true;
@@ -174,7 +206,7 @@ namespace CapaPresentacion
             this.btn_maximizarPrincipal.ImageSize = new System.Drawing.Size(24, 24);
             this.btn_maximizarPrincipal.ImageZoomSize = new System.Drawing.Size(44, 44);
             this.btn_maximizarPrincipal.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_maximizarPrincipal.InitialImage")));
-            this.btn_maximizarPrincipal.Location = new System.Drawing.Point(788, 0);
+            this.btn_maximizarPrincipal.Location = new System.Drawing.Point(791, 0);
             this.btn_maximizarPrincipal.Name = "btn_maximizarPrincipal";
             this.btn_maximizarPrincipal.Rotation = 0;
             this.btn_maximizarPrincipal.ShowActiveImage = true;
@@ -241,65 +273,33 @@ namespace CapaPresentacion
             this.btn_closeChild.Visible = false;
             this.btn_closeChild.Click += new System.EventHandler(this.btn_closeChild_Click);
             // 
-            // btn_citas
+            // lbl_titulo
             // 
-            this.btn_citas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_citas.FlatAppearance.BorderSize = 0;
-            this.btn_citas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_citas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_citas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_citas.Image = global::CapaPresentacion.Properties.Resources.icons8_calendario_48;
-            this.btn_citas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_citas.Location = new System.Drawing.Point(0, 404);
-            this.btn_citas.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_citas.Name = "btn_citas";
-            this.btn_citas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_citas.Size = new System.Drawing.Size(165, 49);
-            this.btn_citas.TabIndex = 3;
-            this.btn_citas.Text = "Citas";
-            this.btn_citas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_citas.UseVisualStyleBackColor = true;
-            this.btn_citas.Click += new System.EventHandler(this.btn_citas_Click);
+            this.lbl_titulo.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lbl_titulo.AutoSize = true;
+            this.lbl_titulo.Font = new System.Drawing.Font("Montserrat", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_titulo.ForeColor = System.Drawing.Color.White;
+            this.lbl_titulo.Location = new System.Drawing.Point(377, 16);
+            this.lbl_titulo.Name = "lbl_titulo";
+            this.lbl_titulo.Size = new System.Drawing.Size(77, 27);
+            this.lbl_titulo.TabIndex = 0;
+            this.lbl_titulo.Text = "HOME";
             // 
-            // btn_doctores
+            // pnlContenedor
             // 
-            this.btn_doctores.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_doctores.FlatAppearance.BorderSize = 0;
-            this.btn_doctores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_doctores.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doctores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_doctores.Image = global::CapaPresentacion.Properties.Resources.icons8_doctor_48;
-            this.btn_doctores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_doctores.Location = new System.Drawing.Point(0, 282);
-            this.btn_doctores.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_doctores.Name = "btn_doctores";
-            this.btn_doctores.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_doctores.Size = new System.Drawing.Size(165, 49);
-            this.btn_doctores.TabIndex = 2;
-            this.btn_doctores.Text = "Doctores";
-            this.btn_doctores.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_doctores.UseVisualStyleBackColor = true;
-            this.btn_doctores.Click += new System.EventHandler(this.btn_doctores_Click);
+            this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlContenedor.Location = new System.Drawing.Point(140, 60);
+            this.pnlContenedor.Name = "pnlContenedor";
+            this.pnlContenedor.Size = new System.Drawing.Size(871, 520);
+            this.pnlContenedor.TabIndex = 2;
             // 
-            // btn_areas
+            // PrincipalDragControl
             // 
-            this.btn_areas.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btn_areas.FlatAppearance.BorderSize = 0;
-            this.btn_areas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_areas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_areas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btn_areas.Image = global::CapaPresentacion.Properties.Resources.icons8_caduceo_48;
-            this.btn_areas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_areas.Location = new System.Drawing.Point(0, 161);
-            this.btn_areas.Margin = new System.Windows.Forms.Padding(2);
-            this.btn_areas.Name = "btn_areas";
-            this.btn_areas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
-            this.btn_areas.Size = new System.Drawing.Size(165, 49);
-            this.btn_areas.TabIndex = 1;
-            this.btn_areas.Text = "Áreas";
-            this.btn_areas.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btn_areas.UseVisualStyleBackColor = true;
-            this.btn_areas.Click += new System.EventHandler(this.btn_areas_Click);
+            this.PrincipalDragControl.Fixed = true;
+            this.PrincipalDragControl.Horizontal = true;
+            this.PrincipalDragControl.TargetControl = this.pnlTitulo;
+            this.PrincipalDragControl.Vertical = true;
             // 
             // bunifuElipse1
             // 
