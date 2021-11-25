@@ -12,7 +12,7 @@ namespace CapaDatos
 {
     class DoctoresDatos : ICrud<Doctor>
     {
-        SqlConnection Conexion = new SqlConnection("server=DESKTOP-V256UOF\\SQLEXPRESS ; database= ; integrated security = true");
+        SqlConnection Conexion = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString);
 
         public bool Create(Doctor obj)
         {
