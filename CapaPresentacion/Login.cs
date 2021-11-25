@@ -30,9 +30,11 @@ namespace CapaPresentacion
             lbl_registrar.Visible = false;
             lbl_titulo.Visible = false;
             btn_sesion.Visible = false;
+            btn_sesion.Enabled = false;
             lbl_registro.Visible = true;
             lbl_ini.Visible = true;
             btn_registro.Visible = true;
+            btn_registro.Enabled = true;
             pnl_login.BackgroundImage = Properties.Resources.light_wave;
 
         }
@@ -43,9 +45,11 @@ namespace CapaPresentacion
             lbl_registrar.Visible = true;
             lbl_titulo.Visible = true;
             btn_sesion.Visible = true;
+            btn_sesion.Enabled = true;
             lbl_registro.Visible = false;
             lbl_ini.Visible = false;
             btn_registro.Visible = false;
+            btn_registro.Enabled = false;
             pnl_login.BackgroundImage = Properties.Resources.wave;
 
         }

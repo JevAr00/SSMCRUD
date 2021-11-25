@@ -326,6 +326,7 @@ namespace CapaPresentacion.Forms
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.ClientSize = new System.Drawing.Size(958, 487);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label8);

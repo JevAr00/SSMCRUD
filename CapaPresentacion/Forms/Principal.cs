@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.InteropServices;
 using System.Windows.Forms;
 
 namespace CapaPresentacion
@@ -12,13 +13,10 @@ namespace CapaPresentacion
         public Principal()
         {
             InitializeComponent();
+            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
 
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
 
 
         /*Hacer llamado de las ventanas*/
@@ -42,21 +40,6 @@ namespace CapaPresentacion
         }
 
 
-        private void DisableButton()
-        {
-            foreach (Control previousBtn in pnlMenu.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.White;
-                    previousBtn.Font = new System.Drawing.Font("Calibri", 13.5F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                }
-            }
-
-        }
-
-
         #region Botones Menu Izquierdo
 
         private void btn_areas_Click(object sender, EventArgs e)
@@ -67,6 +50,8 @@ namespace CapaPresentacion
             string color = ThemeColors.Colorlist[0];
             pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
+            btn_closeChild.Enabled = true;
+            btn_closeChild.Visible = true;
 
         }
 
@@ -77,6 +62,8 @@ namespace CapaPresentacion
             string color = ThemeColors.Colorlist[1];
             pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
+            btn_closeChild.Enabled = true;
+            btn_closeChild.Visible = true;
         }
 
         private void btn_citas_Click(object sender, EventArgs e)
@@ -86,10 +73,55 @@ namespace CapaPresentacion
             string color = ThemeColors.Colorlist[2];
             pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
+            btn_closeChild.Enabled = true;
+            btn_closeChild.Visible = true;
 
         }
 
         #endregion
+
+
+        #region Botones Barra superior
+        private void btn_closeChild_Click(object sender, EventArgs e)
+        {
+            if (activeForm != null)
+                activeForm.Close();
+            Reset();
+        }
+
+        private void Reset()
+        {
+            btn_closeChild.Enabled = false;
+            btn_closeChild.Visible = false;
+
+            lbl_titulo.Text = "HOME";
+            pnlTitulo.BackColor = Color.FromArgb(65, 90, 119);
+            pnlLogo.BackColor = Color.FromArgb(13, 27, 42);
+        }
+
+        private void btn_cerrarPrincipal_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void btn_minimizarPrincipal_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btn_maximizarPrincipal_Click(object sender, EventArgs e)
+        {
+            if (WindowState == FormWindowState.Normal)
+                this.WindowState = FormWindowState.Maximized;
+            else
+                this.WindowState = FormWindowState.Normal;
+        }
+
+        #endregion
+
+
+
+
 
 
     }

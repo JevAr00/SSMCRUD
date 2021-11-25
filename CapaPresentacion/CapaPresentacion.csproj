@@ -230,6 +230,32 @@
   <ItemGroup>
     <None Include="Resources\icons8-calendario-48.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-usuario-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-llave-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-xbox-x-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\light_wave.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cerrar_Child.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
