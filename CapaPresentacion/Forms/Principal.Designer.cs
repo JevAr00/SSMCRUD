@@ -44,6 +44,7 @@ namespace CapaPresentacion
             this.btn_citas = new System.Windows.Forms.Button();
             this.btn_doctores = new System.Windows.Forms.Button();
             this.btn_areas = new System.Windows.Forms.Button();
+            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,7 @@ namespace CapaPresentacion
             this.pnlMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMenu.Margin = new System.Windows.Forms.Padding(2);
             this.pnlMenu.Name = "pnlMenu";
-            this.pnlMenu.Size = new System.Drawing.Size(140, 535);
+            this.pnlMenu.Size = new System.Drawing.Size(140, 580);
             this.pnlMenu.TabIndex = 0;
             // 
             // pnlLogo
@@ -104,7 +105,7 @@ namespace CapaPresentacion
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(140, 60);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(871, 475);
+            this.pnlContenedor.Size = new System.Drawing.Size(871, 520);
             this.pnlContenedor.TabIndex = 2;
             // 
             // PrincipalDragControl
@@ -249,7 +250,7 @@ namespace CapaPresentacion
             this.btn_citas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_citas.Image = global::CapaPresentacion.Properties.Resources.icons8_calendario_48;
             this.btn_citas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_citas.Location = new System.Drawing.Point(0, 381);
+            this.btn_citas.Location = new System.Drawing.Point(0, 404);
             this.btn_citas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_citas.Name = "btn_citas";
             this.btn_citas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -269,7 +270,7 @@ namespace CapaPresentacion
             this.btn_doctores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_doctores.Image = global::CapaPresentacion.Properties.Resources.icons8_doctor_48;
             this.btn_doctores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_doctores.Location = new System.Drawing.Point(0, 259);
+            this.btn_doctores.Location = new System.Drawing.Point(0, 282);
             this.btn_doctores.Margin = new System.Windows.Forms.Padding(2);
             this.btn_doctores.Name = "btn_doctores";
             this.btn_doctores.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -289,7 +290,7 @@ namespace CapaPresentacion
             this.btn_areas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btn_areas.Image = global::CapaPresentacion.Properties.Resources.icons8_caduceo_48;
             this.btn_areas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_areas.Location = new System.Drawing.Point(0, 138);
+            this.btn_areas.Location = new System.Drawing.Point(0, 161);
             this.btn_areas.Margin = new System.Windows.Forms.Padding(2);
             this.btn_areas.Name = "btn_areas";
             this.btn_areas.Padding = new System.Windows.Forms.Padding(8, 0, 0, 0);
@@ -300,11 +301,16 @@ namespace CapaPresentacion
             this.btn_areas.UseVisualStyleBackColor = true;
             this.btn_areas.Click += new System.EventHandler(this.btn_areas_Click);
             // 
+            // bunifuElipse1
+            // 
+            this.bunifuElipse1.ElipseRadius = 7;
+            this.bunifuElipse1.TargetControl = this;
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1011, 535);
+            this.ClientSize = new System.Drawing.Size(1011, 580);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlTitulo);
             this.Controls.Add(this.pnlMenu);
@@ -336,6 +342,7 @@ namespace CapaPresentacion
         private Bunifu.UI.WinForms.BunifuImageButton btn_minimizarPrincipal;
         private Bunifu.UI.WinForms.BunifuImageButton btn_maximizarPrincipal;
         private Bunifu.UI.WinForms.BunifuImageButton btn_cerrarPrincipal;
+        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
     }
 }
 
