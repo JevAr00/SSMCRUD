@@ -168,7 +168,7 @@ namespace CapaPresentacion
             this.btn_minimizarPrincipal.ImageSize = new System.Drawing.Size(24, 24);
             this.btn_minimizarPrincipal.ImageZoomSize = new System.Drawing.Size(44, 44);
             this.btn_minimizarPrincipal.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_minimizarPrincipal.InitialImage")));
-            this.btn_minimizarPrincipal.Location = new System.Drawing.Point(751, 0);
+            this.btn_minimizarPrincipal.Location = new System.Drawing.Point(749, 0);
             this.btn_minimizarPrincipal.Name = "btn_minimizarPrincipal";
             this.btn_minimizarPrincipal.Rotation = 0;
             this.btn_minimizarPrincipal.ShowActiveImage = true;
@@ -205,7 +205,7 @@ namespace CapaPresentacion
             this.btn_maximizarPrincipal.ImageSize = new System.Drawing.Size(24, 24);
             this.btn_maximizarPrincipal.ImageZoomSize = new System.Drawing.Size(44, 44);
             this.btn_maximizarPrincipal.InitialImage = ((System.Drawing.Image)(resources.GetObject("btn_maximizarPrincipal.InitialImage")));
-            this.btn_maximizarPrincipal.Location = new System.Drawing.Point(790, 0);
+            this.btn_maximizarPrincipal.Location = new System.Drawing.Point(788, 0);
             this.btn_maximizarPrincipal.Name = "btn_maximizarPrincipal";
             this.btn_maximizarPrincipal.Rotation = 0;
             this.btn_maximizarPrincipal.ShowActiveImage = true;
