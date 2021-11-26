@@ -186,4 +186,35 @@
         1L4xnUSg02NsQUslyV88PE5ozu9ThgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="txt_nombreArea.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAL4AAAAbCAYAAADCpTXAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVHhe7dNBEQAgDANBpCKlzgP8UdDuzpyDZAEAAAAA
+        AAAAAAAAAAAAAAAAQCdJ9q2kSb3hwzhv+N9HSH1LHZ1PIu3Ase3mAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBox1.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAL4AAAAbCAYAAADCpTXAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVHhe7dNBEQAgDANBpCKlzgP8UdDuzpyDZAEAAAAA
+        AAAAAAAAAAAAAAAAQCdJ9q2kSb3hwzhv+N9HSH1LHZ1PIu3Ase3mAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBox2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAL4AAAAbCAYAAADCpTXAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVHhe7dNBEQAgDANBpCKlzgP8UdDuzpyDZAEAAAAA
+        AAAAAAAAAAAAAAAAQCdJ9q2kSb3hwzhv+N9HSH1LHZ1PIu3Ase3mAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="bunifuTextBox3.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAL4AAAAbCAYAAADCpTXAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABASURBVHhe7dNBEQAgDANBpCKlzgP8UdDuzpyDZAEAAAAA
+        AAAAAAAAAAAAAAAAQCdJ9q2kSb3hwzhv+N9HSH1LHZ1PIu3Ase3mAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="bunifuElipse1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>
