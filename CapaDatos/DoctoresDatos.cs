@@ -5,15 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
-using CapaLogica;
 
 
 namespace CapaDatos
 {
-    class DoctoresDatos : ICrud<Doctor>
+    class DoctoresDatos
     {
-        SqlConnection Conexion = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString);
-
+        //SqlConnection Conexion = new SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings["conexionBD"].ConnectionString);
+        /*
         public bool Create(Doctor obj)
         {
             
@@ -95,5 +94,6 @@ namespace CapaDatos
 
 
         }
+        */
     }
 }
