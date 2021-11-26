@@ -365,6 +365,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.AutoRoundBorders = true;
             this.btn_registroArea.AutoSizeLeftIcon = true;
             this.btn_registroArea.AutoSizeRightIcon = true;
+            this.btn_registroArea.AutoValidate = System.Windows.Forms.AutoValidate.Disable;
             this.btn_registroArea.BackColor = System.Drawing.Color.Transparent;
             this.btn_registroArea.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
             this.btn_registroArea.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_registroArea.BackgroundImage")));
@@ -457,7 +458,7 @@ namespace CapaPresentacion.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv_areas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_areas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
-            this.dgv_areas.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgv_areas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_areas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.dgv_areas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -734,7 +735,6 @@ namespace CapaPresentacion.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_nombreArea);
             this.Controls.Add(this.bunifuTextBox1);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormAreas";
             this.Text = "Áreas";
             this.panel1.ResumeLayout(false);
