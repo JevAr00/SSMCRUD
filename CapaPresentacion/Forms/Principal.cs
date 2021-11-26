@@ -13,11 +13,9 @@ namespace CapaPresentacion
         public Principal()
         {
             InitializeComponent();
+            this.ControlBox = false;
             this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
-
         }
-
-
 
         /*Hacer llamado de las ventanas*/
         private void AbrirVentanas(Form childForm, object btnEnviar)
@@ -117,11 +115,10 @@ namespace CapaPresentacion
                 this.WindowState = FormWindowState.Normal;
         }
 
+
+
+
         #endregion
-
-
-
-
 
 
     }
