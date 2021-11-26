@@ -257,5 +257,11 @@
   <ItemGroup>
     <None Include="Resources\Cerrar_Child.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CapaLogica\CapaLogica.csproj">
+      <Project>{d9586e3b-dbdd-4fdd-b229-ec85b7a277a6}</Project>
+      <Name>CapaLogica</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
