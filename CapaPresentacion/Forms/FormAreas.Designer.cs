@@ -58,7 +58,7 @@ namespace CapaPresentacion.Forms
             this.label1 = new System.Windows.Forms.Label();
             this.txt_nombreArea = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txt_edificioArea = new Bunifu.UI.WinForms.BunifuTextBox();
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.AreasElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_areas)).BeginInit();
             this.SuspendLayout();
@@ -717,10 +717,10 @@ namespace CapaPresentacion.Forms
             this.txt_edificioArea.UseSystemPasswordChar = false;
             this.txt_edificioArea.WordWrap = true;
             // 
-            // bunifuElipse1
+            // AreasElipse
             // 
-            this.bunifuElipse1.ElipseRadius = 7;
-            this.bunifuElipse1.TargetControl = this.dgv_areas;
+            this.AreasElipse.ElipseRadius = 7;
+            this.AreasElipse.TargetControl = this.dgv_areas;
             // 
             // FormAreas
             // 
@@ -758,6 +758,6 @@ namespace CapaPresentacion.Forms
         private System.Windows.Forms.Label label1;
         private Bunifu.UI.WinForms.BunifuTextBox txt_nombreArea;
         private Bunifu.UI.WinForms.BunifuTextBox txt_edificioArea;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse AreasElipse;
     }
 }

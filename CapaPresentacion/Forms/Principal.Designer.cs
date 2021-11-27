@@ -44,9 +44,13 @@ namespace CapaPresentacion
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.PrincipalDragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
-            this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.PrincipalElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.lbl_hora = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_fecha = new Bunifu.UI.WinForms.BunifuLabel();
+            this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
+            this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlMenu
@@ -281,13 +285,15 @@ namespace CapaPresentacion
             this.lbl_titulo.ForeColor = System.Drawing.Color.White;
             this.lbl_titulo.Location = new System.Drawing.Point(377, 16);
             this.lbl_titulo.Name = "lbl_titulo";
-            this.lbl_titulo.Size = new System.Drawing.Size(77, 27);
+            this.lbl_titulo.Size = new System.Drawing.Size(81, 27);
             this.lbl_titulo.TabIndex = 0;
-            this.lbl_titulo.Text = "HOME";
+            this.lbl_titulo.Text = "INICIO";
             // 
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            this.pnlContenedor.Controls.Add(this.lbl_fecha);
+            this.pnlContenedor.Controls.Add(this.lbl_hora);
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(140, 60);
             this.pnlContenedor.Name = "pnlContenedor";
@@ -301,10 +307,47 @@ namespace CapaPresentacion
             this.PrincipalDragControl.TargetControl = this.pnlTitulo;
             this.PrincipalDragControl.Vertical = true;
             // 
-            // bunifuElipse1
+            // PrincipalElipse
             // 
-            this.bunifuElipse1.ElipseRadius = 7;
-            this.bunifuElipse1.TargetControl = this;
+            this.PrincipalElipse.ElipseRadius = 6;
+            this.PrincipalElipse.TargetControl = this;
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AllowParentOverrides = false;
+            this.lbl_hora.AutoEllipsis = false;
+            this.lbl_hora.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbl_hora.Font = new System.Drawing.Font("Montserrat", 17F);
+            this.lbl_hora.ForeColor = System.Drawing.Color.White;
+            this.lbl_hora.Location = new System.Drawing.Point(737, 444);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_hora.Size = new System.Drawing.Size(56, 32);
+            this.lbl_hora.TabIndex = 0;
+            this.lbl_hora.Text = "Hora";
+            this.lbl_hora.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_hora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbl_fecha
+            // 
+            this.lbl_fecha.AllowParentOverrides = false;
+            this.lbl_fecha.AutoEllipsis = false;
+            this.lbl_fecha.CursorType = null;
+            this.lbl_fecha.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
+            this.lbl_fecha.ForeColor = System.Drawing.Color.White;
+            this.lbl_fecha.Location = new System.Drawing.Point(577, 483);
+            this.lbl_fecha.Name = "lbl_fecha";
+            this.lbl_fecha.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_fecha.Size = new System.Drawing.Size(50, 22);
+            this.lbl_fecha.TabIndex = 1;
+            this.lbl_fecha.Text = "Fecha";
+            this.lbl_fecha.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_fecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // timerHora
+            // 
+            this.timerHora.Enabled = true;
+            this.timerHora.Tick += new System.EventHandler(this.timerHora_Tick);
             // 
             // Principal
             // 
@@ -323,6 +366,8 @@ namespace CapaPresentacion
             this.pnlMenu.ResumeLayout(false);
             this.pnlTitulo.ResumeLayout(false);
             this.pnlTitulo.PerformLayout();
+            this.pnlContenedor.ResumeLayout(false);
+            this.pnlContenedor.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -342,7 +387,10 @@ namespace CapaPresentacion
         private Bunifu.UI.WinForms.BunifuImageButton btn_minimizarPrincipal;
         private Bunifu.UI.WinForms.BunifuImageButton btn_maximizarPrincipal;
         private Bunifu.UI.WinForms.BunifuImageButton btn_cerrarPrincipal;
-        private Bunifu.Framework.UI.BunifuElipse bunifuElipse1;
+        private Bunifu.Framework.UI.BunifuElipse PrincipalElipse;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_fecha;
+        private Bunifu.UI.WinForms.BunifuLabel lbl_hora;
+        private System.Windows.Forms.Timer timerHora;
     }
 }
 

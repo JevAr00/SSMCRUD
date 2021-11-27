@@ -13,10 +13,9 @@ namespace CapaPresentacion
         public Principal()
         {
             InitializeComponent();
-            this.ControlBox = false;
-            this.MaximizedBounds = Screen.FromHandle(this.Handle).WorkingArea;
         }
 
+        #region Métodos Adicionales
         /*Hacer llamado de las ventanas*/
         private void AbrirVentanas(Form childForm, object btnEnviar)
         {
@@ -36,6 +35,14 @@ namespace CapaPresentacion
             lbl_titulo.Text = childForm.Text;
 
         }
+
+        private void timerHora_Tick(object sender, EventArgs e)
+        {
+            lbl_hora.Text = DateTime.Now.ToString("hh:mm tt");
+            lbl_fecha.Text = DateTime.Now.ToLongDateString();
+        }
+
+        #endregion
 
 
         #region Botones Menu Izquierdo
@@ -92,7 +99,7 @@ namespace CapaPresentacion
             btn_closeChild.Enabled = false;
             btn_closeChild.Visible = false;
 
-            lbl_titulo.Text = "HOME";
+            lbl_titulo.Text = "INICIO";
             pnlTitulo.BackColor = Color.FromArgb(65, 90, 119);
             pnlLogo.BackColor = Color.FromArgb(13, 27, 42);
         }
@@ -114,6 +121,7 @@ namespace CapaPresentacion
             else
                 this.WindowState = FormWindowState.Normal;
         }
+
 
 
 
