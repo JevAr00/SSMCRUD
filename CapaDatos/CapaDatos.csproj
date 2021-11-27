@@ -43,8 +43,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DoctoresDatos.cs" />
+    <Compile Include="Contracts\IAreaRepository.cs" />
+    <Compile Include="Contracts\IGenericRepository.cs" />
+    <Compile Include="Entities\Area.cs" />
+    <Compile Include="Entities\Persona.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AreaRepository.cs" />
+    <Compile Include="Repositories\MasterRepository.cs" />
+    <Compile Include="Repositories\Repository.cs" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
