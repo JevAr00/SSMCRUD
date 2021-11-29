@@ -6,15 +6,19 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaLogica.Models;
 using System.Windows.Forms;
 
 namespace CapaPresentacion.Forms
 {
     public partial class FormAreas : Form
     {
+        AreaModel area = new AreaModel();
+
         public FormAreas()
         {
             InitializeComponent();
+            dgv_areas.DataSource = area.GetAll();
         }
 
         #region Botones de Funciones
@@ -41,4 +45,8 @@ namespace CapaPresentacion.Forms
 
 
     }
+
+
+
+
 }
