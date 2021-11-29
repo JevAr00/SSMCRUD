@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Configuration;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace CapaDatos.Repositories
 {
@@ -20,9 +20,9 @@ namespace CapaDatos.Repositories
             connectionString = ConfigurationManager.ConnectionStrings["conexionBD"].ToString();
         }
 
-        protected SqlConnection GetConnection()
+        protected MySqlConnection GetConnection()
         {
-            return new SqlConnection(connectionString);
+            return new MySqlConnection(connectionString);
         }
     }
 }

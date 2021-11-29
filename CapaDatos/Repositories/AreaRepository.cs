@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using CapaDatos.Contracts;
 using CapaDatos.Entities;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace CapaDatos.Repositories
 {
@@ -27,10 +27,10 @@ namespace CapaDatos.Repositories
 
         public int Create(Area Entity)
         {
-            parametros = new List<SqlParameter>();
-            parametros.Add(new SqlParameter("@nombre", Entity.nombre));
-            parametros.Add(new SqlParameter("@edificio", Entity.edificio));
-            parametros.Add(new SqlParameter("@habilitada", Entity.habilitada));
+            parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
+            parametros.Add(new MySqlParameter("@edificio", Entity.edificio));
+            parametros.Add(new MySqlParameter("@habilitada", Entity.habilitada));
             return ExecuteNonQuery(insert);
         }
 

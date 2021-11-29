@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace CapaDatos.Repositories
 {
@@ -13,7 +13,7 @@ namespace CapaDatos.Repositories
     /// </summary>
     public abstract class MasterRepository:Repository
     {
-        protected List<SqlParameter> parametros;
+        protected List<MySqlParameter> parametros;
 
         //noconsulta
         protected int ExecuteNonQuery(string transactSQL)
@@ -21,12 +21,12 @@ namespace CapaDatos.Repositories
             using (var connection = GetConnection())
             {
                 connection.Open();
-                using (var command = new SqlCommand())
+                using (var command = new MySqlCommand())
                 {
                     command.Connection = connection;
                     command.CommandText = transactSQL;
                     command.CommandType = CommandType.Text;
-                    foreach(SqlParameter item in parametros)
+                    foreach(MySqlParameter item in parametros)
                     {
                         command.Parameters.Add(item);
                     }
@@ -43,12 +43,12 @@ namespace CapaDatos.Repositories
             using (var connection = GetConnection())
             {
                 connection.Open();
-                using (var command = new SqlCommand())
+                using (var command = new MySqlCommand())
                 {
                     command.Connection = connection;
                     command.CommandText = transactSQL;
                     command.CommandType = CommandType.Text;
-                    SqlDataReader reader = command.ExecuteReader();
+                    MySqlDataReader reader = command.ExecuteReader();
                     using (var table = new DataTable())
                     {
                         table.Load(reader);
