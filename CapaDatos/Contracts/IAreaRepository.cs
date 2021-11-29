@@ -7,8 +7,12 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Contracts
 {
+    /// <summary>
+    /// Declara metodos adicionales que debe contener AreaRepository. 
+    /// </summary>
+    /// <remarks>Implementa <see cref="IGenericRepository{Entity}"/></remarks>
     public interface IAreaRepository:IGenericRepository<Area>
     {
-        //Aqui se escriben otros metodos que deben implementarce (especificos)
+        //metodos a implementar (especificos)
     }
 }

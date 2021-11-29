@@ -8,10 +8,14 @@ using System.Data.SqlClient;
 
 namespace CapaDatos.Repositories
 {
+    /// <summary>
+    /// Contiene los metodos de consulta y no consulta que seran utilizados por cualquier repositorio que se implemente
+    /// </summary>
     public abstract class MasterRepository:Repository
     {
         protected List<SqlParameter> parametros;
 
+        //noconsulta
         protected int ExecuteNonQuery(string transactSQL)
         {
             using (var connection = GetConnection())
@@ -33,6 +37,7 @@ namespace CapaDatos.Repositories
             }
         }
 
+        //consulta
         protected DataTable ExecuteReader(string transactSQL)
         {
             using (var connection = GetConnection())
