@@ -520,6 +520,7 @@ namespace CapaPresentacion.Forms
             this.dgv_citas.HeaderForeColor = System.Drawing.Color.White;
             this.dgv_citas.Location = new System.Drawing.Point(58, 67);
             this.dgv_citas.Name = "dgv_citas";
+            this.dgv_citas.ReadOnly = true;
             this.dgv_citas.RowHeadersVisible = false;
             this.dgv_citas.RowTemplate.Height = 40;
             this.dgv_citas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;

@@ -57,6 +57,7 @@ namespace CapaPresentacion
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
             btn_closeChild.Enabled = true;
             btn_closeChild.Visible = true;
+            
 
         }
 
@@ -121,10 +122,6 @@ namespace CapaPresentacion
             else
                 this.WindowState = FormWindowState.Normal;
         }
-
-
-
-
 
         #endregion
 
