@@ -24,6 +24,7 @@ namespace CapaPresentacion
             Application.Exit();
         }
 
+        #region Inicio y Registro label
         private void lbl_registrar_Click(object sender, EventArgs e)
         {
 
@@ -53,7 +54,9 @@ namespace CapaPresentacion
             pnl_login.BackgroundImage = Properties.Resources.wave;
 
         }
+        #endregion
 
+        #region botones inicio sesión y registro
         private void btn_sesion_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -64,12 +67,9 @@ namespace CapaPresentacion
         {
 
         }
+        #endregion
 
-        private void txt_contraseña_KeyPress(object sender, KeyPressEventArgs e)
-        {
-
-        }
-
+        #region Métodos Adicionales
         private void txt_contraseña_TextChanged(object sender, EventArgs e)
         {
 
@@ -84,8 +84,8 @@ namespace CapaPresentacion
             }
 
         }
+        #endregion
 
-       
 
     }
 }

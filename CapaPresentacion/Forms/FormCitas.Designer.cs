@@ -183,6 +183,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarCita.TextMarginLeft = 0;
             this.btn_eliminarCita.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_eliminarCita.UseDefaultRadiusAndThickness = true;
+            this.btn_eliminarCita.Click += new System.EventHandler(this.btn_eliminarCita_Click);
             // 
             // btn_modificarCita
             // 
@@ -275,6 +276,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarCita.TextMarginLeft = 0;
             this.btn_modificarCita.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_modificarCita.UseDefaultRadiusAndThickness = true;
+            this.btn_modificarCita.Click += new System.EventHandler(this.btn_modificarCita_Click);
             // 
             // btn_buscarCita
             // 
@@ -367,6 +369,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarCita.TextMarginLeft = 0;
             this.btn_buscarCita.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_buscarCita.UseDefaultRadiusAndThickness = true;
+            this.btn_buscarCita.Click += new System.EventHandler(this.btn_buscarCita_Click);
             // 
             // btn_registroCita
             // 
@@ -459,6 +462,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroCita.TextMarginLeft = 0;
             this.btn_registroCita.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_registroCita.UseDefaultRadiusAndThickness = true;
+            this.btn_registroCita.Click += new System.EventHandler(this.btn_registroCita_Click);
             // 
             // dgv_citas
             // 

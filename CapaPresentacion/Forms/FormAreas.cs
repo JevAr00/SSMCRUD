@@ -16,5 +16,29 @@ namespace CapaPresentacion.Forms
         {
             InitializeComponent();
         }
+
+        #region Botones de Funciones
+        private void btn_registroArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_modificarArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_eliminarArea_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_buscarArea_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+
     }
 }

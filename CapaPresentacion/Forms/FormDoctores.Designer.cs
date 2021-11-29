@@ -307,9 +307,9 @@ namespace CapaPresentacion.Forms
             this.panel1.Controls.Add(this.btn_buscarDoctor);
             this.panel1.Controls.Add(this.btn_registroDoctor);
             this.panel1.Controls.Add(this.dgv_doctores);
-            this.panel1.Location = new System.Drawing.Point(418, 1);
+            this.panel1.Location = new System.Drawing.Point(407, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 481);
+            this.panel1.Size = new System.Drawing.Size(478, 481);
             this.panel1.TabIndex = 25;
             // 
             // btn_eliminarDoctor
@@ -362,7 +362,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarDoctor.IdleIconLeftImage = null;
             this.btn_eliminarDoctor.IdleIconRightImage = null;
             this.btn_eliminarDoctor.IndicateFocus = false;
-            this.btn_eliminarDoctor.Location = new System.Drawing.Point(312, 374);
+            this.btn_eliminarDoctor.Location = new System.Drawing.Point(353, 374);
             this.btn_eliminarDoctor.Name = "btn_eliminarDoctor";
             this.btn_eliminarDoctor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_eliminarDoctor.OnDisabledState.BorderRadius = 39;
@@ -403,6 +403,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarDoctor.TextMarginLeft = 0;
             this.btn_eliminarDoctor.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_eliminarDoctor.UseDefaultRadiusAndThickness = true;
+            this.btn_eliminarDoctor.Click += new System.EventHandler(this.btn_eliminarDoctor_Click);
             // 
             // btn_modificarDoctor
             // 
@@ -454,7 +455,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarDoctor.IdleIconLeftImage = null;
             this.btn_modificarDoctor.IdleIconRightImage = null;
             this.btn_modificarDoctor.IndicateFocus = false;
-            this.btn_modificarDoctor.Location = new System.Drawing.Point(215, 374);
+            this.btn_modificarDoctor.Location = new System.Drawing.Point(256, 374);
             this.btn_modificarDoctor.Name = "btn_modificarDoctor";
             this.btn_modificarDoctor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_modificarDoctor.OnDisabledState.BorderRadius = 39;
@@ -495,6 +496,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarDoctor.TextMarginLeft = 0;
             this.btn_modificarDoctor.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_modificarDoctor.UseDefaultRadiusAndThickness = true;
+            this.btn_modificarDoctor.Click += new System.EventHandler(this.btn_modificarDoctor_Click);
             // 
             // btn_buscarDoctor
             // 
@@ -546,7 +548,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarDoctor.IdleIconLeftImage = null;
             this.btn_buscarDoctor.IdleIconRightImage = null;
             this.btn_buscarDoctor.IndicateFocus = false;
-            this.btn_buscarDoctor.Location = new System.Drawing.Point(118, 374);
+            this.btn_buscarDoctor.Location = new System.Drawing.Point(159, 374);
             this.btn_buscarDoctor.Name = "btn_buscarDoctor";
             this.btn_buscarDoctor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_buscarDoctor.OnDisabledState.BorderRadius = 39;
@@ -587,6 +589,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarDoctor.TextMarginLeft = 0;
             this.btn_buscarDoctor.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_buscarDoctor.UseDefaultRadiusAndThickness = true;
+            this.btn_buscarDoctor.Click += new System.EventHandler(this.btn_buscarDoctor_Click);
             // 
             // btn_registroDoctor
             // 
@@ -638,7 +641,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroDoctor.IdleIconLeftImage = null;
             this.btn_registroDoctor.IdleIconRightImage = null;
             this.btn_registroDoctor.IndicateFocus = false;
-            this.btn_registroDoctor.Location = new System.Drawing.Point(21, 374);
+            this.btn_registroDoctor.Location = new System.Drawing.Point(62, 374);
             this.btn_registroDoctor.Name = "btn_registroDoctor";
             this.btn_registroDoctor.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_registroDoctor.OnDisabledState.BorderRadius = 39;
@@ -679,6 +682,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroDoctor.TextMarginLeft = 0;
             this.btn_registroDoctor.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_registroDoctor.UseDefaultRadiusAndThickness = true;
+            this.btn_registroDoctor.Click += new System.EventHandler(this.btn_registroDoctor_Click);
             // 
             // dgv_doctores
             // 
@@ -739,7 +743,7 @@ namespace CapaPresentacion.Forms
             this.dgv_doctores.RowHeadersVisible = false;
             this.dgv_doctores.RowTemplate.Height = 40;
             this.dgv_doctores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_doctores.Size = new System.Drawing.Size(325, 271);
+            this.dgv_doctores.Size = new System.Drawing.Size(366, 271);
             this.dgv_doctores.TabIndex = 31;
             this.dgv_doctores.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -1061,7 +1065,7 @@ namespace CapaPresentacion.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            this.ClientSize = new System.Drawing.Size(855, 481);
+            this.ClientSize = new System.Drawing.Size(885, 481);
             this.Controls.Add(this.bunifuTextBox3);
             this.Controls.Add(this.bunifuTextBox2);
             this.Controls.Add(this.bunifuTextBox1);

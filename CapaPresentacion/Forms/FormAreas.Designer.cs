@@ -169,6 +169,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarArea.TextMarginLeft = 0;
             this.btn_eliminarArea.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_eliminarArea.UseDefaultRadiusAndThickness = true;
+            this.btn_eliminarArea.Click += new System.EventHandler(this.btn_eliminarArea_Click);
             // 
             // btn_modificarArea
             // 
@@ -261,6 +262,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarArea.TextMarginLeft = 0;
             this.btn_modificarArea.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_modificarArea.UseDefaultRadiusAndThickness = true;
+            this.btn_modificarArea.Click += new System.EventHandler(this.btn_modificarArea_Click);
             // 
             // btn_buscarArea
             // 
@@ -353,6 +355,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarArea.TextMarginLeft = 0;
             this.btn_buscarArea.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_buscarArea.UseDefaultRadiusAndThickness = true;
+            this.btn_buscarArea.Click += new System.EventHandler(this.btn_buscarArea_Click);
             // 
             // btn_registroArea
             // 
@@ -446,6 +449,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.TextMarginLeft = 0;
             this.btn_registroArea.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_registroArea.UseDefaultRadiusAndThickness = true;
+            this.btn_registroArea.Click += new System.EventHandler(this.btn_registroArea_Click);
             // 
             // dgv_areas
             // 
