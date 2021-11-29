@@ -19,10 +19,10 @@ namespace CapaDatos.Repositories
 
         public AreaRepository()
         {
-            selectAll = "select * from Areas";
-            insert = "insert into Areas values(@nombre,@edificio,@habilitada)";
-            update = "update Areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where idArea=@id";
-            delete = "delete from Areas where idArea=@id";
+            selectAll = "select * from areas";
+            insert = "insert into areas values(@nombre,@edificio,@habilitada)";
+            update = "update areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where idArea=@id";
+            delete = "delete from areas where idArea=@id";
         }
 
         public int Create(Area Entity)
