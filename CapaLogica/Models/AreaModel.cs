@@ -76,21 +76,24 @@ namespace CapaLogica.Models
         /// Obtiene todos los registros que se encuentran en una tabla de la base de datos
         /// </summary>
         /// <returns>Lista con registros de la tabla de la base de datos</returns>
-        public List<AreaModel> GetAll()
+        public async Task<List<AreaModel>> GetAll()
         {
-            var areaDataModel = areaRepositorio.Read();
-            listaAreas = new List<AreaModel>();
-            foreach (Area item in areaDataModel)
+            return await Task.Run(() =>
             {
-                listaAreas.Add(new AreaModel
+                var areaDataModel = areaRepositorio.Read();
+                listaAreas = new List<AreaModel>();
+                foreach (Area item in areaDataModel)
                 {
-                    idArea = item.idArea,
-                    nombre = item.nombre,
-                    edificio = item.edificio,
-                    habilitada = item.habilitada,
-                });
-            }
-            return listaAreas;
+                    listaAreas.Add(new AreaModel
+                    {
+                        idArea = item.idArea,
+                        nombre = item.nombre,
+                        edificio = item.edificio,
+                        habilitada = item.habilitada,
+                    });
+                }
+                return listaAreas;
+            });
         }
 
         /// <summary>
