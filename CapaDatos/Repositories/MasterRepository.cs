@@ -60,7 +60,8 @@ namespace CapaDatos.Repositories
                     {
                         table.Load(reader);
                         reader.Dispose();
-                        parametros.Clear();
+                        if(parametros!=null)
+                            parametros.Clear();
                         return table;
                     }
                 }
