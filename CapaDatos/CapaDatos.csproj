@@ -89,6 +89,7 @@
     <Compile Include="Contracts\IGenericRepository.cs" />
     <Compile Include="Entities\Area.cs" />
     <Compile Include="Entities\Persona.cs" />
+    <Compile Include="Entities\Usuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AreaRepository.cs" />
     <Compile Include="Repositories\MasterRepository.cs" />
