@@ -22,7 +22,7 @@ namespace CapaLogica.Models
 
         public int IdUsuario { get => idUsuario; set => idUsuario = value; }
         public string Nombre { get => nombre; set => nombre = value; }
-        public string Password { get => password; private set => password = value; }
+        public string Password { private get => password; set => password = value; }
 
         public UserModel()
         {
