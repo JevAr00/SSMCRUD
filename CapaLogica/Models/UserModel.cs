@@ -33,41 +33,44 @@ namespace CapaLogica.Models
         /// Observa cual es el <see cref="EntityState"/> de AreaModel, luego se encarga de ejecutar los metodos insert, update o delete segun corresponda.
         /// </summary>
         /// <returns>Mensaja con respuesta</returns>
-        public string ejecutarAccion()
+        public async Task<string> ejecutarAccion()
         {
-            string message = null;
-            try
+            return await Task.Run(() =>
             {
-                var usuarioDataModel = new Usuario();
-                usuarioDataModel.idUsuario = idUsuario;
-                usuarioDataModel.nombre = nombre;
-                usuarioDataModel.passUser = password;
-
-                switch (estadoEntidad)
+                string message = null;
+                try
                 {
-                    case EntityState.Added:
-                        usuarioRepositorio.Create(usuarioDataModel);
-                        message = $"Se ha registrado {usuarioDataModel.nombre}, como un nuevo usuario.";
-                        break;
+                    var usuarioDataModel = new Usuario();
+                    usuarioDataModel.idUsuario = idUsuario;
+                    usuarioDataModel.nombre = nombre;
+                    usuarioDataModel.passUser = password;
 
-                    /*case EntityState.Modified:
-                        usuarioRepositorio.Update(areaDataModel);
-                        message = $"El area con ID:{areaDataModel.idArea}, se ha modificado";
-                        break;
+                    switch (estadoEntidad)
+                    {
+                        case EntityState.Added:
+                            usuarioRepositorio.Create(usuarioDataModel);
+                            message = $"Se ha registrado {usuarioDataModel.nombre}, como un nuevo usuario.";
+                            break;
 
-                    case EntityState.Deleted:
-                        usuarioRepositorio.Delete(idUsuario);
-                        message = "Se ha elimiando correctamente";
-                        break;
-                    */
+                            /*case EntityState.Modified:
+                                usuarioRepositorio.Update(areaDataModel);
+                                message = $"El area con ID:{areaDataModel.idArea}, se ha modificado";
+                                break;
+
+                            case EntityState.Deleted:
+                                usuarioRepositorio.Delete(idUsuario);
+                                message = "Se ha elimiando correctamente";
+                                break;
+                            */
+                    }
+
                 }
-
-            }
-            catch (Exception e)
-            {
-                message = $"Un error ha ocurrido\n\nError:\n{e}";
-            }
-            return message;
+                catch (Exception e)
+                {
+                    message = $"Un error ha ocurrido\n\nError:\n{e}";
+                }
+                return message;
+            });
         }
 
         public string Encrypt(string pwrd)
