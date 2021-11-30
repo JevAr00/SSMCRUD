@@ -21,7 +21,7 @@ namespace CapaPresentacion
         {
             if (activeForm != null)
             {
-                activeForm.Close();
+                activeForm.Dispose();
             }
 
             activeForm = childForm;
@@ -91,7 +91,7 @@ namespace CapaPresentacion
         private void btn_closeChild_Click(object sender, EventArgs e)
         {
             if (activeForm != null)
-                activeForm.Close();
+                activeForm.Dispose();
             Reset();
         }
 

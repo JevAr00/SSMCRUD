@@ -19,7 +19,7 @@ namespace CapaPresentacion.Forms
         public FormAreas()
         {
             InitializeComponent();
-            dgv_areas.DataSource = area.GetAll();
+
         }
 
 
@@ -35,12 +35,11 @@ namespace CapaPresentacion.Forms
             string mensaje = area.ejecutarAccion();
 
             MessageBox.Show(mensaje);
-            dgv_areas.DataSource = area.GetAll();
 
             txt_nombreArea.Clear();
             txt_edificioArea.Clear();
             cmb_dispArea.Text = "";
-
+            Refrescar();
         }
 
         private void btn_modificarArea_Click(object sender, EventArgs e)
@@ -60,17 +59,18 @@ namespace CapaPresentacion.Forms
 
         #endregion
 
-        private void FormAreas_Load(object sender, EventArgs e)
+        private async void FormAreas_Load(object sender, EventArgs e)
         {
-
+            Refrescar();
         }
 
+        #region Métodos Adicionales
         private void dgv_areas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
                 int ID = Convert.ToInt32(this.dgv_areas.SelectedRows[0].Cells[0].Value);
-                string nombre= Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[1].Value);
+                string nombre = Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[1].Value);
                 string edificio = Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[2].Value);
                 string disponibilidad = Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[3].Value);
 
@@ -84,8 +84,20 @@ namespace CapaPresentacion.Forms
             }
 
         }
+        #endregion
 
+        private async void Refrescar()
+        {
+            await Task.Run(async () =>
+            {
+                var datos = await area.GetAll();
+                dgv_areas.Invoke(new Action(() =>
+                {
+                    dgv_areas.DataSource = datos;
+                }));
+            });
 
+        }
 
     }
 }
