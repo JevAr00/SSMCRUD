@@ -73,6 +73,22 @@ namespace CapaLogica.Models
             });
         }
 
+        public bool validarUsuario()
+        {
+            var usuarioDataModel = new Usuario();
+            usuarioDataModel.nombre = nombre;
+            usuarioDataModel.passUser = password;
+
+            if (usuarioRepositorio.Login(usuarioDataModel))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
         public string Encrypt(string pwrd)
         {
             SHA512 hashSvc = SHA512.Create();
