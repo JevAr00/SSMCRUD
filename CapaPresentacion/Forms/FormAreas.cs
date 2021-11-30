@@ -84,7 +84,6 @@ namespace CapaPresentacion.Forms
             }
 
         }
-        #endregion
 
         private async void Refrescar()
         {
@@ -98,6 +97,14 @@ namespace CapaPresentacion.Forms
             });
 
         }
+
+        private void txt_nombreArea_TextChanged(object sender, EventArgs e)
+        {
+            dgv_areas.DataSource = area.Buscar(txt_nombreArea.Text);
+        }
+
+        #endregion
+
 
     }
 }

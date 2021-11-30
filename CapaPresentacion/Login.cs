@@ -70,9 +70,8 @@ namespace CapaPresentacion
         #region botones inicio sesión y registro
         private void btn_sesion_Click(object sender, EventArgs e)
         {
+            Inicio_Sesion();
 
-            this.Hide();
-            principal.Show();
 
         }
 
@@ -90,7 +89,7 @@ namespace CapaPresentacion
             {
                 MessageBox.Show("Su Solicitud está siendo procesada");
                 Registro();
-                
+
             }
         }
         #endregion
@@ -111,6 +110,26 @@ namespace CapaPresentacion
                MessageBox.Show(mensaje);
            });
             limpiar();
+        }
+
+        public void Inicio_Sesion()
+        {
+            usuario.Nombre = txt_usuario.Text;
+            usuario.Password = usuario.Encrypt(txt_contraseña.Text);
+
+            if (txt_usuario.Text == "" || txt_contraseña.Text == "")
+            {
+                MessageBox.Show("Por favor llenar los campos");
+            } else if (usuario.validarUsuario() == false) 
+            {
+                MessageBox.Show("Usuario o contraseña incorrecta");
+            }
+            else
+            {
+                this.Hide();
+                principal.Show();
+            }
+
         }
 
 

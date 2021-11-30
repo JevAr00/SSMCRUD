@@ -34,7 +34,6 @@ namespace CapaPresentacion.Forms
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
-            Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges4 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -49,7 +48,6 @@ namespace CapaPresentacion.Forms
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_eliminarArea = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_modificarArea = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
-            this.btn_buscarArea = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_registroArea = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.dgv_areas = new Bunifu.UI.WinForms.BunifuDataGridView();
             this.cmb_dispArea = new System.Windows.Forms.ComboBox();
@@ -70,12 +68,12 @@ namespace CapaPresentacion.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.btn_eliminarArea);
             this.panel1.Controls.Add(this.btn_modificarArea);
-            this.panel1.Controls.Add(this.btn_buscarArea);
             this.panel1.Controls.Add(this.btn_registroArea);
             this.panel1.Controls.Add(this.dgv_areas);
-            this.panel1.Location = new System.Drawing.Point(239, 0);
+            this.panel1.Location = new System.Drawing.Point(319, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 481);
+            this.panel1.Size = new System.Drawing.Size(583, 592);
             this.panel1.TabIndex = 46;
             // 
             // btn_eliminarArea
@@ -128,10 +126,11 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarArea.IdleIconLeftImage = null;
             this.btn_eliminarArea.IdleIconRightImage = null;
             this.btn_eliminarArea.IndicateFocus = false;
-            this.btn_eliminarArea.Location = new System.Drawing.Point(312, 374);
+            this.btn_eliminarArea.Location = new System.Drawing.Point(401, 460);
+            this.btn_eliminarArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_eliminarArea.Name = "btn_eliminarArea";
             this.btn_eliminarArea.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_eliminarArea.OnDisabledState.BorderRadius = 39;
+            this.btn_eliminarArea.OnDisabledState.BorderRadius = 48;
             this.btn_eliminarArea.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_eliminarArea.OnDisabledState.BorderThickness = 1;
             this.btn_eliminarArea.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -139,7 +138,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarArea.OnDisabledState.IconLeftImage = null;
             this.btn_eliminarArea.OnDisabledState.IconRightImage = null;
             this.btn_eliminarArea.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_eliminarArea.onHoverState.BorderRadius = 39;
+            this.btn_eliminarArea.onHoverState.BorderRadius = 48;
             this.btn_eliminarArea.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_eliminarArea.onHoverState.BorderThickness = 1;
             this.btn_eliminarArea.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -147,7 +146,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarArea.onHoverState.IconLeftImage = null;
             this.btn_eliminarArea.onHoverState.IconRightImage = null;
             this.btn_eliminarArea.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_eliminarArea.OnIdleState.BorderRadius = 39;
+            this.btn_eliminarArea.OnIdleState.BorderRadius = 48;
             this.btn_eliminarArea.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_eliminarArea.OnIdleState.BorderThickness = 1;
             this.btn_eliminarArea.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -155,14 +154,14 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarArea.OnIdleState.IconLeftImage = null;
             this.btn_eliminarArea.OnIdleState.IconRightImage = null;
             this.btn_eliminarArea.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_eliminarArea.OnPressedState.BorderRadius = 39;
+            this.btn_eliminarArea.OnPressedState.BorderRadius = 48;
             this.btn_eliminarArea.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_eliminarArea.OnPressedState.BorderThickness = 1;
             this.btn_eliminarArea.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_eliminarArea.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_eliminarArea.OnPressedState.IconLeftImage = null;
             this.btn_eliminarArea.OnPressedState.IconRightImage = null;
-            this.btn_eliminarArea.Size = new System.Drawing.Size(91, 39);
+            this.btn_eliminarArea.Size = new System.Drawing.Size(121, 48);
             this.btn_eliminarArea.TabIndex = 35;
             this.btn_eliminarArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_eliminarArea.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -221,10 +220,11 @@ namespace CapaPresentacion.Forms
             this.btn_modificarArea.IdleIconLeftImage = null;
             this.btn_modificarArea.IdleIconRightImage = null;
             this.btn_modificarArea.IndicateFocus = false;
-            this.btn_modificarArea.Location = new System.Drawing.Point(215, 374);
+            this.btn_modificarArea.Location = new System.Drawing.Point(209, 460);
+            this.btn_modificarArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_modificarArea.Name = "btn_modificarArea";
             this.btn_modificarArea.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_modificarArea.OnDisabledState.BorderRadius = 39;
+            this.btn_modificarArea.OnDisabledState.BorderRadius = 48;
             this.btn_modificarArea.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_modificarArea.OnDisabledState.BorderThickness = 1;
             this.btn_modificarArea.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -232,7 +232,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarArea.OnDisabledState.IconLeftImage = null;
             this.btn_modificarArea.OnDisabledState.IconRightImage = null;
             this.btn_modificarArea.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_modificarArea.onHoverState.BorderRadius = 39;
+            this.btn_modificarArea.onHoverState.BorderRadius = 48;
             this.btn_modificarArea.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_modificarArea.onHoverState.BorderThickness = 1;
             this.btn_modificarArea.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -240,7 +240,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarArea.onHoverState.IconLeftImage = null;
             this.btn_modificarArea.onHoverState.IconRightImage = null;
             this.btn_modificarArea.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_modificarArea.OnIdleState.BorderRadius = 39;
+            this.btn_modificarArea.OnIdleState.BorderRadius = 48;
             this.btn_modificarArea.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_modificarArea.OnIdleState.BorderThickness = 1;
             this.btn_modificarArea.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -248,14 +248,14 @@ namespace CapaPresentacion.Forms
             this.btn_modificarArea.OnIdleState.IconLeftImage = null;
             this.btn_modificarArea.OnIdleState.IconRightImage = null;
             this.btn_modificarArea.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_modificarArea.OnPressedState.BorderRadius = 39;
+            this.btn_modificarArea.OnPressedState.BorderRadius = 48;
             this.btn_modificarArea.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_modificarArea.OnPressedState.BorderThickness = 1;
             this.btn_modificarArea.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_modificarArea.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_modificarArea.OnPressedState.IconLeftImage = null;
             this.btn_modificarArea.OnPressedState.IconRightImage = null;
-            this.btn_modificarArea.Size = new System.Drawing.Size(91, 39);
+            this.btn_modificarArea.Size = new System.Drawing.Size(121, 48);
             this.btn_modificarArea.TabIndex = 34;
             this.btn_modificarArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_modificarArea.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -263,99 +263,6 @@ namespace CapaPresentacion.Forms
             this.btn_modificarArea.TextPadding = new System.Windows.Forms.Padding(0);
             this.btn_modificarArea.UseDefaultRadiusAndThickness = true;
             this.btn_modificarArea.Click += new System.EventHandler(this.btn_modificarArea_Click);
-            // 
-            // btn_buscarArea
-            // 
-            this.btn_buscarArea.AllowAnimations = true;
-            this.btn_buscarArea.AllowMouseEffects = true;
-            this.btn_buscarArea.AllowToggling = false;
-            this.btn_buscarArea.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_buscarArea.AnimationSpeed = 200;
-            this.btn_buscarArea.AutoGenerateColors = false;
-            this.btn_buscarArea.AutoRoundBorders = true;
-            this.btn_buscarArea.AutoSizeLeftIcon = true;
-            this.btn_buscarArea.AutoSizeRightIcon = true;
-            this.btn_buscarArea.BackColor = System.Drawing.Color.Transparent;
-            this.btn_buscarArea.BackColor1 = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(122)))), ((int)(((byte)(183)))));
-            this.btn_buscarArea.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarArea.BackgroundImage")));
-            this.btn_buscarArea.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_buscarArea.ButtonText = "Buscar";
-            this.btn_buscarArea.ButtonTextMarginLeft = 0;
-            this.btn_buscarArea.ColorContrastOnClick = 45;
-            this.btn_buscarArea.ColorContrastOnHover = 45;
-            this.btn_buscarArea.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges3.BottomLeft = true;
-            borderEdges3.BottomRight = true;
-            borderEdges3.TopLeft = true;
-            borderEdges3.TopRight = true;
-            this.btn_buscarArea.CustomizableEdges = borderEdges3;
-            this.btn_buscarArea.DialogResult = System.Windows.Forms.DialogResult.None;
-            this.btn_buscarArea.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_buscarArea.DisabledFillColor = System.Drawing.Color.Empty;
-            this.btn_buscarArea.DisabledForecolor = System.Drawing.Color.Empty;
-            this.btn_buscarArea.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
-            this.btn_buscarArea.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Bold);
-            this.btn_buscarArea.ForeColor = System.Drawing.Color.White;
-            this.btn_buscarArea.IconLeft = null;
-            this.btn_buscarArea.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_buscarArea.IconLeftCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_buscarArea.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
-            this.btn_buscarArea.IconMarginLeft = 11;
-            this.btn_buscarArea.IconPadding = 10;
-            this.btn_buscarArea.IconRight = null;
-            this.btn_buscarArea.IconRightAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btn_buscarArea.IconRightCursor = System.Windows.Forms.Cursors.Default;
-            this.btn_buscarArea.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
-            this.btn_buscarArea.IconSize = 25;
-            this.btn_buscarArea.IdleBorderColor = System.Drawing.Color.Empty;
-            this.btn_buscarArea.IdleBorderRadius = 0;
-            this.btn_buscarArea.IdleBorderThickness = 0;
-            this.btn_buscarArea.IdleFillColor = System.Drawing.Color.Empty;
-            this.btn_buscarArea.IdleIconLeftImage = null;
-            this.btn_buscarArea.IdleIconRightImage = null;
-            this.btn_buscarArea.IndicateFocus = false;
-            this.btn_buscarArea.Location = new System.Drawing.Point(118, 374);
-            this.btn_buscarArea.Name = "btn_buscarArea";
-            this.btn_buscarArea.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_buscarArea.OnDisabledState.BorderRadius = 39;
-            this.btn_buscarArea.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_buscarArea.OnDisabledState.BorderThickness = 1;
-            this.btn_buscarArea.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.btn_buscarArea.OnDisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(168)))), ((int)(((byte)(160)))), ((int)(((byte)(168)))));
-            this.btn_buscarArea.OnDisabledState.IconLeftImage = null;
-            this.btn_buscarArea.OnDisabledState.IconRightImage = null;
-            this.btn_buscarArea.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_buscarArea.onHoverState.BorderRadius = 39;
-            this.btn_buscarArea.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_buscarArea.onHoverState.BorderThickness = 1;
-            this.btn_buscarArea.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_buscarArea.onHoverState.ForeColor = System.Drawing.Color.White;
-            this.btn_buscarArea.onHoverState.IconLeftImage = null;
-            this.btn_buscarArea.onHoverState.IconRightImage = null;
-            this.btn_buscarArea.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_buscarArea.OnIdleState.BorderRadius = 39;
-            this.btn_buscarArea.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_buscarArea.OnIdleState.BorderThickness = 1;
-            this.btn_buscarArea.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_buscarArea.OnIdleState.ForeColor = System.Drawing.Color.White;
-            this.btn_buscarArea.OnIdleState.IconLeftImage = null;
-            this.btn_buscarArea.OnIdleState.IconRightImage = null;
-            this.btn_buscarArea.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_buscarArea.OnPressedState.BorderRadius = 39;
-            this.btn_buscarArea.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
-            this.btn_buscarArea.OnPressedState.BorderThickness = 1;
-            this.btn_buscarArea.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_buscarArea.OnPressedState.ForeColor = System.Drawing.Color.White;
-            this.btn_buscarArea.OnPressedState.IconLeftImage = null;
-            this.btn_buscarArea.OnPressedState.IconRightImage = null;
-            this.btn_buscarArea.Size = new System.Drawing.Size(91, 39);
-            this.btn_buscarArea.TabIndex = 33;
-            this.btn_buscarArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btn_buscarArea.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
-            this.btn_buscarArea.TextMarginLeft = 0;
-            this.btn_buscarArea.TextPadding = new System.Windows.Forms.Padding(0);
-            this.btn_buscarArea.UseDefaultRadiusAndThickness = true;
-            this.btn_buscarArea.Click += new System.EventHandler(this.btn_buscarArea_Click);
             // 
             // btn_registroArea
             // 
@@ -378,11 +285,11 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.ColorContrastOnClick = 45;
             this.btn_registroArea.ColorContrastOnHover = 45;
             this.btn_registroArea.Cursor = System.Windows.Forms.Cursors.Default;
-            borderEdges4.BottomLeft = true;
-            borderEdges4.BottomRight = true;
-            borderEdges4.TopLeft = true;
-            borderEdges4.TopRight = true;
-            this.btn_registroArea.CustomizableEdges = borderEdges4;
+            borderEdges3.BottomLeft = true;
+            borderEdges3.BottomRight = true;
+            borderEdges3.TopLeft = true;
+            borderEdges3.TopRight = true;
+            this.btn_registroArea.CustomizableEdges = borderEdges3;
             this.btn_registroArea.DialogResult = System.Windows.Forms.DialogResult.None;
             this.btn_registroArea.DisabledBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_registroArea.DisabledFillColor = System.Drawing.Color.Empty;
@@ -408,10 +315,11 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.IdleIconLeftImage = null;
             this.btn_registroArea.IdleIconRightImage = null;
             this.btn_registroArea.IndicateFocus = false;
-            this.btn_registroArea.Location = new System.Drawing.Point(21, 374);
+            this.btn_registroArea.Location = new System.Drawing.Point(13, 460);
+            this.btn_registroArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btn_registroArea.Name = "btn_registroArea";
             this.btn_registroArea.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
-            this.btn_registroArea.OnDisabledState.BorderRadius = 39;
+            this.btn_registroArea.OnDisabledState.BorderRadius = 48;
             this.btn_registroArea.OnDisabledState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_registroArea.OnDisabledState.BorderThickness = 1;
             this.btn_registroArea.OnDisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
@@ -419,7 +327,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.OnDisabledState.IconLeftImage = null;
             this.btn_registroArea.OnDisabledState.IconRightImage = null;
             this.btn_registroArea.onHoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_registroArea.onHoverState.BorderRadius = 39;
+            this.btn_registroArea.onHoverState.BorderRadius = 48;
             this.btn_registroArea.onHoverState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_registroArea.onHoverState.BorderThickness = 1;
             this.btn_registroArea.onHoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -427,7 +335,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.onHoverState.IconLeftImage = null;
             this.btn_registroArea.onHoverState.IconRightImage = null;
             this.btn_registroArea.OnIdleState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_registroArea.OnIdleState.BorderRadius = 39;
+            this.btn_registroArea.OnIdleState.BorderRadius = 48;
             this.btn_registroArea.OnIdleState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_registroArea.OnIdleState.BorderThickness = 1;
             this.btn_registroArea.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
@@ -435,14 +343,14 @@ namespace CapaPresentacion.Forms
             this.btn_registroArea.OnIdleState.IconLeftImage = null;
             this.btn_registroArea.OnIdleState.IconRightImage = null;
             this.btn_registroArea.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
-            this.btn_registroArea.OnPressedState.BorderRadius = 39;
+            this.btn_registroArea.OnPressedState.BorderRadius = 48;
             this.btn_registroArea.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
             this.btn_registroArea.OnPressedState.BorderThickness = 1;
             this.btn_registroArea.OnPressedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_registroArea.OnPressedState.ForeColor = System.Drawing.Color.White;
             this.btn_registroArea.OnPressedState.IconLeftImage = null;
             this.btn_registroArea.OnPressedState.IconRightImage = null;
-            this.btn_registroArea.Size = new System.Drawing.Size(91, 39);
+            this.btn_registroArea.Size = new System.Drawing.Size(121, 48);
             this.btn_registroArea.TabIndex = 32;
             this.btn_registroArea.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_registroArea.TextAlignment = System.Windows.Forms.HorizontalAlignment.Center;
@@ -505,13 +413,15 @@ namespace CapaPresentacion.Forms
             this.dgv_areas.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_areas.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_areas.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_areas.Location = new System.Drawing.Point(58, 67);
+            this.dgv_areas.Location = new System.Drawing.Point(77, 82);
+            this.dgv_areas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgv_areas.Name = "dgv_areas";
             this.dgv_areas.ReadOnly = true;
             this.dgv_areas.RowHeadersVisible = false;
+            this.dgv_areas.RowHeadersWidth = 51;
             this.dgv_areas.RowTemplate.Height = 40;
             this.dgv_areas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_areas.Size = new System.Drawing.Size(325, 271);
+            this.dgv_areas.Size = new System.Drawing.Size(433, 334);
             this.dgv_areas.TabIndex = 31;
             this.dgv_areas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             this.dgv_areas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv_areas_CellDoubleClick);
@@ -528,9 +438,10 @@ namespace CapaPresentacion.Forms
             this.cmb_dispArea.Items.AddRange(new object[] {
             "s",
             "n"});
-            this.cmb_dispArea.Location = new System.Drawing.Point(16, 323);
+            this.cmb_dispArea.Location = new System.Drawing.Point(21, 398);
+            this.cmb_dispArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cmb_dispArea.Name = "cmb_dispArea";
-            this.cmb_dispArea.Size = new System.Drawing.Size(121, 24);
+            this.cmb_dispArea.Size = new System.Drawing.Size(160, 29);
             this.cmb_dispArea.TabIndex = 43;
             // 
             // label7
@@ -539,9 +450,10 @@ namespace CapaPresentacion.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label7.Location = new System.Drawing.Point(16, 290);
+            this.label7.Location = new System.Drawing.Point(21, 357);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(80, 20);
+            this.label7.Size = new System.Drawing.Size(100, 24);
             this.label7.TabIndex = 42;
             this.label7.Text = "Habilitada";
             // 
@@ -551,9 +463,10 @@ namespace CapaPresentacion.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(16, 210);
+            this.label3.Location = new System.Drawing.Point(21, 258);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.Size = new System.Drawing.Size(76, 24);
             this.label3.TabIndex = 28;
             this.label3.Text = "Edificio";
             // 
@@ -563,9 +476,10 @@ namespace CapaPresentacion.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(16, 130);
+            this.label1.Location = new System.Drawing.Point(21, 160);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(82, 24);
             this.label1.TabIndex = 26;
             this.label1.Text = "Nombre";
             // 
@@ -599,7 +513,8 @@ namespace CapaPresentacion.Forms
             this.txt_nombreArea.IconRight = null;
             this.txt_nombreArea.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_nombreArea.Lines = new string[0];
-            this.txt_nombreArea.Location = new System.Drawing.Point(16, 161);
+            this.txt_nombreArea.Location = new System.Drawing.Point(21, 198);
+            this.txt_nombreArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nombreArea.MaxLength = 20;
             this.txt_nombreArea.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_nombreArea.Modified = false;
@@ -625,7 +540,7 @@ namespace CapaPresentacion.Forms
             stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_nombreArea.OnIdleState = stateProperties4;
-            this.txt_nombreArea.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_nombreArea.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_nombreArea.PasswordChar = '\0';
             this.txt_nombreArea.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_nombreArea.PlaceholderText = "";
@@ -635,7 +550,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreArea.SelectionLength = 0;
             this.txt_nombreArea.SelectionStart = 0;
             this.txt_nombreArea.ShortcutsEnabled = true;
-            this.txt_nombreArea.Size = new System.Drawing.Size(190, 27);
+            this.txt_nombreArea.Size = new System.Drawing.Size(253, 33);
             this.txt_nombreArea.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.txt_nombreArea.TabIndex = 47;
             this.txt_nombreArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -645,6 +560,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreArea.TextPlaceholder = "";
             this.txt_nombreArea.UseSystemPasswordChar = false;
             this.txt_nombreArea.WordWrap = true;
+            this.txt_nombreArea.TextChanged += new System.EventHandler(this.txt_nombreArea_TextChanged);
             // 
             // txt_edificioArea
             // 
@@ -676,7 +592,8 @@ namespace CapaPresentacion.Forms
             this.txt_edificioArea.IconRight = null;
             this.txt_edificioArea.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_edificioArea.Lines = new string[0];
-            this.txt_edificioArea.Location = new System.Drawing.Point(16, 240);
+            this.txt_edificioArea.Location = new System.Drawing.Point(21, 295);
+            this.txt_edificioArea.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_edificioArea.MaxLength = 20;
             this.txt_edificioArea.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_edificioArea.Modified = false;
@@ -702,7 +619,7 @@ namespace CapaPresentacion.Forms
             stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_edificioArea.OnIdleState = stateProperties8;
-            this.txt_edificioArea.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_edificioArea.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txt_edificioArea.PasswordChar = '\0';
             this.txt_edificioArea.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_edificioArea.PlaceholderText = "";
@@ -712,7 +629,7 @@ namespace CapaPresentacion.Forms
             this.txt_edificioArea.SelectionLength = 0;
             this.txt_edificioArea.SelectionStart = 0;
             this.txt_edificioArea.ShortcutsEnabled = true;
-            this.txt_edificioArea.Size = new System.Drawing.Size(190, 29);
+            this.txt_edificioArea.Size = new System.Drawing.Size(253, 36);
             this.txt_edificioArea.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
             this.txt_edificioArea.TabIndex = 48;
             this.txt_edificioArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
@@ -730,10 +647,10 @@ namespace CapaPresentacion.Forms
             // 
             // FormAreas
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            this.ClientSize = new System.Drawing.Size(676, 481);
+            this.ClientSize = new System.Drawing.Size(901, 592);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -741,6 +658,7 @@ namespace CapaPresentacion.Forms
             this.Controls.Add(this.label7);
             this.Controls.Add(this.txt_nombreArea);
             this.Controls.Add(this.txt_edificioArea);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FormAreas";
             this.Text = "Áreas";
             this.Load += new System.EventHandler(this.FormAreas_Load);
@@ -756,7 +674,6 @@ namespace CapaPresentacion.Forms
         private System.Windows.Forms.Panel panel1;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_eliminarArea;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_modificarArea;
-        private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_buscarArea;
         private Bunifu.UI.WinForms.BunifuButton.BunifuButton btn_registroArea;
         private Bunifu.UI.WinForms.BunifuDataGridView dgv_areas;
         private System.Windows.Forms.ComboBox cmb_dispArea;
