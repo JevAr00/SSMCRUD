@@ -48,11 +48,16 @@ namespace CapaDatos.Repositories
                     command.Connection = connection;
                     command.CommandText = transactSQL;
                     command.CommandType = CommandType.Text;
+                    foreach (MySqlParameter item in parametros)
+                    {
+                        command.Parameters.Add(item);
+                    }
                     MySqlDataReader reader = command.ExecuteReader();
                     using (var table = new DataTable())
                     {
                         table.Load(reader);
                         reader.Dispose();
+                        parametros.Clear();
                         return table;
                     }
                 }
