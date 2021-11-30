@@ -87,6 +87,7 @@
   <ItemGroup>
     <Compile Include="Contracts\IAreaRepository.cs" />
     <Compile Include="Contracts\IGenericRepository.cs" />
+    <Compile Include="Contracts\IUsuarioRepository.cs" />
     <Compile Include="Entities\Area.cs" />
     <Compile Include="Entities\Persona.cs" />
     <Compile Include="Entities\Usuario.cs" />
@@ -94,6 +95,7 @@
     <Compile Include="Repositories\AreaRepository.cs" />
     <Compile Include="Repositories\MasterRepository.cs" />
     <Compile Include="Repositories\Repository.cs" />
+    <Compile Include="Repositories\UsuarioRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
