@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Entities
 {
-    public class Persona
+    public abstract class Persona
     {
         public string cedula { get; set; }
         public string nombre { get; set; }
