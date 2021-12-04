@@ -36,7 +36,9 @@ namespace CapaDatos.Repositories
 
         public int Delete(int EntityID)
         {
-            return 1;
+            parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("@id", EntityID));
+            return ExecuteNonQuery(delete);
         }
 
         public IEnumerable<Area> Read()
@@ -58,7 +60,13 @@ namespace CapaDatos.Repositories
 
         public int Update(Area Entity)
         {
-            return 1;
+            parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
+            parametros.Add(new MySqlParameter("@edificio", Entity.edificio));
+            parametros.Add(new MySqlParameter("@habilitada", Entity.habilitada));
+            parametros.Add(new MySqlParameter("@id", Entity.idArea));
+            return ExecuteNonQuery(update);
+           
         }
     }
 }
