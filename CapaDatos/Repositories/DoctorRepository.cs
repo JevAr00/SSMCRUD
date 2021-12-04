@@ -58,7 +58,7 @@ namespace CapaDatos.Repositories
                     cedula = item[2].ToString(),
                     nombre = item[3].ToString(),
                     apellidos = item[4].ToString(),
-                    telefono = item[5].ToString(),
+                    telefono = Convert.ToInt32(item[5]),
                     diasLaborales = item[6].ToString(),
                     disponibilidad = Convert.ToChar(item[7]),
                     activo = Convert.ToChar(item[8])
