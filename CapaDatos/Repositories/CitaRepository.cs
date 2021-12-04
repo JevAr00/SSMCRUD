@@ -30,10 +30,10 @@ namespace CapaDatos.Repositories
             parametros = new List<MySqlParameter>();
             parametros.Add(new MySqlParameter("@descripcion", Entity.descripcion));
             parametros.Add(new MySqlParameter("@nombreDoctor", Entity.nombreDoctor));
-            parametros.Add(new MySqlParameter("@cedulaPaciente", Entity.cedulaPaciente));
-            parametros.Add(new MySqlParameter("@nombrePaciente", Entity.nombrePaciente));
+            parametros.Add(new MySqlParameter("@cedulaPaciente", Entity.cedula));
+            parametros.Add(new MySqlParameter("@nombrePaciente", Entity.nombre));
             parametros.Add(new MySqlParameter("@correoPaciente", Entity.correoPaciente));
-            parametros.Add(new MySqlParameter("@telefonoPaciente", Entity.telefonoPaciente));
+            parametros.Add(new MySqlParameter("@telefonoPaciente", Entity.telefono));
             parametros.Add(new MySqlParameter("@fecha", Entity.fecha));
             parametros.Add(new MySqlParameter("@hora", Entity.hora));
             return ExecuteNonQuery(insert);
@@ -57,10 +57,10 @@ namespace CapaDatos.Repositories
                     idCita = Convert.ToInt32(item[0]),
                     descripcion = item[1].ToString(),
                     nombreDoctor = item[2].ToString(),
-                    cedulaPaciente = item[3].ToString(),
-                    nombrePaciente = item[4].ToString(),
+                    cedula = item[3].ToString(),
+                    nombre = item[4].ToString(),
                     correoPaciente = item[5].ToString(),
-                    telefonoPaciente = item[6].ToString(),
+                    telefono = item[6].ToString(),
                     fecha = Convert.ToDateTime(item[7]),
                     hora = item[8].ToString()
 
@@ -75,10 +75,10 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@id", Entity.idCita));
             parametros.Add(new MySqlParameter("@descripcion", Entity.descripcion));
             parametros.Add(new MySqlParameter("@nombreDoctor", Entity.nombreDoctor));
-            parametros.Add(new MySqlParameter("@cedulaPaciente", Entity.cedulaPaciente));
-            parametros.Add(new MySqlParameter("@nombrePaciente", Entity.nombrePaciente));
+            parametros.Add(new MySqlParameter("@cedulaPaciente", Entity.cedula));
+            parametros.Add(new MySqlParameter("@nombrePaciente", Entity.nombre));
             parametros.Add(new MySqlParameter("@correoPaciente", Entity.correoPaciente));
-            parametros.Add(new MySqlParameter("@telefonoPaciente", Entity.telefonoPaciente));
+            parametros.Add(new MySqlParameter("@telefonoPaciente", Entity.telefono));
             parametros.Add(new MySqlParameter("@fecha", Entity.fecha));
             parametros.Add(new MySqlParameter("@hora", Entity.hora));
            

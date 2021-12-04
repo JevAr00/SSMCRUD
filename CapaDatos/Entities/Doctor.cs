@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CapaDatos.Entities
 {
-    public class Doctor
+    public class Doctor:Persona
     {
         public int idDoctor { get; set; }
         public int idArea { get; set; }
