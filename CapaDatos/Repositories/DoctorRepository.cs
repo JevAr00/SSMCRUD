@@ -30,7 +30,7 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@idArea", Entity.idArea));
             parametros.Add(new MySqlParameter("@cedula",Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
-            parametros.Add(new MySqlParameter("@apellido", Entity.apellido));
+            parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
             parametros.Add(new MySqlParameter("@telefonp", Entity.telefono));
             parametros.Add(new MySqlParameter("@diasLaborales", Entity.diasLaborales));
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));
@@ -57,7 +57,7 @@ namespace CapaDatos.Repositories
                     idArea = Convert.ToInt32(item[1]),
                     cedula = item[2].ToString(),
                     nombre = item[3].ToString(),
-                    apellido = item[4].ToString(),
+                    apellidos = item[4].ToString(),
                     telefono = item[5].ToString(),
                     diasLaborales = item[6].ToString(),
                     disponibilidad = Convert.ToChar(item[7]),
@@ -75,7 +75,7 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@idArea", Entity.idArea));
             parametros.Add(new MySqlParameter("@cedula", Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
-            parametros.Add(new MySqlParameter("@apellido", Entity.apellido));
+            parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
             parametros.Add(new MySqlParameter("@telefonp", Entity.telefono));
             parametros.Add(new MySqlParameter("@diasLaborales", Entity.diasLaborales));
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));

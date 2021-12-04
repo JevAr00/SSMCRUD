@@ -13,7 +13,7 @@ namespace CapaDatos.Entities
         public int idArea { get; set; }
         public string cedula { get; set; }
         public string nombre { get; set; }
-        public string apellido { get; set; }
+        public string apellidos { get; set; }
         public string telefono { get; set; }
         public string diasLaborales { get; set; }
         public char disponibilidad { get; set; }
