@@ -61,10 +61,11 @@ namespace CapaDatos.Repositories
         public int Update(Area Entity)
         {
             parametros = new List<MySqlParameter>();
+            parametros.Add(new MySqlParameter("@id", Entity.idArea));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@edificio", Entity.edificio));
             parametros.Add(new MySqlParameter("@habilitada", Entity.habilitada));
-            parametros.Add(new MySqlParameter("@id", Entity.idArea));
+            
             return ExecuteNonQuery(update);
            
         }

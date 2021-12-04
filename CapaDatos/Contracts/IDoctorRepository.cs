@@ -8,10 +8,10 @@ using CapaDatos.Entities;
 namespace CapaDatos.Contracts
 {
     /// <summary>
-    /// Declara metodos adicionales que debe contener CitaRepository. 
+    /// Declara metodos adicionales que debe contener DoctorRepository. 
     /// </summary>
     /// <remarks>Implementa <see cref="IGenericRepository{Entity}"/></remarks>
-    public interface ICitaRepository:IGenericRepository<Cita>
+    public interface IDoctorRepository : IGenericRepository<Doctor>
     {
         //metodos a implementar (especificos)
     }
