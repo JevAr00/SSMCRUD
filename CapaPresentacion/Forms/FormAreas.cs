@@ -87,15 +87,21 @@ namespace CapaPresentacion.Forms
 
         private async void Refrescar()
         {
-            await Task.Run(async () =>
+            try
             {
-                var datos = await area.GetAll();
-                dgv_areas.Invoke(new Action(() =>
+                await Task.Run(async () =>
                 {
-                    dgv_areas.DataSource = datos;
-                }));
-            });
-
+                    var datos = await area.GetAll();
+                    dgv_areas.Invoke(new Action(() =>
+                    {
+                        dgv_areas.DataSource = datos;
+                    }));
+                });
+            }
+            catch
+            {
+               
+            }
         }
 
         private void txt_nombreArea_TextChanged(object sender, EventArgs e)
