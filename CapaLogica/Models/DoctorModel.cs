@@ -55,7 +55,7 @@ namespace CapaLogica.Models
                 {
                     case EntityState.Added:
                         doctorRepositorio.Create(doctorDataModel);
-                        message = $"Se ha registrado {doctorDataModel.nombre}, como una nueva area.";
+                        message = $"Se ha registrado {doctorDataModel.nombre}, como nueva persona contratada.";
                         break;
 
                     case EntityState.Modified:
