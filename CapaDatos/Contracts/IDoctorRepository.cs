@@ -13,6 +13,9 @@ namespace CapaDatos.Contracts
     /// <remarks>Implementa <see cref="IGenericRepository{Entity}"/></remarks>
     public interface IDoctorRepository : IGenericRepository<Doctor>
     {
-        //metodos a implementar (especificos)
+        /// <summary>
+        /// Obtiene los nombres de los doctores registradas
+        /// </summary>
+        IEnumerable<Doctor> GetNames();
     }
 }
