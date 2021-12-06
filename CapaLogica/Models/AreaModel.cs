@@ -95,6 +95,27 @@ namespace CapaLogica.Models
         }
 
         /// <summary>
+        /// Obtiene todos los nombres de areas que se encuentran en una tabla de la base de datos
+        /// </summary>
+        /// <returns>Lista con nombres de areas de la tabla de la base de datos</returns>
+        public async Task<List<AreaModel>> GetNombres()
+        {
+            return await Task.Run(() =>
+            {
+                var areaDataModel = areaRepositorio.Read();
+                listaAreas = new List<AreaModel>();
+                foreach (Area item in areaDataModel)
+                {
+                    listaAreas.Add(new AreaModel
+                    {
+                        nombre = item.nombre,
+                    });
+                }
+                return listaAreas;
+            });
+        }
+
+        /// <summary>
         /// Realiza una busqueda en los registros obtenidos de la base de datos.
         /// </summary>
         /// <param name="filtro">Caracteres para realizar busqueda</param>
