@@ -32,7 +32,7 @@ namespace CapaLogica.Models
         }
 
         /// <summary>
-        /// Observa cual es el <see cref="EntityState"/> de AreaModel, luego se encarga de ejecutar los metodos insert, update o delete segun corresponda.
+        /// Observa cual es el <see cref="EntityState"/> de DoctorModel, luego se encarga de ejecutar los metodos insert, update o delete segun corresponda.
         /// </summary>
         /// <returns>Mensaja con respuesta</returns>
         public string ejecutarAccion()
