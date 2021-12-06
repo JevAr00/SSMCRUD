@@ -79,6 +79,7 @@ namespace CapaPresentacion.Forms
             this.CitasElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.txt_descCita = new Bunifu.UI.WinForms.BunifuTextBox();
             this.lbl_descCitas = new System.Windows.Forms.Label();
+            this.TimeElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_citas)).BeginInit();
             this.SuspendLayout();
@@ -528,6 +529,7 @@ namespace CapaPresentacion.Forms
             this.dgv_citas.Name = "dgv_citas";
             this.dgv_citas.ReadOnly = true;
             this.dgv_citas.RowHeadersVisible = false;
+            this.dgv_citas.RowHeadersWidth = 51;
             this.dgv_citas.RowTemplate.Height = 40;
             this.dgv_citas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_citas.Size = new System.Drawing.Size(367, 330);
@@ -565,7 +567,7 @@ namespace CapaPresentacion.Forms
             this.txt_telefonoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_telefonoCliente.Lines = new string[0];
             this.txt_telefonoCliente.Location = new System.Drawing.Point(11, 270);
-            this.txt_telefonoCliente.MaxLength = 20;
+            this.txt_telefonoCliente.MaxLength = 15;
             this.txt_telefonoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_telefonoCliente.Modified = false;
             this.txt_telefonoCliente.Multiline = false;
@@ -590,7 +592,7 @@ namespace CapaPresentacion.Forms
             stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_telefonoCliente.OnIdleState = stateProperties4;
-            this.txt_telefonoCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_telefonoCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_telefonoCliente.PasswordChar = '\0';
             this.txt_telefonoCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_telefonoCliente.PlaceholderText = "";
@@ -642,7 +644,7 @@ namespace CapaPresentacion.Forms
             this.txt_correoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_correoCliente.Lines = new string[0];
             this.txt_correoCliente.Location = new System.Drawing.Point(11, 205);
-            this.txt_correoCliente.MaxLength = 20;
+            this.txt_correoCliente.MaxLength = 160;
             this.txt_correoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_correoCliente.Modified = false;
             this.txt_correoCliente.Multiline = false;
@@ -667,7 +669,7 @@ namespace CapaPresentacion.Forms
             stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_correoCliente.OnIdleState = stateProperties8;
-            this.txt_correoCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_correoCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_correoCliente.PasswordChar = '\0';
             this.txt_correoCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_correoCliente.PlaceholderText = "";
@@ -719,7 +721,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_nombreCliente.Lines = new string[0];
             this.txt_nombreCliente.Location = new System.Drawing.Point(11, 140);
-            this.txt_nombreCliente.MaxLength = 20;
+            this.txt_nombreCliente.MaxLength = 100;
             this.txt_nombreCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_nombreCliente.Modified = false;
             this.txt_nombreCliente.Multiline = false;
@@ -744,7 +746,7 @@ namespace CapaPresentacion.Forms
             stateProperties12.ForeColor = System.Drawing.Color.White;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_nombreCliente.OnIdleState = stateProperties12;
-            this.txt_nombreCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_nombreCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_nombreCliente.PasswordChar = '\0';
             this.txt_nombreCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_nombreCliente.PlaceholderText = "";
@@ -821,7 +823,7 @@ namespace CapaPresentacion.Forms
             stateProperties16.ForeColor = System.Drawing.Color.White;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_identCliente.OnIdleState = stateProperties16;
-            this.txt_identCliente.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_identCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_identCliente.PasswordChar = '\0';
             this.txt_identCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_identCliente.PlaceholderText = "";
@@ -911,6 +913,7 @@ namespace CapaPresentacion.Forms
             this.cmb_Doctor.ForeColor = System.Drawing.Color.White;
             this.cmb_Doctor.FormattingEnabled = true;
             this.cmb_Doctor.Location = new System.Drawing.Point(11, 341);
+            this.cmb_Doctor.MaxLength = 100;
             this.cmb_Doctor.Name = "cmb_Doctor";
             this.cmb_Doctor.Size = new System.Drawing.Size(182, 24);
             this.cmb_Doctor.TabIndex = 61;
@@ -1019,7 +1022,7 @@ namespace CapaPresentacion.Forms
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_descCita.OnIdleState = stateProperties20;
-            this.txt_descCita.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_descCita.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
             this.txt_descCita.PasswordChar = '\0';
             this.txt_descCita.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_descCita.PlaceholderText = "";
@@ -1052,6 +1055,11 @@ namespace CapaPresentacion.Forms
             this.lbl_descCitas.TabIndex = 66;
             this.lbl_descCitas.Text = "Descripción";
             // 
+            // TimeElipse
+            // 
+            this.TimeElipse.ElipseRadius = 7;
+            this.TimeElipse.TargetControl = this.dtp_horaCita;
+            // 
             // FormCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1073,6 +1081,7 @@ namespace CapaPresentacion.Forms
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCitas";
             this.Text = "Citas";
             this.panel1.ResumeLayout(false);
@@ -1105,5 +1114,6 @@ namespace CapaPresentacion.Forms
         private Bunifu.Framework.UI.BunifuElipse CitasElipse;
         private Bunifu.UI.WinForms.BunifuTextBox txt_descCita;
         private System.Windows.Forms.Label lbl_descCitas;
+        private Bunifu.Framework.UI.BunifuElipse TimeElipse;
     }
 }

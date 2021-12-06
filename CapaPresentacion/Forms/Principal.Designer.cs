@@ -43,10 +43,10 @@ namespace CapaPresentacion
             this.btn_closeChild = new System.Windows.Forms.Button();
             this.lbl_titulo = new System.Windows.Forms.Label();
             this.pnlContenedor = new System.Windows.Forms.Panel();
+            this.lbl_fecha = new Bunifu.UI.WinForms.BunifuLabel();
+            this.lbl_hora = new Bunifu.UI.WinForms.BunifuLabel();
             this.PrincipalDragControl = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.PrincipalElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.lbl_hora = new Bunifu.UI.WinForms.BunifuLabel();
-            this.lbl_fecha = new Bunifu.UI.WinForms.BunifuLabel();
             this.timerHora = new System.Windows.Forms.Timer(this.components);
             this.pnlMenu.SuspendLayout();
             this.pnlTitulo.SuspendLayout();
@@ -73,7 +73,7 @@ namespace CapaPresentacion
             this.btn_citas.FlatAppearance.BorderSize = 0;
             this.btn_citas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_citas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_citas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_citas.ForeColor = System.Drawing.Color.White;
             this.btn_citas.Image = global::CapaPresentacion.Properties.Resources.icons8_calendario_48;
             this.btn_citas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_citas.Location = new System.Drawing.Point(0, 404);
@@ -93,7 +93,7 @@ namespace CapaPresentacion
             this.btn_doctores.FlatAppearance.BorderSize = 0;
             this.btn_doctores.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_doctores.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_doctores.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_doctores.ForeColor = System.Drawing.Color.White;
             this.btn_doctores.Image = global::CapaPresentacion.Properties.Resources.icons8_doctor_48;
             this.btn_doctores.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_doctores.Location = new System.Drawing.Point(0, 282);
@@ -113,7 +113,7 @@ namespace CapaPresentacion
             this.btn_areas.FlatAppearance.BorderSize = 0;
             this.btn_areas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_areas.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_areas.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn_areas.ForeColor = System.Drawing.Color.White;
             this.btn_areas.Image = global::CapaPresentacion.Properties.Resources.icons8_caduceo_48;
             this.btn_areas.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btn_areas.Location = new System.Drawing.Point(0, 161);
@@ -300,37 +300,10 @@ namespace CapaPresentacion
             this.pnlContenedor.Size = new System.Drawing.Size(871, 520);
             this.pnlContenedor.TabIndex = 2;
             // 
-            // PrincipalDragControl
-            // 
-            this.PrincipalDragControl.Fixed = true;
-            this.PrincipalDragControl.Horizontal = true;
-            this.PrincipalDragControl.TargetControl = this.pnlTitulo;
-            this.PrincipalDragControl.Vertical = true;
-            // 
-            // PrincipalElipse
-            // 
-            this.PrincipalElipse.ElipseRadius = 6;
-            this.PrincipalElipse.TargetControl = this;
-            // 
-            // lbl_hora
-            // 
-            this.lbl_hora.AllowParentOverrides = false;
-            this.lbl_hora.AutoEllipsis = false;
-            this.lbl_hora.CursorType = System.Windows.Forms.Cursors.Default;
-            this.lbl_hora.Font = new System.Drawing.Font("Montserrat", 17F);
-            this.lbl_hora.ForeColor = System.Drawing.Color.White;
-            this.lbl_hora.Location = new System.Drawing.Point(737, 444);
-            this.lbl_hora.Name = "lbl_hora";
-            this.lbl_hora.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lbl_hora.Size = new System.Drawing.Size(56, 32);
-            this.lbl_hora.TabIndex = 0;
-            this.lbl_hora.Text = "Hora";
-            this.lbl_hora.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
-            this.lbl_hora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
-            // 
             // lbl_fecha
             // 
             this.lbl_fecha.AllowParentOverrides = false;
+            this.lbl_fecha.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.lbl_fecha.AutoEllipsis = false;
             this.lbl_fecha.CursorType = null;
             this.lbl_fecha.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold);
@@ -343,6 +316,36 @@ namespace CapaPresentacion
             this.lbl_fecha.Text = "Fecha";
             this.lbl_fecha.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
             this.lbl_fecha.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // lbl_hora
+            // 
+            this.lbl_hora.AllowParentOverrides = false;
+            this.lbl_hora.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.lbl_hora.AutoEllipsis = false;
+            this.lbl_hora.Cursor = System.Windows.Forms.Cursors.Default;
+            this.lbl_hora.CursorType = System.Windows.Forms.Cursors.Default;
+            this.lbl_hora.Font = new System.Drawing.Font("Montserrat", 17F);
+            this.lbl_hora.ForeColor = System.Drawing.Color.White;
+            this.lbl_hora.Location = new System.Drawing.Point(737, 444);
+            this.lbl_hora.Name = "lbl_hora";
+            this.lbl_hora.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lbl_hora.Size = new System.Drawing.Size(56, 32);
+            this.lbl_hora.TabIndex = 0;
+            this.lbl_hora.Text = "Hora";
+            this.lbl_hora.TextAlignment = System.Drawing.ContentAlignment.TopCenter;
+            this.lbl_hora.TextFormat = Bunifu.UI.WinForms.BunifuLabel.TextFormattingOptions.Default;
+            // 
+            // PrincipalDragControl
+            // 
+            this.PrincipalDragControl.Fixed = true;
+            this.PrincipalDragControl.Horizontal = true;
+            this.PrincipalDragControl.TargetControl = this.pnlTitulo;
+            this.PrincipalDragControl.Vertical = true;
+            // 
+            // PrincipalElipse
+            // 
+            this.PrincipalElipse.ElipseRadius = 6;
+            this.PrincipalElipse.TargetControl = this;
             // 
             // timerHora
             // 

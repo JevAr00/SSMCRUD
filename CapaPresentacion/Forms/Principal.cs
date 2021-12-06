@@ -15,10 +15,12 @@ namespace CapaPresentacion
             InitializeComponent();
         }
 
+
         #region Métodos Adicionales
         /*Hacer llamado de las ventanas*/
-        private void AbrirVentanas(Form childForm, object btnEnviar)
+        private void AbrirVentanas(Form childForm)
         {
+
             if (activeForm != null)
             {
                 activeForm.Dispose();
@@ -33,6 +35,10 @@ namespace CapaPresentacion
             childForm.BringToFront();
             childForm.Show();
             lbl_titulo.Text = childForm.Text;
+
+
+
+
 
         }
 
@@ -50,37 +56,52 @@ namespace CapaPresentacion
         private void btn_areas_Click(object sender, EventArgs e)
         {
 
-            AbrirVentanas(new Forms.FormAreas(), sender);
+            try
+            {
 
-            string color = ThemeColors.Colorlist[0];
-            pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
-            pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
-            btn_closeChild.Enabled = true;
-            btn_closeChild.Visible = true;
-            
+                AbrirVentanas(new Forms.FormAreas());
+
+                string color = ThemeColors.Colorlist[0];
+                pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
+                pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
+                btn_closeChild.Enabled = true;
+                btn_closeChild.Visible = true;
+            }
+            catch
+            {
+
+            }
 
         }
 
         private void btn_doctores_Click(object sender, EventArgs e)
         {
-            AbrirVentanas(new Forms.FormDoctores(), sender);
+            try
+            {
+                AbrirVentanas(new Forms.FormDoctores());
 
-            string color = ThemeColors.Colorlist[1];
-            pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
-            pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
-            btn_closeChild.Enabled = true;
-            btn_closeChild.Visible = true;
+                string color = ThemeColors.Colorlist[1];
+                pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
+                pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
+                btn_closeChild.Enabled = true;
+                btn_closeChild.Visible = true;
+            }
+            catch
+            {
+
+            }
         }
 
         private void btn_citas_Click(object sender, EventArgs e)
         {
-            AbrirVentanas(new Forms.FormCitas(), sender);
+
+            AbrirVentanas(new Forms.FormCitas());
 
             string color = ThemeColors.Colorlist[2];
             pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
             btn_closeChild.Enabled = true;
-            btn_closeChild.Visible = true;
+            btn_closeChild.Enabled = true;
 
         }
 
@@ -97,7 +118,7 @@ namespace CapaPresentacion
 
         private void Reset()
         {
-            btn_closeChild.Enabled = false;
+            btn_closeChild.Visible = false;
             btn_closeChild.Visible = false;
 
             lbl_titulo.Text = "INICIO";
