@@ -6,12 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaLogica.Models;
+using CapaLogica.ValueObjects;
 using System.Windows.Forms;
 
 namespace CapaPresentacion.Forms
 {
     public partial class FormCitas : Form
     {
+        CitaModel cita = new CitaModel();
+
         public FormCitas()
         {
             InitializeComponent();
@@ -36,6 +40,35 @@ namespace CapaPresentacion.Forms
         {
 
         }
+        #endregion
+
+
+        #region Métodos Principales
+
+        private async void Refrescar()
+        {
+            try
+            {
+                await Task.Run(async () =>
+                {
+                    var datos = await cita.GetAll();
+                    dgv_citas.Invoke(new Action(() =>
+                    {
+                        dgv_citas.DataSource = datos;
+                    }));
+                });
+            }
+            catch
+            {
+
+            }
+        }
+
+        private async void FormCitas_Load(object sender, EventArgs e)
+        {
+            Refrescar();
+        }
+
         #endregion
 
 

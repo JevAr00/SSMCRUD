@@ -6,12 +6,16 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using CapaLogica.Models;
+using CapaLogica.ValueObjects;
 using System.Windows.Forms;
 
 namespace CapaPresentacion.Forms
 {
     public partial class FormDoctores : Form
     {
+        DoctorModel doctor = new DoctorModel();
+
         public FormDoctores()
         {
             InitializeComponent();
@@ -36,7 +40,34 @@ namespace CapaPresentacion.Forms
         {
 
         }
+
         #endregion
+
+
+        private async void Refrescar()
+        {
+            try
+            {
+                await Task.Run(async () =>
+                {
+                    var datos = await doctor.GetAll();
+                    dgv_doctores.Invoke(new Action(() =>
+                    {
+                        dgv_doctores.DataSource = datos;
+                    }));
+                });
+            }
+            catch
+            {
+
+            }
+        }
+
+        private void FormDoctores_Load(object sender, EventArgs e)
+        {
+            Refrescar();
+        }
+
 
 
     }

@@ -94,9 +94,9 @@ namespace CapaPresentacion.Forms
             this.panel1.Controls.Add(this.btn_buscarCita);
             this.panel1.Controls.Add(this.btn_registroCita);
             this.panel1.Controls.Add(this.dgv_citas);
-            this.panel1.Location = new System.Drawing.Point(323, 1);
+            this.panel1.Location = new System.Drawing.Point(277, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(479, 540);
+            this.panel1.Size = new System.Drawing.Size(525, 540);
             this.panel1.TabIndex = 26;
             // 
             // btn_eliminarCita
@@ -149,7 +149,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarCita.IdleIconLeftImage = null;
             this.btn_eliminarCita.IdleIconRightImage = null;
             this.btn_eliminarCita.IndicateFocus = false;
-            this.btn_eliminarCita.Location = new System.Drawing.Point(354, 433);
+            this.btn_eliminarCita.Location = new System.Drawing.Point(400, 433);
             this.btn_eliminarCita.Name = "btn_eliminarCita";
             this.btn_eliminarCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_eliminarCita.OnDisabledState.BorderRadius = 39;
@@ -242,7 +242,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarCita.IdleIconLeftImage = null;
             this.btn_modificarCita.IdleIconRightImage = null;
             this.btn_modificarCita.IndicateFocus = false;
-            this.btn_modificarCita.Location = new System.Drawing.Point(257, 433);
+            this.btn_modificarCita.Location = new System.Drawing.Point(303, 433);
             this.btn_modificarCita.Name = "btn_modificarCita";
             this.btn_modificarCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_modificarCita.OnDisabledState.BorderRadius = 39;
@@ -335,7 +335,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarCita.IdleIconLeftImage = null;
             this.btn_buscarCita.IdleIconRightImage = null;
             this.btn_buscarCita.IndicateFocus = false;
-            this.btn_buscarCita.Location = new System.Drawing.Point(160, 433);
+            this.btn_buscarCita.Location = new System.Drawing.Point(206, 433);
             this.btn_buscarCita.Name = "btn_buscarCita";
             this.btn_buscarCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_buscarCita.OnDisabledState.BorderRadius = 39;
@@ -428,7 +428,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroCita.IdleIconLeftImage = null;
             this.btn_registroCita.IdleIconRightImage = null;
             this.btn_registroCita.IndicateFocus = false;
-            this.btn_registroCita.Location = new System.Drawing.Point(63, 433);
+            this.btn_registroCita.Location = new System.Drawing.Point(109, 433);
             this.btn_registroCita.Name = "btn_registroCita";
             this.btn_registroCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_registroCita.OnDisabledState.BorderRadius = 39;
@@ -480,7 +480,7 @@ namespace CapaPresentacion.Forms
             this.dgv_citas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_citas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_citas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv_citas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
             this.dgv_citas.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_citas.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -532,7 +532,7 @@ namespace CapaPresentacion.Forms
             this.dgv_citas.RowHeadersWidth = 51;
             this.dgv_citas.RowTemplate.Height = 40;
             this.dgv_citas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_citas.Size = new System.Drawing.Size(367, 330);
+            this.dgv_citas.Size = new System.Drawing.Size(413, 330);
             this.dgv_citas.TabIndex = 31;
             this.dgv_citas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -592,7 +592,7 @@ namespace CapaPresentacion.Forms
             stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_telefonoCliente.OnIdleState = stateProperties4;
-            this.txt_telefonoCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_telefonoCliente.Padding = new System.Windows.Forms.Padding(3);
             this.txt_telefonoCliente.PasswordChar = '\0';
             this.txt_telefonoCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_telefonoCliente.PlaceholderText = "";
@@ -669,7 +669,7 @@ namespace CapaPresentacion.Forms
             stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_correoCliente.OnIdleState = stateProperties8;
-            this.txt_correoCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_correoCliente.Padding = new System.Windows.Forms.Padding(3);
             this.txt_correoCliente.PasswordChar = '\0';
             this.txt_correoCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_correoCliente.PlaceholderText = "";
@@ -746,7 +746,7 @@ namespace CapaPresentacion.Forms
             stateProperties12.ForeColor = System.Drawing.Color.White;
             stateProperties12.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_nombreCliente.OnIdleState = stateProperties12;
-            this.txt_nombreCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_nombreCliente.Padding = new System.Windows.Forms.Padding(3);
             this.txt_nombreCliente.PasswordChar = '\0';
             this.txt_nombreCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_nombreCliente.PlaceholderText = "";
@@ -823,7 +823,7 @@ namespace CapaPresentacion.Forms
             stateProperties16.ForeColor = System.Drawing.Color.White;
             stateProperties16.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_identCliente.OnIdleState = stateProperties16;
-            this.txt_identCliente.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_identCliente.Padding = new System.Windows.Forms.Padding(3);
             this.txt_identCliente.PasswordChar = '\0';
             this.txt_identCliente.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_identCliente.PlaceholderText = "";
@@ -1022,7 +1022,7 @@ namespace CapaPresentacion.Forms
             stateProperties20.ForeColor = System.Drawing.Color.Empty;
             stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_descCita.OnIdleState = stateProperties20;
-            this.txt_descCita.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_descCita.Padding = new System.Windows.Forms.Padding(3);
             this.txt_descCita.PasswordChar = '\0';
             this.txt_descCita.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_descCita.PlaceholderText = "";
@@ -1084,6 +1084,7 @@ namespace CapaPresentacion.Forms
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormCitas";
             this.Text = "Citas";
+            this.Load += new System.EventHandler(this.FormCitas_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_citas)).EndInit();
             this.ResumeLayout(false);

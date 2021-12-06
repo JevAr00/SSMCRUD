@@ -530,7 +530,7 @@ namespace CapaPresentacion.Forms
             stateProperties4.ForeColor = System.Drawing.Color.White;
             stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_nombreArea.OnIdleState = stateProperties4;
-            this.txt_nombreArea.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_nombreArea.Padding = new System.Windows.Forms.Padding(3);
             this.txt_nombreArea.PasswordChar = '\0';
             this.txt_nombreArea.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_nombreArea.PlaceholderText = "";
@@ -608,7 +608,7 @@ namespace CapaPresentacion.Forms
             stateProperties8.ForeColor = System.Drawing.Color.White;
             stateProperties8.PlaceholderForeColor = System.Drawing.Color.Empty;
             this.txt_edificioArea.OnIdleState = stateProperties8;
-            this.txt_edificioArea.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.txt_edificioArea.Padding = new System.Windows.Forms.Padding(3);
             this.txt_edificioArea.PasswordChar = '\0';
             this.txt_edificioArea.PlaceholderForeColor = System.Drawing.Color.White;
             this.txt_edificioArea.PlaceholderText = "";
