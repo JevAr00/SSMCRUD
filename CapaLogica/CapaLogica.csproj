@@ -42,7 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AreaModel.cs" />
-    <Compile Include="Models\CitasModel.cs" />
+    <Compile Include="Models\CitaModel.cs" />
     <Compile Include="Models\DoctorModel.cs" />
     <Compile Include="Models\PersonaModel.cs" />
     <Compile Include="Models\UserModel.cs" />
