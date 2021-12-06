@@ -16,10 +16,12 @@ namespace CapaDatos.Repositories
         private string update;
         private string delete;
         private string selectAll;
+        private string selectByName;
 
         public DoctorRepository()
         {
             selectAll = "select * from doctores";
+            selectByName = "select nombre from doctores";
             insert = "insert into doctores values(default,@idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo)";
             update = "update doctores set @idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo where idDoctor=@id";
             delete = "delete from doctores where idDoctor=@id";
@@ -81,6 +83,20 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));
             parametros.Add(new MySqlParameter("@activo", Entity.activo));
             return ExecuteNonQuery(update);
+        }
+
+        public IEnumerable<Doctor> GetNames()
+        {
+            DataTable resultadoTabla = ExecuteReader(selectByName);
+            var listaDoctor = new List<Doctor>();
+            foreach (DataRow item in resultadoTabla.Rows)
+            {
+                listaDoctor.Add(new Doctor
+                {
+                    nombre = item[0].ToString(),
+                });
+            }
+            return listaDoctor;
         }
     }
 }

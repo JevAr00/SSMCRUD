@@ -107,6 +107,27 @@ namespace CapaLogica.Models
         }
 
         /// <summary>
+        /// Obtiene todos los nombres de doctores que se encuentran en una tabla de la base de datos
+        /// </summary>
+        /// <returns>Lista con nombres de doctores de la tabla de la base de datos</returns>
+        public async Task<List<DoctorModel>> GetNombres()
+        {
+            return await Task.Run(() =>
+            {
+                var doctorDataModel = doctorRepositorio.Read();
+                listaDoctores = new List<DoctorModel>();
+                foreach (Doctor item in doctorDataModel)
+                {
+                    listaDoctores.Add(new DoctorModel
+                    {
+                        Nombre = item.nombre,
+                    });
+                }
+                return listaDoctores;
+            });
+        }
+
+        /// <summary>
         /// Realiza una busqueda en los registros obtenidos de la base de datos.
         /// </summary>
         /// <param name="filtro">Caracteres para realizar busqueda</param>

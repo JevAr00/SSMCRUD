@@ -14,8 +14,8 @@ namespace CapaLogica.Models
     {
         private int idCita;
         private string descripcion;
-        private string nombreDoctor;
-        private string correoPaciente;
+        private string doctor;
+        private string correo;
         private DateTime fecha;
         private string hora;
 
@@ -25,8 +25,8 @@ namespace CapaLogica.Models
 
         public int IdCita { get => idCita; set => idCita = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
-        public string NombreDoctor { get => nombreDoctor; set => nombreDoctor = value; }
-        public string CorreoPaciente { get => correoPaciente; set => correoPaciente = value; }
+        public string Doctor { get => doctor; set => doctor = value; }
+        public string Correo { get => correo; set => correo = value; }
         public DateTime Fecha { get => fecha; set => fecha = value; }
         public string Hora { get => hora; set => hora = value; }
 
@@ -47,11 +47,11 @@ namespace CapaLogica.Models
                 var citaDataModel = new Cita();
                 citaDataModel.idCita = idCita;
                 citaDataModel.descripcion = descripcion;
-                citaDataModel.nombreDoctor = nombreDoctor;
+                citaDataModel.nombreDoctor = doctor;
                 citaDataModel.cedula = Cedula;
                 citaDataModel.nombre = Nombre;
                 citaDataModel.telefono = Telefono;
-                citaDataModel.correoPaciente = correoPaciente;
+                citaDataModel.correoPaciente = correo;
                 citaDataModel.fecha = fecha;
                 citaDataModel.hora = hora;
 
@@ -97,11 +97,11 @@ namespace CapaLogica.Models
                     {
                         idCita = item.idCita,
                         descripcion = item.descripcion,
-                        nombreDoctor = item.nombreDoctor,
+                        doctor = item.nombreDoctor,
                         Cedula = item.cedula,
                         Nombre = item.nombre,
                         Telefono = item.telefono,
-                        correoPaciente = item.correoPaciente,
+                        correo = item.correoPaciente,
                         fecha = item.fecha,
                         hora = item.hora
                     });
