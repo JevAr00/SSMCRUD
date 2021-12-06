@@ -54,6 +54,10 @@ namespace CapaPresentacion.Forms
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties14 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties15 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties16 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties17 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.panel1 = new System.Windows.Forms.Panel();
             this.btn_eliminarCita = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_modificarCita = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -73,6 +77,8 @@ namespace CapaPresentacion.Forms
             this.dtp_fechaCita = new Bunifu.UI.WinForms.BunifuDatePicker();
             this.dtp_horaCita = new System.Windows.Forms.DateTimePicker();
             this.CitasElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
+            this.txt_descCita = new Bunifu.UI.WinForms.BunifuTextBox();
+            this.lbl_descCitas = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_citas)).BeginInit();
             this.SuspendLayout();
@@ -87,9 +93,9 @@ namespace CapaPresentacion.Forms
             this.panel1.Controls.Add(this.btn_buscarCita);
             this.panel1.Controls.Add(this.btn_registroCita);
             this.panel1.Controls.Add(this.dgv_citas);
-            this.panel1.Location = new System.Drawing.Point(365, 1);
+            this.panel1.Location = new System.Drawing.Point(323, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(437, 494);
+            this.panel1.Size = new System.Drawing.Size(479, 540);
             this.panel1.TabIndex = 26;
             // 
             // btn_eliminarCita
@@ -142,7 +148,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarCita.IdleIconLeftImage = null;
             this.btn_eliminarCita.IdleIconRightImage = null;
             this.btn_eliminarCita.IndicateFocus = false;
-            this.btn_eliminarCita.Location = new System.Drawing.Point(312, 387);
+            this.btn_eliminarCita.Location = new System.Drawing.Point(354, 433);
             this.btn_eliminarCita.Name = "btn_eliminarCita";
             this.btn_eliminarCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_eliminarCita.OnDisabledState.BorderRadius = 39;
@@ -235,7 +241,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarCita.IdleIconLeftImage = null;
             this.btn_modificarCita.IdleIconRightImage = null;
             this.btn_modificarCita.IndicateFocus = false;
-            this.btn_modificarCita.Location = new System.Drawing.Point(215, 387);
+            this.btn_modificarCita.Location = new System.Drawing.Point(257, 433);
             this.btn_modificarCita.Name = "btn_modificarCita";
             this.btn_modificarCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_modificarCita.OnDisabledState.BorderRadius = 39;
@@ -328,7 +334,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarCita.IdleIconLeftImage = null;
             this.btn_buscarCita.IdleIconRightImage = null;
             this.btn_buscarCita.IndicateFocus = false;
-            this.btn_buscarCita.Location = new System.Drawing.Point(118, 387);
+            this.btn_buscarCita.Location = new System.Drawing.Point(160, 433);
             this.btn_buscarCita.Name = "btn_buscarCita";
             this.btn_buscarCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_buscarCita.OnDisabledState.BorderRadius = 39;
@@ -421,7 +427,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroCita.IdleIconLeftImage = null;
             this.btn_registroCita.IdleIconRightImage = null;
             this.btn_registroCita.IndicateFocus = false;
-            this.btn_registroCita.Location = new System.Drawing.Point(21, 387);
+            this.btn_registroCita.Location = new System.Drawing.Point(63, 433);
             this.btn_registroCita.Name = "btn_registroCita";
             this.btn_registroCita.OnDisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(191)))), ((int)(((byte)(191)))));
             this.btn_registroCita.OnDisabledState.BorderRadius = 39;
@@ -524,7 +530,7 @@ namespace CapaPresentacion.Forms
             this.dgv_citas.RowHeadersVisible = false;
             this.dgv_citas.RowTemplate.Height = 40;
             this.dgv_citas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_citas.Size = new System.Drawing.Size(325, 284);
+            this.dgv_citas.Size = new System.Drawing.Size(367, 330);
             this.dgv_citas.TabIndex = 31;
             this.dgv_citas.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -558,7 +564,7 @@ namespace CapaPresentacion.Forms
             this.txt_telefonoCliente.IconRight = null;
             this.txt_telefonoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_telefonoCliente.Lines = new string[0];
-            this.txt_telefonoCliente.Location = new System.Drawing.Point(11, 288);
+            this.txt_telefonoCliente.Location = new System.Drawing.Point(11, 270);
             this.txt_telefonoCliente.MaxLength = 20;
             this.txt_telefonoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_telefonoCliente.Modified = false;
@@ -635,7 +641,7 @@ namespace CapaPresentacion.Forms
             this.txt_correoCliente.IconRight = null;
             this.txt_correoCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_correoCliente.Lines = new string[0];
-            this.txt_correoCliente.Location = new System.Drawing.Point(11, 223);
+            this.txt_correoCliente.Location = new System.Drawing.Point(11, 205);
             this.txt_correoCliente.MaxLength = 20;
             this.txt_correoCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_correoCliente.Modified = false;
@@ -712,7 +718,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreCliente.IconRight = null;
             this.txt_nombreCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_nombreCliente.Lines = new string[0];
-            this.txt_nombreCliente.Location = new System.Drawing.Point(11, 158);
+            this.txt_nombreCliente.Location = new System.Drawing.Point(11, 140);
             this.txt_nombreCliente.MaxLength = 20;
             this.txt_nombreCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_nombreCliente.Modified = false;
@@ -789,7 +795,7 @@ namespace CapaPresentacion.Forms
             this.txt_identCliente.IconRight = null;
             this.txt_identCliente.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
             this.txt_identCliente.Lines = new string[0];
-            this.txt_identCliente.Location = new System.Drawing.Point(11, 90);
+            this.txt_identCliente.Location = new System.Drawing.Point(11, 72);
             this.txt_identCliente.MaxLength = 20;
             this.txt_identCliente.MinimumSize = new System.Drawing.Size(1, 1);
             this.txt_identCliente.Modified = false;
@@ -842,7 +848,7 @@ namespace CapaPresentacion.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label4.Location = new System.Drawing.Point(11, 262);
+            this.label4.Location = new System.Drawing.Point(11, 244);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(68, 20);
             this.label4.TabIndex = 55;
@@ -854,7 +860,7 @@ namespace CapaPresentacion.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label3.Location = new System.Drawing.Point(11, 196);
+            this.label3.Location = new System.Drawing.Point(11, 178);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(57, 20);
             this.label3.TabIndex = 54;
@@ -866,7 +872,7 @@ namespace CapaPresentacion.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label2.Location = new System.Drawing.Point(11, 64);
+            this.label2.Location = new System.Drawing.Point(11, 46);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 20);
             this.label2.TabIndex = 53;
@@ -878,7 +884,7 @@ namespace CapaPresentacion.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label1.Location = new System.Drawing.Point(11, 130);
+            this.label1.Location = new System.Drawing.Point(11, 112);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(67, 20);
             this.label1.TabIndex = 52;
@@ -890,7 +896,7 @@ namespace CapaPresentacion.Forms
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
-            this.label5.Location = new System.Drawing.Point(11, 327);
+            this.label5.Location = new System.Drawing.Point(11, 309);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(59, 20);
             this.label5.TabIndex = 60;
@@ -904,7 +910,7 @@ namespace CapaPresentacion.Forms
             this.cmb_Doctor.Font = new System.Drawing.Font("Montserrat", 9F);
             this.cmb_Doctor.ForeColor = System.Drawing.Color.White;
             this.cmb_Doctor.FormattingEnabled = true;
-            this.cmb_Doctor.Location = new System.Drawing.Point(11, 359);
+            this.cmb_Doctor.Location = new System.Drawing.Point(11, 341);
             this.cmb_Doctor.Name = "cmb_Doctor";
             this.cmb_Doctor.Size = new System.Drawing.Size(182, 24);
             this.cmb_Doctor.TabIndex = 61;
@@ -933,7 +939,7 @@ namespace CapaPresentacion.Forms
             this.dtp_fechaCita.IconColor = System.Drawing.Color.White;
             this.dtp_fechaCita.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
             this.dtp_fechaCita.LeftTextMargin = 5;
-            this.dtp_fechaCita.Location = new System.Drawing.Point(11, 414);
+            this.dtp_fechaCita.Location = new System.Drawing.Point(11, 494);
             this.dtp_fechaCita.MinimumSize = new System.Drawing.Size(4, 32);
             this.dtp_fechaCita.Name = "dtp_fechaCita";
             this.dtp_fechaCita.Size = new System.Drawing.Size(118, 32);
@@ -946,7 +952,7 @@ namespace CapaPresentacion.Forms
             this.dtp_horaCita.CalendarFont = new System.Drawing.Font("Montserrat", 9F);
             this.dtp_horaCita.CustomFormat = "hh:mm tt";
             this.dtp_horaCita.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtp_horaCita.Location = new System.Drawing.Point(149, 421);
+            this.dtp_horaCita.Location = new System.Drawing.Point(149, 501);
             this.dtp_horaCita.Name = "dtp_horaCita";
             this.dtp_horaCita.ShowUpDown = true;
             this.dtp_horaCita.Size = new System.Drawing.Size(93, 20);
@@ -958,12 +964,102 @@ namespace CapaPresentacion.Forms
             this.CitasElipse.ElipseRadius = 7;
             this.CitasElipse.TargetControl = this.dgv_citas;
             // 
+            // txt_descCita
+            // 
+            this.txt_descCita.AcceptsReturn = false;
+            this.txt_descCita.AcceptsTab = false;
+            this.txt_descCita.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txt_descCita.AnimationSpeed = 200;
+            this.txt_descCita.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_descCita.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_descCita.AutoSizeHeight = true;
+            this.txt_descCita.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            this.txt_descCita.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_descCita.BackgroundImage")));
+            this.txt_descCita.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_descCita.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_descCita.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_descCita.BorderColorIdle = System.Drawing.Color.White;
+            this.txt_descCita.BorderRadius = 7;
+            this.txt_descCita.BorderThickness = 1;
+            this.txt_descCita.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_descCita.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_descCita.DefaultFont = new System.Drawing.Font("Segoe UI", 9.25F);
+            this.txt_descCita.DefaultText = "";
+            this.txt_descCita.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            this.txt_descCita.HideSelection = true;
+            this.txt_descCita.IconLeft = null;
+            this.txt_descCita.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_descCita.IconPadding = 10;
+            this.txt_descCita.IconRight = null;
+            this.txt_descCita.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_descCita.Lines = new string[0];
+            this.txt_descCita.Location = new System.Drawing.Point(11, 413);
+            this.txt_descCita.MaxLength = 200;
+            this.txt_descCita.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_descCita.Modified = false;
+            this.txt_descCita.Multiline = true;
+            this.txt_descCita.Name = "txt_descCita";
+            stateProperties17.BorderColor = System.Drawing.Color.White;
+            stateProperties17.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            stateProperties17.ForeColor = System.Drawing.Color.White;
+            stateProperties17.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_descCita.OnActiveState = stateProperties17;
+            stateProperties18.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            stateProperties18.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            stateProperties18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties18.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_descCita.OnDisabledState = stateProperties18;
+            stateProperties19.BorderColor = System.Drawing.Color.White;
+            stateProperties19.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            stateProperties19.ForeColor = System.Drawing.Color.Empty;
+            stateProperties19.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_descCita.OnHoverState = stateProperties19;
+            stateProperties20.BorderColor = System.Drawing.Color.White;
+            stateProperties20.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            stateProperties20.ForeColor = System.Drawing.Color.Empty;
+            stateProperties20.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_descCita.OnIdleState = stateProperties20;
+            this.txt_descCita.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_descCita.PasswordChar = '\0';
+            this.txt_descCita.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txt_descCita.PlaceholderText = "";
+            this.txt_descCita.ReadOnly = false;
+            this.txt_descCita.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_descCita.SelectedText = "";
+            this.txt_descCita.SelectionLength = 0;
+            this.txt_descCita.SelectionStart = 0;
+            this.txt_descCita.ShortcutsEnabled = true;
+            this.txt_descCita.Size = new System.Drawing.Size(260, 60);
+            this.txt_descCita.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Bunifu;
+            this.txt_descCita.TabIndex = 65;
+            this.txt_descCita.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_descCita.TextMarginBottom = 0;
+            this.txt_descCita.TextMarginLeft = 3;
+            this.txt_descCita.TextMarginTop = 1;
+            this.txt_descCita.TextPlaceholder = "";
+            this.txt_descCita.UseSystemPasswordChar = false;
+            this.txt_descCita.WordWrap = true;
+            // 
+            // lbl_descCitas
+            // 
+            this.lbl_descCitas.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_descCitas.AutoSize = true;
+            this.lbl_descCitas.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_descCitas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
+            this.lbl_descCitas.Location = new System.Drawing.Point(11, 381);
+            this.lbl_descCitas.Name = "lbl_descCitas";
+            this.lbl_descCitas.Size = new System.Drawing.Size(93, 20);
+            this.lbl_descCitas.TabIndex = 66;
+            this.lbl_descCitas.Text = "Descripción";
+            // 
             // FormCitas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            this.ClientSize = new System.Drawing.Size(800, 495);
+            this.ClientSize = new System.Drawing.Size(800, 541);
+            this.Controls.Add(this.lbl_descCitas);
+            this.Controls.Add(this.txt_descCita);
             this.Controls.Add(this.dtp_horaCita);
             this.Controls.Add(this.dtp_fechaCita);
             this.Controls.Add(this.cmb_Doctor);
@@ -1007,5 +1103,7 @@ namespace CapaPresentacion.Forms
         private Bunifu.UI.WinForms.BunifuDatePicker dtp_fechaCita;
         private System.Windows.Forms.DateTimePicker dtp_horaCita;
         private Bunifu.Framework.UI.BunifuElipse CitasElipse;
+        private Bunifu.UI.WinForms.BunifuTextBox txt_descCita;
+        private System.Windows.Forms.Label lbl_descCitas;
     }
 }

@@ -229,4 +229,20 @@
   <metadata name="CitasElipse.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>
+  <data name="txt_descCita.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAQQAAAA8CAYAAACAVsR+AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGuSURBVHhe7dc/axNxAMbxGx0dfQm+JN+Es4MOji4OBR2q
+        uIgIFv+AuBSKbV0cimRQKIJ00UkHaZu7Sy4h50WPRwL3Ci6fBz4khN+N9yW/wsxscKvV6kZZzSatmY1+
+        63e9aZZ3uq9X+gT837Scvf/y7cf57t5he+v+C2Dk1u/6h5PT+rKsv25Eoa6bmyefzy6GHgLG7c3Bp6b7
+        Q/Csz0FRlNX8bOfp/uBhYNzuPnjdNotl1eegKNb3iaGDwHZYr8+BIMC2EwQgBAEIQQBCEIAQBCAEAQhB
+        AEIQgBAEIAQBCEEAQhCAEAQgBAEIQQBCEIAQBCAEAQhBAEIQgBAEIAQBCEEAQhCAEAQgBAEIQQBCEIAQ
+        BCAEAQhBAEIQgBAEIAQBCEEAQhCAEAQgBAEIQQBCEIAQBCAEAQhBAEIQgBAEIAQBCEEAQhCA2AjCbN78
+        uvf43eBBYNxu77xsl8vlos9BUZTV7NHbo8li6DAwbrt7h23XgEmfg79XhqsX0/r7k1fHgw8A4/Tw+UH7
+        +7z82TXgep+Df+t+uHZZ1R/Xdwkz245Nq/lp97EZAzOzoiiKP/xnVxALk6CbAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>70</value>
+  </metadata>
 </root>
