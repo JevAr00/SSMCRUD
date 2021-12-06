@@ -13,6 +13,9 @@ namespace CapaDatos.Contracts
     /// <remarks>Implementa <see cref="IGenericRepository{Entity}"/></remarks>
     public interface IAreaRepository:IGenericRepository<Area>
     {
-        //metodos a implementar (especificos)
+        /// <summary>
+        /// Obtiene los nombres de las areas registradas
+        /// </summary>
+        IEnumerable<Area> GetNames();
     }
 }
