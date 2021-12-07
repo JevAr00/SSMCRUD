@@ -15,6 +15,8 @@ namespace CapaPresentacion.Forms
     public partial class FormCitas : Form
     {
         CitaModel cita = new CitaModel();
+        DoctorModel doctor = new DoctorModel();
+        List<DoctorModel> listaDoctor = new List<DoctorModel>();
 
         public FormCitas()
         {
@@ -67,10 +69,40 @@ namespace CapaPresentacion.Forms
         private async void FormCitas_Load(object sender, EventArgs e)
         {
             Refrescar();
+            comboDoctor();
         }
 
         #endregion
 
+
+        #region Métodos Adicionales
+
+        private async void comboDoctor()
+
+        {
+            try
+            {
+                await Task.Run(async () =>
+                {
+                    listaDoctor = await doctor.GetNombres();
+
+                    cmb_Doctor.Invoke(new Action(() =>
+                    {
+
+                        for (int i = 0; i < listaDoctor.Count; i++)
+                        {
+                            cmb_Doctor.Items.Add(listaDoctor[i].Nombre);
+                        }
+
+                    }));
+
+                });
+
+            }
+            catch { }
+
+        }
+        #endregion
 
     }
 }
