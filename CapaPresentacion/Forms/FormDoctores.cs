@@ -16,6 +16,10 @@ namespace CapaPresentacion.Forms
     {
         DoctorModel doctor = new DoctorModel();
 
+        AreaModel area = new AreaModel();
+
+        List<AreaModel> listaArea = new List<AreaModel>();
+
         public FormDoctores()
         {
             InitializeComponent();
@@ -66,8 +70,39 @@ namespace CapaPresentacion.Forms
         private void FormDoctores_Load(object sender, EventArgs e)
         {
             Refrescar();
+            comboArea();
         }
 
+
+        #region Método ComboBox
+
+        private async void comboArea()
+        {
+            try
+            {
+                await Task.Run(async () =>
+                {
+                    //var datAreas = await area.GetNombres();
+                    listaArea = await area.GetNombres();
+                    
+                    cmb_areaDoctor.Invoke(new Action(() =>
+                    {
+
+                        for (int i = 0; i < listaArea.Count; i++)
+                        {
+                            cmb_areaDoctor.Items.Add(listaArea[i].Nombre);
+                        }
+
+                    }));
+
+                });
+
+            }
+            catch { }
+
+        }
+
+        #endregion
 
 
     }

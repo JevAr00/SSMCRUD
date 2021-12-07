@@ -153,12 +153,6 @@ namespace CapaPresentacion.Forms
             this.cmb_areaDoctor.Font = new System.Drawing.Font("Montserrat", 9F);
             this.cmb_areaDoctor.ForeColor = System.Drawing.Color.White;
             this.cmb_areaDoctor.FormattingEnabled = true;
-            this.cmb_areaDoctor.Items.AddRange(new object[] {
-            "1",
-            "2",
-            "3",
-            "4",
-            "5"});
             this.cmb_areaDoctor.Location = new System.Drawing.Point(17, 357);
             this.cmb_areaDoctor.Name = "cmb_areaDoctor";
             this.cmb_areaDoctor.Size = new System.Drawing.Size(121, 24);
