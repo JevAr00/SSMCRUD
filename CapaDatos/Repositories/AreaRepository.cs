@@ -21,7 +21,7 @@ namespace CapaDatos.Repositories
         public AreaRepository()
         {
             selectAll = "select * from areas";
-            selectByName = "select idArea, nombre from areas";
+            selectByName = "select id_area, nombre from areas";
             insert = "insert into areas values(default,@nombre,@edificio,@habilitada)";
             update = "update areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where idArea=@id";
             delete = "delete from areas where idArea=@id";
@@ -80,7 +80,7 @@ namespace CapaDatos.Repositories
             {
                 listaAreas.Add(new Area
                 {
-                    idArea = Convert.ToInt32(item[0].ToString()),
+                    idArea = Convert.ToInt32(item[0]),
                     nombre = item[1].ToString(),
                 });
             }

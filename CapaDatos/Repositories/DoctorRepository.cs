@@ -21,7 +21,7 @@ namespace CapaDatos.Repositories
         public DoctorRepository()
         {
             selectAll = "select * from doctores";
-            selectByName = "select nombre from doctores";
+            selectByName = "select id_doctor, nombre from doctores";
             insert = "insert into doctores values(default,@idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo)";
             update = "update doctores set @idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo where idDoctor=@id";
             delete = "delete from doctores where idDoctor=@id";
