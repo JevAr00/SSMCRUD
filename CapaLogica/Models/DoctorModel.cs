@@ -114,7 +114,7 @@ namespace CapaLogica.Models
         {
             return await Task.Run(() =>
             {
-                var doctorDataModel = doctorRepositorio.Read();
+                var doctorDataModel = doctorRepositorio.GetNames();
                 listaDoctores = new List<DoctorModel>();
                 foreach (Doctor item in doctorDataModel)
                 {
@@ -125,6 +125,25 @@ namespace CapaLogica.Models
                 }
                 return listaDoctores;
             });
+        }
+
+        /// <summary>
+        /// Compara el nombre recibido con la lista recibida de <see cref="GetNombres"/> para obtener su id
+        /// </summary>
+        /// <param name="lista">Lista que contiene todos los ID y nombre desde <see cref="GetNombres"/> </param>
+        /// <param name="nombre">Nombre que recibe para compararse</param>
+        /// <returns>ID de nombre que coincide</returns>
+        public int GetID(List<DoctorModel> lista, string nombre)
+        {
+            int id = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (nombre == lista[i].Nombre)
+                {
+                    id = lista[i].idArea;
+                }
+            }
+            return id;
         }
 
         /// <summary>
