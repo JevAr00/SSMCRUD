@@ -693,7 +693,7 @@ namespace CapaPresentacion.Forms
             this.dgv_doctores.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv_doctores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_doctores.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.ColumnHeader;
             this.dgv_doctores.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
             this.dgv_doctores.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dgv_doctores.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
@@ -738,12 +738,12 @@ namespace CapaPresentacion.Forms
             this.dgv_doctores.HeaderBackColor = System.Drawing.Color.DodgerBlue;
             this.dgv_doctores.HeaderBgColor = System.Drawing.Color.Empty;
             this.dgv_doctores.HeaderForeColor = System.Drawing.Color.White;
-            this.dgv_doctores.Location = new System.Drawing.Point(58, 67);
+            this.dgv_doctores.Location = new System.Drawing.Point(28, 67);
             this.dgv_doctores.Name = "dgv_doctores";
             this.dgv_doctores.RowHeadersVisible = false;
             this.dgv_doctores.RowTemplate.Height = 40;
             this.dgv_doctores.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_doctores.Size = new System.Drawing.Size(366, 271);
+            this.dgv_doctores.Size = new System.Drawing.Size(416, 271);
             this.dgv_doctores.TabIndex = 31;
             this.dgv_doctores.Theme = Bunifu.UI.WinForms.BunifuDataGridView.PresetThemes.Light;
             // 
@@ -1089,6 +1089,7 @@ namespace CapaPresentacion.Forms
             this.Controls.Add(this.label1);
             this.Name = "FormDoctores";
             this.Text = "Doctores";
+            this.Load += new System.EventHandler(this.FormDoctores_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_doctores)).EndInit();
             this.ResumeLayout(false);

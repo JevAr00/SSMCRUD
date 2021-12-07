@@ -101,7 +101,7 @@ namespace CapaPresentacion
             pnlTitulo.BackColor = ColorTranslator.FromHtml(color);
             pnlLogo.BackColor = ThemeColors.ChangeColorBrightness(ColorTranslator.FromHtml(color), -0.3);
             btn_closeChild.Enabled = true;
-            btn_closeChild.Enabled = true;
+            btn_closeChild.Visible = true;
 
         }
 
@@ -118,7 +118,6 @@ namespace CapaPresentacion
 
         private void Reset()
         {
-            btn_closeChild.Visible = false;
             btn_closeChild.Visible = false;
 
             lbl_titulo.Text = "INICIO";
