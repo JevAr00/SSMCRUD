@@ -80,7 +80,8 @@ namespace CapaDatos.Repositories
             {
                 listaAreas.Add(new Area
                 {
-                    nombre = item[0].ToString(),
+                    idArea = Convert.ToInt32(item[0].ToString()),
+                    nombre = item[1].ToString(),
                 });
             }
             return listaAreas;

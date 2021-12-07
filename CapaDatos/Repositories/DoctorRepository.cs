@@ -93,7 +93,8 @@ namespace CapaDatos.Repositories
             {
                 listaDoctor.Add(new Doctor
                 {
-                    nombre = item[0].ToString(),
+                    idDoctor = Convert.ToInt32(item[0].ToString()),
+                    nombre = item[1].ToString(),
                 });
             }
             return listaDoctor;
