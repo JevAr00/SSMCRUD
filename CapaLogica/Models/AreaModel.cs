@@ -108,6 +108,7 @@ namespace CapaLogica.Models
                 {
                     listaAreas.Add(new AreaModel
                     {
+                        idArea = item.idArea,
                         nombre = item.nombre,
                     });
                 }
