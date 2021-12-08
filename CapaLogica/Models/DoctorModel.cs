@@ -13,8 +13,8 @@ namespace CapaLogica.Models
         private int idDoctor;
         private int idArea;
         private string diasLaborales;
-        private char disponibilidad;
-        private char activo;
+        private string disponibilidad;
+        private string activo;
 
         private List<DoctorModel> listaDoctores;
         private IDoctorRepository doctorRepositorio;
@@ -23,8 +23,8 @@ namespace CapaLogica.Models
         public int IdDoctor { get => idDoctor; set => idDoctor = value; }
         public int IdArea { get => idArea; set => idArea = value; }
         public string DiasLaborales { get => diasLaborales; set => diasLaborales = value; }
-        public char Disponibilidad { get => disponibilidad; set => disponibilidad = value; }
-        public char Activo { get => activo; set => activo = value; }
+        public string Disponibilidad { get => disponibilidad; set => disponibilidad = value; }
+        public string Activo { get => activo; set => activo = value; }
 
         public DoctorModel()
         {
@@ -48,8 +48,8 @@ namespace CapaLogica.Models
                 doctorDataModel.apellidos = Apellidos;
                 doctorDataModel.telefono = Telefono;
                 doctorDataModel.diasLaborales = diasLaborales;
-                doctorDataModel.disponibilidad = disponibilidad;
-                doctorDataModel.activo = activo;
+                doctorDataModel.disponibilidad = char.Parse(disponibilidad);
+                doctorDataModel.activo = char.Parse(activo);
 
                 switch (estadoEntidad)
                 {
