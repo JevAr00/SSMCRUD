@@ -98,8 +98,8 @@ namespace CapaLogica.Models
                         Apellidos = item.apellidos,
                         Telefono = item.telefono,
                         diasLaborales = item.diasLaborales,
-                        disponibilidad = item.disponibilidad,
-                        activo = item.activo
+                        disponibilidad = item.disponibilidad.ToString(),
+                        activo = item.activo.ToString()
                     });
                 }
                 return listaDoctores;
