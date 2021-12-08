@@ -21,6 +21,7 @@ namespace CapaPresentacion.Forms
         public FormCitas()
         {
             InitializeComponent();
+            DataGridSize();
         }
 
         #region Botones de Funciones
@@ -102,7 +103,20 @@ namespace CapaPresentacion.Forms
             catch { }
 
         }
+
+        private void DataGridSize()
+        {
+            if (WindowState == FormWindowState.Normal)
+            {
+                dgv_citas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.ColumnHeader;
+            }
+            else
+            {
+                dgv_citas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            }
+        }
         #endregion
+
 
     }
 }
