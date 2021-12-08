@@ -78,7 +78,7 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@cedula", Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
-            parametros.Add(new MySqlParameter("@telefonp", Entity.telefono));
+            parametros.Add(new MySqlParameter("@telefono", Entity.telefono));
             parametros.Add(new MySqlParameter("@diasLaborales", Entity.diasLaborales));
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));
             parametros.Add(new MySqlParameter("@activo", Entity.activo));
