@@ -120,6 +120,7 @@ namespace CapaLogica.Models
                 {
                     listaDoctores.Add(new DoctorModel
                     {
+                        idDoctor = item.idDoctor,
                         Nombre = item.nombre,
                     });
                 }
