@@ -33,7 +33,7 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@cedula",Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
-            parametros.Add(new MySqlParameter("@telefonp", Entity.telefono));
+            parametros.Add(new MySqlParameter("@telefono", Entity.telefono));
             parametros.Add(new MySqlParameter("@diasLaborales", Entity.diasLaborales));
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));
             parametros.Add(new MySqlParameter("@activo", Entity.activo));
@@ -60,7 +60,7 @@ namespace CapaDatos.Repositories
                     cedula = item[2].ToString(),
                     nombre = item[3].ToString(),
                     apellidos = item[4].ToString(),
-                    telefono = Convert.ToInt32(item[5]),
+                    telefono = item[5].ToString(),
                     diasLaborales = item[6].ToString(),
                     disponibilidad = Convert.ToChar(item[7]),
                     activo = Convert.ToChar(item[8])
