@@ -148,6 +148,25 @@ namespace CapaLogica.Models
         }
 
         /// <summary>
+        /// Compara el ID recibido con la lista recibida de <see cref="GetNombres"/> para obtener su nombre
+        /// </summary>
+        /// <param name="lista">Lista que contiene todos los ID y nombre desde <see cref="GetNombres"/> </param>
+        /// <param name="ID">ID que recibe para compararse</param>
+        /// <returns>Nombre de ID que coincide</returns>
+        public string GetNameByID(List<DoctorModel> lista, int ID)
+        {
+            string nombre = "";
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (ID == lista[i].idDoctor)
+                {
+                    nombre = lista[i].Nombre;
+                }
+            }
+            return nombre;
+        }
+
+        /// <summary>
         /// Realiza una busqueda en los registros obtenidos de la base de datos.
         /// </summary>
         /// <param name="filtro">Caracteres para realizar busqueda</param>
