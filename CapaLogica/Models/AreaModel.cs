@@ -143,7 +143,7 @@ namespace CapaLogica.Models
         /// <returns>Nombre de ID que coincide</returns>
         public string GetNameByID(List<AreaModel> lista, int ID)
         {
-            string nombre = "" ;
+            string nombre = "";
             for (int i = 0; i < lista.Count; i++)
             {
                 if (ID == lista[i].idArea)
