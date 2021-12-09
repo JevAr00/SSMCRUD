@@ -24,6 +24,7 @@ namespace CapaPresentacion.Forms
 
 
         #region Botones de Funciones
+
         private void btn_registroArea_Click(object sender, EventArgs e)
         {
             area.estadoEntidad = EntityState.Added;
@@ -54,17 +55,27 @@ namespace CapaPresentacion.Forms
 
         private void btn_buscarArea_Click(object sender, EventArgs e)
         {
-
+            if (txt_searchA.Visible == false)
+            {
+                txt_searchA.Visible = true;
+                txt_searchA.Clear();
+            }
+            else
+            {
+                txt_searchA.Visible = false;
+                txt_searchA.Clear();
+            }
         }
 
         #endregion
 
-        private async void FormAreas_Load(object sender, EventArgs e)
+
+        #region Métodos Adicionales
+        private void FormAreas_Load(object sender, EventArgs e)
         {
             Refrescar();
         }
 
-        #region Métodos Adicionales
         private void dgv_areas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -104,10 +115,11 @@ namespace CapaPresentacion.Forms
             }
         }
 
-        private void txt_nombreArea_TextChanged(object sender, EventArgs e)
+        private void txt_searchA_TextChanged(object sender, EventArgs e)
         {
-            dgv_areas.DataSource = area.Buscar(txt_nombreArea.Text);
+            dgv_areas.DataSource = area.Buscar(txt_searchA.Text);
         }
+
 
         #endregion
 

@@ -31,18 +31,9 @@ namespace CapaPresentacion.Forms
             if ((ckb_lunes.Checked || ckb_martes.Checked || ckb_miercoles.Checked || ckb_jueves.Checked || ckb_viernes.Checked) == true)
             {
 
-                doctor.estadoEntidad = EntityState.Added;
-                doctor.Cedula = txt_identificacionD.Text;
-                doctor.Nombre = txt_nombreD.Text;
-                doctor.Apellidos = txt_apellidoD.Text;
-                doctor.Telefono = txt_telefonoD.Text;
-                doctor.Disponibilidad = cmb_dispDoctor.Text;
-                doctor.Activo = cmb_estadoDoctor.Text;
-                doctor.DiasLaborales = DiaLaboral();
-                doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
+                Registrar();
 
                 string mensaje = doctor.ejecutarAccion();
-
                 MessageBox.Show(mensaje);
 
                 Limpiar();
@@ -68,7 +59,16 @@ namespace CapaPresentacion.Forms
         }
         private void btn_buscarDoctor_Click(object sender, EventArgs e)
         {
-
+            if (txt_searchD.Visible == false)
+            {
+                txt_searchD.Visible = true;
+                txt_searchD.Clear();
+            }
+            else
+            {
+                txt_searchD.Visible = false;
+                txt_searchD.Clear();
+            }
         }
 
         #endregion
@@ -97,8 +97,8 @@ namespace CapaPresentacion.Forms
 
         private void FormDoctores_Load(object sender, EventArgs e)
         {
-            Refrescar();
             comboArea();
+            Refrescar();
         }
 
         private async void comboArea()
@@ -126,7 +126,6 @@ namespace CapaPresentacion.Forms
             catch { }
 
         }
-
 
         private string DiaLaboral()
         {
@@ -162,7 +161,6 @@ namespace CapaPresentacion.Forms
             ckb_viernes.Checked = false;
         }
 
-
         private void dgv_doctores_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -180,7 +178,7 @@ namespace CapaPresentacion.Forms
         {
 
             int ID = Convert.ToInt32(this.dgv_doctores.SelectedRows[0].Cells[0].Value);
-            string area = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[1].Value);
+            string IDarea = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[1].Value);
             string dias = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[2].Value);
             string disponibilidad = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[3].Value);
             string estado = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[4].Value);
@@ -193,7 +191,7 @@ namespace CapaPresentacion.Forms
             txt_nombreD.Text = nombre;
             txt_apellidoD.Text = apellido;
             txt_telefonoD.Text = telefono;
-            cmb_areaDoctor.Text = area;
+            cmb_areaDoctor.Text = area.GetNameByID(listaArea, Int32.Parse(IDarea));
             cmb_dispDoctor.Text = disponibilidad;
             cmb_estadoDoctor.Text = estado;
 
@@ -214,9 +212,32 @@ namespace CapaPresentacion.Forms
                 if (i == "V")
                     ckb_viernes.Checked = true;
             }
+
+
+        }
+
+        private void Registrar()
+        {
+
+            doctor.estadoEntidad = EntityState.Added;
+            doctor.Cedula = txt_identificacionD.Text;
+            doctor.Nombre = txt_nombreD.Text;
+            doctor.Apellidos = txt_apellidoD.Text;
+            doctor.Telefono = txt_telefonoD.Text;
+            doctor.Disponibilidad = cmb_dispDoctor.Text;
+            doctor.Activo = cmb_estadoDoctor.Text;
+            doctor.DiasLaborales = DiaLaboral();
+            doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
+
+        }
+
+        private void txt_searchD_TextChanged(object sender, EventArgs e)
+        {
+            dgv_doctores.DataSource = doctor.Buscar(txt_searchD.Text);
         }
 
         #endregion
+
 
 
     }
