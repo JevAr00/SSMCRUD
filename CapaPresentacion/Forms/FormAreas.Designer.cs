@@ -201,7 +201,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarArea.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.btn_buscarArea.IconMarginLeft = 11;
             this.btn_buscarArea.IconPadding = 10;
-            this.btn_buscarArea.IconRight = ((System.Drawing.Image)(resources.GetObject("btn_buscarArea.IconRight")));
+            this.btn_buscarArea.IconRight = global::CapaPresentacion.Properties.Resources.Search_Icon;
             this.btn_buscarArea.IconRightAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_buscarArea.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btn_buscarArea.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
@@ -211,7 +211,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarArea.IdleBorderThickness = 0;
             this.btn_buscarArea.IdleFillColor = System.Drawing.Color.Empty;
             this.btn_buscarArea.IdleIconLeftImage = null;
-            this.btn_buscarArea.IdleIconRightImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarArea.IdleIconRightImage")));
+            this.btn_buscarArea.IdleIconRightImage = global::CapaPresentacion.Properties.Resources.Search_Icon;
             this.btn_buscarArea.IndicateFocus = false;
             this.btn_buscarArea.Location = new System.Drawing.Point(348, 41);
             this.btn_buscarArea.Name = "btn_buscarArea";
@@ -238,7 +238,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarArea.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_buscarArea.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btn_buscarArea.OnIdleState.IconLeftImage = null;
-            this.btn_buscarArea.OnIdleState.IconRightImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarArea.OnIdleState.IconRightImage")));
+            this.btn_buscarArea.OnIdleState.IconRightImage = global::CapaPresentacion.Properties.Resources.Search_Icon;
             this.btn_buscarArea.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_buscarArea.OnPressedState.BorderRadius = 34;
             this.btn_buscarArea.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;

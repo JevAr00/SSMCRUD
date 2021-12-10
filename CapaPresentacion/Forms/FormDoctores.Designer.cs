@@ -30,6 +30,11 @@ namespace CapaPresentacion.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoctores));
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
+            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges1 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges2 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
             Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges borderEdges3 = new Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderEdges();
@@ -53,11 +58,6 @@ namespace CapaPresentacion.Forms
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties18 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties19 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties20 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDoctores));
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties1 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties2 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties3 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
-            Bunifu.UI.WinForms.BunifuTextBox.StateProperties stateProperties4 = new Bunifu.UI.WinForms.BunifuTextBox.StateProperties();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -75,6 +75,7 @@ namespace CapaPresentacion.Forms
             this.cmb_estadoDoctor = new System.Windows.Forms.ComboBox();
             this.label8 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_searchD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.btn_eliminarDoctor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_modificarDoctor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
             this.btn_buscarDoctor = new Bunifu.UI.WinForms.BunifuButton.BunifuButton();
@@ -85,7 +86,6 @@ namespace CapaPresentacion.Forms
             this.txt_apellidoD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.txt_telefonoD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.DoctoresElipse = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txt_searchD = new Bunifu.UI.WinForms.BunifuTextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_doctores)).BeginInit();
             this.SuspendLayout();
@@ -312,6 +312,85 @@ namespace CapaPresentacion.Forms
             this.panel1.Size = new System.Drawing.Size(478, 481);
             this.panel1.TabIndex = 25;
             // 
+            // txt_searchD
+            // 
+            this.txt_searchD.AcceptsReturn = false;
+            this.txt_searchD.AcceptsTab = false;
+            this.txt_searchD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txt_searchD.AnimationSpeed = 200;
+            this.txt_searchD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
+            this.txt_searchD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
+            this.txt_searchD.AutoSizeHeight = true;
+            this.txt_searchD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            this.txt_searchD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_searchD.BackgroundImage")));
+            this.txt_searchD.BorderColorActive = System.Drawing.Color.DodgerBlue;
+            this.txt_searchD.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
+            this.txt_searchD.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
+            this.txt_searchD.BorderColorIdle = System.Drawing.Color.White;
+            this.txt_searchD.BorderRadius = 1;
+            this.txt_searchD.BorderThickness = 2;
+            this.txt_searchD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
+            this.txt_searchD.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_searchD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
+            this.txt_searchD.DefaultText = "";
+            this.txt_searchD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            this.txt_searchD.ForeColor = System.Drawing.Color.White;
+            this.txt_searchD.HideSelection = true;
+            this.txt_searchD.IconLeft = null;
+            this.txt_searchD.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_searchD.IconPadding = 10;
+            this.txt_searchD.IconRight = null;
+            this.txt_searchD.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
+            this.txt_searchD.Lines = new string[0];
+            this.txt_searchD.Location = new System.Drawing.Point(103, 53);
+            this.txt_searchD.MaxLength = 20;
+            this.txt_searchD.MinimumSize = new System.Drawing.Size(1, 1);
+            this.txt_searchD.Modified = false;
+            this.txt_searchD.Multiline = false;
+            this.txt_searchD.Name = "txt_searchD";
+            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
+            stateProperties1.FillColor = System.Drawing.Color.Empty;
+            stateProperties1.ForeColor = System.Drawing.Color.Empty;
+            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_searchD.OnActiveState = stateProperties1;
+            stateProperties2.BorderColor = System.Drawing.Color.White;
+            stateProperties2.FillColor = System.Drawing.Color.White;
+            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
+            this.txt_searchD.OnDisabledState = stateProperties2;
+            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
+            stateProperties3.FillColor = System.Drawing.Color.Empty;
+            stateProperties3.ForeColor = System.Drawing.Color.Empty;
+            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_searchD.OnHoverState = stateProperties3;
+            stateProperties4.BorderColor = System.Drawing.Color.White;
+            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
+            stateProperties4.ForeColor = System.Drawing.Color.White;
+            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
+            this.txt_searchD.OnIdleState = stateProperties4;
+            this.txt_searchD.Padding = new System.Windows.Forms.Padding(3);
+            this.txt_searchD.PasswordChar = '\0';
+            this.txt_searchD.PlaceholderForeColor = System.Drawing.Color.White;
+            this.txt_searchD.PlaceholderText = "";
+            this.txt_searchD.ReadOnly = false;
+            this.txt_searchD.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txt_searchD.SelectedText = "";
+            this.txt_searchD.SelectionLength = 0;
+            this.txt_searchD.SelectionStart = 0;
+            this.txt_searchD.ShortcutsEnabled = true;
+            this.txt_searchD.Size = new System.Drawing.Size(281, 27);
+            this.txt_searchD.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
+            this.txt_searchD.TabIndex = 50;
+            this.txt_searchD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            this.txt_searchD.TextMarginBottom = 0;
+            this.txt_searchD.TextMarginLeft = 3;
+            this.txt_searchD.TextMarginTop = 1;
+            this.txt_searchD.TextPlaceholder = "";
+            this.txt_searchD.UseSystemPasswordChar = false;
+            this.txt_searchD.Visible = false;
+            this.txt_searchD.WordWrap = true;
+            this.txt_searchD.TextChanged += new System.EventHandler(this.txt_searchD_TextChanged);
+            // 
             // btn_eliminarDoctor
             // 
             this.btn_eliminarDoctor.AllowAnimations = true;
@@ -536,7 +615,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarDoctor.IconLeftPadding = new System.Windows.Forms.Padding(11, 3, 3, 3);
             this.btn_buscarDoctor.IconMarginLeft = 11;
             this.btn_buscarDoctor.IconPadding = 10;
-            this.btn_buscarDoctor.IconRight = ((System.Drawing.Image)(resources.GetObject("btn_buscarDoctor.IconRight")));
+            this.btn_buscarDoctor.IconRight = global::CapaPresentacion.Properties.Resources.Search_Icon;
             this.btn_buscarDoctor.IconRightAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btn_buscarDoctor.IconRightCursor = System.Windows.Forms.Cursors.Default;
             this.btn_buscarDoctor.IconRightPadding = new System.Windows.Forms.Padding(3, 3, 7, 3);
@@ -546,7 +625,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarDoctor.IdleBorderThickness = 0;
             this.btn_buscarDoctor.IdleFillColor = System.Drawing.Color.Empty;
             this.btn_buscarDoctor.IdleIconLeftImage = null;
-            this.btn_buscarDoctor.IdleIconRightImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarDoctor.IdleIconRightImage")));
+            this.btn_buscarDoctor.IdleIconRightImage = global::CapaPresentacion.Properties.Resources.Search_Icon;
             this.btn_buscarDoctor.IndicateFocus = false;
             this.btn_buscarDoctor.Location = new System.Drawing.Point(407, 46);
             this.btn_buscarDoctor.Name = "btn_buscarDoctor";
@@ -573,7 +652,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarDoctor.OnIdleState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_buscarDoctor.OnIdleState.ForeColor = System.Drawing.Color.White;
             this.btn_buscarDoctor.OnIdleState.IconLeftImage = null;
-            this.btn_buscarDoctor.OnIdleState.IconRightImage = ((System.Drawing.Image)(resources.GetObject("btn_buscarDoctor.OnIdleState.IconRightImage")));
+            this.btn_buscarDoctor.OnIdleState.IconRightImage = global::CapaPresentacion.Properties.Resources.Search_Icon;
             this.btn_buscarDoctor.OnPressedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(96)))), ((int)(((byte)(144)))));
             this.btn_buscarDoctor.OnPressedState.BorderRadius = 34;
             this.btn_buscarDoctor.OnPressedState.BorderStyle = Bunifu.UI.WinForms.BunifuButton.BunifuButton.BorderStyles.Solid;
@@ -1061,85 +1140,6 @@ namespace CapaPresentacion.Forms
             // 
             this.DoctoresElipse.ElipseRadius = 7;
             this.DoctoresElipse.TargetControl = this.dgv_doctores;
-            // 
-            // txt_searchD
-            // 
-            this.txt_searchD.AcceptsReturn = false;
-            this.txt_searchD.AcceptsTab = false;
-            this.txt_searchD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.txt_searchD.AnimationSpeed = 200;
-            this.txt_searchD.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.None;
-            this.txt_searchD.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.None;
-            this.txt_searchD.AutoSizeHeight = true;
-            this.txt_searchD.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            this.txt_searchD.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("txt_searchD.BackgroundImage")));
-            this.txt_searchD.BorderColorActive = System.Drawing.Color.DodgerBlue;
-            this.txt_searchD.BorderColorDisabled = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(204)))), ((int)(((byte)(204)))));
-            this.txt_searchD.BorderColorHover = System.Drawing.Color.FromArgb(((int)(((byte)(105)))), ((int)(((byte)(181)))), ((int)(((byte)(255)))));
-            this.txt_searchD.BorderColorIdle = System.Drawing.Color.White;
-            this.txt_searchD.BorderRadius = 1;
-            this.txt_searchD.BorderThickness = 2;
-            this.txt_searchD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
-            this.txt_searchD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_searchD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
-            this.txt_searchD.DefaultText = "";
-            this.txt_searchD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            this.txt_searchD.ForeColor = System.Drawing.Color.White;
-            this.txt_searchD.HideSelection = true;
-            this.txt_searchD.IconLeft = null;
-            this.txt_searchD.IconLeftCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_searchD.IconPadding = 10;
-            this.txt_searchD.IconRight = null;
-            this.txt_searchD.IconRightCursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_searchD.Lines = new string[0];
-            this.txt_searchD.Location = new System.Drawing.Point(103, 53);
-            this.txt_searchD.MaxLength = 20;
-            this.txt_searchD.MinimumSize = new System.Drawing.Size(1, 1);
-            this.txt_searchD.Modified = false;
-            this.txt_searchD.Multiline = false;
-            this.txt_searchD.Name = "txt_searchD";
-            stateProperties1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
-            stateProperties1.FillColor = System.Drawing.Color.Empty;
-            stateProperties1.ForeColor = System.Drawing.Color.Empty;
-            stateProperties1.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_searchD.OnActiveState = stateProperties1;
-            stateProperties2.BorderColor = System.Drawing.Color.White;
-            stateProperties2.FillColor = System.Drawing.Color.White;
-            stateProperties2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            stateProperties2.PlaceholderForeColor = System.Drawing.Color.DarkGray;
-            this.txt_searchD.OnDisabledState = stateProperties2;
-            stateProperties3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(38)))), ((int)(((byte)(59)))));
-            stateProperties3.FillColor = System.Drawing.Color.Empty;
-            stateProperties3.ForeColor = System.Drawing.Color.Empty;
-            stateProperties3.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_searchD.OnHoverState = stateProperties3;
-            stateProperties4.BorderColor = System.Drawing.Color.White;
-            stateProperties4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
-            stateProperties4.ForeColor = System.Drawing.Color.White;
-            stateProperties4.PlaceholderForeColor = System.Drawing.Color.Empty;
-            this.txt_searchD.OnIdleState = stateProperties4;
-            this.txt_searchD.Padding = new System.Windows.Forms.Padding(3);
-            this.txt_searchD.PasswordChar = '\0';
-            this.txt_searchD.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_searchD.PlaceholderText = "";
-            this.txt_searchD.ReadOnly = false;
-            this.txt_searchD.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txt_searchD.SelectedText = "";
-            this.txt_searchD.SelectionLength = 0;
-            this.txt_searchD.SelectionStart = 0;
-            this.txt_searchD.ShortcutsEnabled = true;
-            this.txt_searchD.Size = new System.Drawing.Size(281, 27);
-            this.txt_searchD.Style = Bunifu.UI.WinForms.BunifuTextBox._Style.Material;
-            this.txt_searchD.TabIndex = 50;
-            this.txt_searchD.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txt_searchD.TextMarginBottom = 0;
-            this.txt_searchD.TextMarginLeft = 3;
-            this.txt_searchD.TextMarginTop = 1;
-            this.txt_searchD.TextPlaceholder = "";
-            this.txt_searchD.UseSystemPasswordChar = false;
-            this.txt_searchD.Visible = false;
-            this.txt_searchD.WordWrap = true;
-            this.txt_searchD.TextChanged += new System.EventHandler(this.txt_searchD_TextChanged);
             // 
             // FormDoctores
             // 
