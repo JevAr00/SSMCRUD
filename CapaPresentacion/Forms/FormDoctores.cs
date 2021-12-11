@@ -236,9 +236,46 @@ namespace CapaPresentacion.Forms
             dgv_doctores.DataSource = doctor.Buscar(txt_searchD.Text);
         }
 
+
+
         #endregion
 
+        #region Métodos números y letras textbox
+        private void txt_identificacionD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Ingresar Únicamente Números");
+                e.Handled = true;
+            }
+        }
 
+        private void txt_nombreD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
+            {
+                MessageBox.Show("Ingresar Únicamente Letras");
+                e.Handled = true;
+            }
+        }
 
+        private void txt_apellidoD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
+            {
+                MessageBox.Show("Ingresar Únicamente Letras");
+                e.Handled = true;
+            }
+        }
+
+        private void txt_telefonoD_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Ingresar Únicamente Números");
+                e.Handled = true;
+            }
+        }
+        #endregion
     }
 }

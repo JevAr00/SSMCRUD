@@ -612,6 +612,7 @@ namespace CapaPresentacion.Forms
             this.txt_telefonoCliente.TextPlaceholder = "";
             this.txt_telefonoCliente.UseSystemPasswordChar = false;
             this.txt_telefonoCliente.WordWrap = true;
+            this.txt_telefonoCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefonoCliente_KeyPress);
             // 
             // txt_correoCliente
             // 
@@ -766,6 +767,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreCliente.TextPlaceholder = "";
             this.txt_nombreCliente.UseSystemPasswordChar = false;
             this.txt_nombreCliente.WordWrap = true;
+            this.txt_nombreCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreCliente_KeyPress);
             // 
             // txt_identCliente
             // 
@@ -843,6 +845,7 @@ namespace CapaPresentacion.Forms
             this.txt_identCliente.TextPlaceholder = "";
             this.txt_identCliente.UseSystemPasswordChar = false;
             this.txt_identCliente.WordWrap = true;
+            this.txt_identCliente.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_identCliente_KeyPress);
             // 
             // label4
             // 

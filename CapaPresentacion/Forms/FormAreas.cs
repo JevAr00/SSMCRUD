@@ -121,6 +121,27 @@ namespace CapaPresentacion.Forms
         }
 
 
+
+        #endregion
+
+        #region Métodos letras y números textbox
+        private void txt_nombreArea_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
+            {
+                MessageBox.Show("Ingresar Únicamente Letras");
+                e.Handled = true;
+            }
+        }
+
+        private void txt_edificioArea_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Ingresar Únicamente Números");
+                e.Handled = true;
+            }
+        }
         #endregion
 
 

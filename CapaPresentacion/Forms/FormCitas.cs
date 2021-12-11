@@ -115,6 +115,38 @@ namespace CapaPresentacion.Forms
                 dgv_citas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             }
         }
+
+
+        #endregion
+
+
+        #region Métodos números y letras textbox
+        private void txt_identCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Ingresar Únicamente Números");
+                e.Handled = true;
+            }
+        }
+
+        private void txt_nombreCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!(char.IsLetter(e.KeyChar)) && (e.KeyChar != (char)Keys.Back) && (e.KeyChar != ' '))
+            {
+                MessageBox.Show("Ingresar Únicamente Letras");
+                e.Handled = true;
+            }
+        }
+
+        private void txt_telefonoCliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                MessageBox.Show("Ingresar Únicamente Números");
+                e.Handled = true;
+            }
+        }
         #endregion
 
 

@@ -147,7 +147,7 @@ namespace CapaPresentacion
             this.btn_salir.WaitOnLoad = false;
             this.btn_salir.Zoom = 10;
             this.btn_salir.ZoomSpeed = 10;
-            this.btn_salir.Click += new System.EventHandler(this.bunifuImageButton1_Click);
+            this.btn_salir.Click += new System.EventHandler(this.btn_salir_Click);
             // 
             // lbl_registro
             // 

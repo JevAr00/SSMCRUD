@@ -727,10 +727,11 @@ namespace CapaPresentacion.Forms
             this.txt_nombreArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_nombreArea.TextMarginBottom = 0;
             this.txt_nombreArea.TextMarginLeft = 3;
-            this.txt_nombreArea.TextMarginTop = 1;
+            this.txt_nombreArea.TextMarginTop = 0;
             this.txt_nombreArea.TextPlaceholder = "";
             this.txt_nombreArea.UseSystemPasswordChar = false;
             this.txt_nombreArea.WordWrap = true;
+            this.txt_nombreArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreArea_KeyPress);
             // 
             // txt_edificioArea
             // 
@@ -804,10 +805,11 @@ namespace CapaPresentacion.Forms
             this.txt_edificioArea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             this.txt_edificioArea.TextMarginBottom = 0;
             this.txt_edificioArea.TextMarginLeft = 3;
-            this.txt_edificioArea.TextMarginTop = 1;
+            this.txt_edificioArea.TextMarginTop = 0;
             this.txt_edificioArea.TextPlaceholder = "";
             this.txt_edificioArea.UseSystemPasswordChar = false;
             this.txt_edificioArea.WordWrap = true;
+            this.txt_edificioArea.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_edificioArea_KeyPress);
             // 
             // AreasElipse
             // 

@@ -904,6 +904,7 @@ namespace CapaPresentacion.Forms
             this.txt_identificacionD.TextPlaceholder = "";
             this.txt_identificacionD.UseSystemPasswordChar = false;
             this.txt_identificacionD.WordWrap = true;
+            this.txt_identificacionD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_identificacionD_KeyPress);
             // 
             // txt_nombreD
             // 
@@ -981,6 +982,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreD.TextPlaceholder = "";
             this.txt_nombreD.UseSystemPasswordChar = false;
             this.txt_nombreD.WordWrap = true;
+            this.txt_nombreD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_nombreD_KeyPress);
             // 
             // txt_apellidoD
             // 
@@ -1058,6 +1060,7 @@ namespace CapaPresentacion.Forms
             this.txt_apellidoD.TextPlaceholder = "";
             this.txt_apellidoD.UseSystemPasswordChar = false;
             this.txt_apellidoD.WordWrap = true;
+            this.txt_apellidoD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_apellidoD_KeyPress);
             // 
             // txt_telefonoD
             // 
@@ -1135,6 +1138,7 @@ namespace CapaPresentacion.Forms
             this.txt_telefonoD.TextPlaceholder = "";
             this.txt_telefonoD.UseSystemPasswordChar = false;
             this.txt_telefonoD.WordWrap = true;
+            this.txt_telefonoD.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_telefonoD_KeyPress);
             // 
             // DoctoresElipse
             // 

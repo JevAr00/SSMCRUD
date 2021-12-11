@@ -24,7 +24,7 @@ namespace CapaPresentacion
             Size = new Size(354, 451);
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void btn_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -64,8 +64,8 @@ namespace CapaPresentacion
         #region botones inicio sesión y registro
         private void btn_sesion_Click(object sender, EventArgs e)
         {
+            
             Inicio_Sesion();
-
 
         }
 
@@ -87,7 +87,6 @@ namespace CapaPresentacion
             }
         }
         #endregion
-
 
         #region métodos de inicio sesión y registro
 
@@ -126,8 +125,6 @@ namespace CapaPresentacion
 
         }
 
-
-
         #endregion
 
         #region Métodos de los txt contraseña
@@ -164,8 +161,8 @@ namespace CapaPresentacion
             txt_contraseña.Clear();
             txt_confContraseña.Clear();
         }
-        #endregion
 
+        #endregion
 
     }
 }
