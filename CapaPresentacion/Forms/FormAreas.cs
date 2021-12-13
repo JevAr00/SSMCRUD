@@ -15,6 +15,7 @@ namespace CapaPresentacion.Forms
     public partial class FormAreas : Form
     {
         AreaModel area = new AreaModel();
+        int ID;
 
         public FormAreas()
         {
@@ -37,20 +38,39 @@ namespace CapaPresentacion.Forms
 
             MessageBox.Show(mensaje);
 
-            txt_nombreArea.Clear();
-            txt_edificioArea.Clear();
-            cmb_dispArea.Text = "";
+            Limpiar();
             Refrescar();
         }
 
         private void btn_modificarArea_Click(object sender, EventArgs e)
         {
+            area.estadoEntidad = EntityState.Modified;
 
+            area.IdArea = ID;
+            area.Nombre = txt_nombreArea.Text;
+            area.Edificio = txt_edificioArea.Text;
+            area.Habilitada = cmb_dispArea.Text;
+
+            string mensaje = area.ejecutarAccion();
+
+            MessageBox.Show(mensaje);
+
+            Limpiar();
+            Refrescar();
         }
 
         private void btn_eliminarArea_Click(object sender, EventArgs e)
         {
+            area.estadoEntidad = EntityState.Deleted;
 
+            area.IdArea = ID;
+
+            string mensaje = area.ejecutarAccion();
+
+            MessageBox.Show(mensaje);
+
+            Limpiar();
+            Refrescar();
         }
 
         private void btn_buscarArea_Click(object sender, EventArgs e)
@@ -80,7 +100,7 @@ namespace CapaPresentacion.Forms
         {
             try
             {
-                int ID = Convert.ToInt32(this.dgv_areas.SelectedRows[0].Cells[0].Value);
+                ID = Convert.ToInt32(this.dgv_areas.SelectedRows[0].Cells[0].Value);
                 string nombre = Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[1].Value);
                 string edificio = Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[2].Value);
                 string disponibilidad = Convert.ToString(this.dgv_areas.SelectedRows[0].Cells[3].Value);
@@ -120,7 +140,12 @@ namespace CapaPresentacion.Forms
             dgv_areas.DataSource = area.Buscar(txt_searchA.Text);
         }
 
-
+        private void Limpiar()
+        {
+            txt_nombreArea.Clear();
+            txt_edificioArea.Clear();
+            cmb_dispArea.Text = "";
+        }
 
         #endregion
 
