@@ -94,11 +94,11 @@ namespace CapaPresentacion.Forms
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label1.Location = new System.Drawing.Point(16, 127);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(67, 20);
+            this.label1.Size = new System.Drawing.Size(58, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Nombre";
             // 
@@ -106,11 +106,11 @@ namespace CapaPresentacion.Forms
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label2.Location = new System.Drawing.Point(16, 61);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(105, 20);
+            this.label2.Size = new System.Drawing.Size(90, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Identificación";
             // 
@@ -118,11 +118,11 @@ namespace CapaPresentacion.Forms
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label3.Location = new System.Drawing.Point(16, 193);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 20);
+            this.label3.Size = new System.Drawing.Size(58, 17);
             this.label3.TabIndex = 6;
             this.label3.Text = "Apellido";
             // 
@@ -130,11 +130,11 @@ namespace CapaPresentacion.Forms
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label4.Location = new System.Drawing.Point(16, 259);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 20);
+            this.label4.Size = new System.Drawing.Size(64, 17);
             this.label4.TabIndex = 7;
             this.label4.Text = "Teléfono";
             // 
@@ -142,11 +142,11 @@ namespace CapaPresentacion.Forms
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label5.Location = new System.Drawing.Point(17, 324);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 20);
+            this.label5.Size = new System.Drawing.Size(38, 17);
             this.label5.TabIndex = 8;
             this.label5.Text = "Área";
             // 
@@ -155,23 +155,23 @@ namespace CapaPresentacion.Forms
             this.cmb_areaDoctor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmb_areaDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.cmb_areaDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_areaDoctor.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.cmb_areaDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmb_areaDoctor.ForeColor = System.Drawing.Color.White;
             this.cmb_areaDoctor.FormattingEnabled = true;
             this.cmb_areaDoctor.Location = new System.Drawing.Point(17, 357);
             this.cmb_areaDoctor.Name = "cmb_areaDoctor";
-            this.cmb_areaDoctor.Size = new System.Drawing.Size(121, 24);
+            this.cmb_areaDoctor.Size = new System.Drawing.Size(121, 23);
             this.cmb_areaDoctor.TabIndex = 13;
             // 
             // ckb_lunes
             // 
             this.ckb_lunes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_lunes.AutoSize = true;
-            this.ckb_lunes.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.ckb_lunes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ckb_lunes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.ckb_lunes.Location = new System.Drawing.Point(17, 422);
             this.ckb_lunes.Name = "ckb_lunes";
-            this.ckb_lunes.Size = new System.Drawing.Size(63, 20);
+            this.ckb_lunes.Size = new System.Drawing.Size(60, 19);
             this.ckb_lunes.TabIndex = 15;
             this.ckb_lunes.Text = "Lunes";
             this.ckb_lunes.UseVisualStyleBackColor = true;
@@ -180,11 +180,11 @@ namespace CapaPresentacion.Forms
             // 
             this.ckb_martes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_martes.AutoSize = true;
-            this.ckb_martes.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.ckb_martes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ckb_martes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.ckb_martes.Location = new System.Drawing.Point(79, 422);
             this.ckb_martes.Name = "ckb_martes";
-            this.ckb_martes.Size = new System.Drawing.Size(68, 20);
+            this.ckb_martes.Size = new System.Drawing.Size(64, 19);
             this.ckb_martes.TabIndex = 16;
             this.ckb_martes.Text = "Martes";
             this.ckb_martes.UseVisualStyleBackColor = true;
@@ -193,11 +193,11 @@ namespace CapaPresentacion.Forms
             // 
             this.ckb_miercoles.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_miercoles.AutoSize = true;
-            this.ckb_miercoles.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.ckb_miercoles.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ckb_miercoles.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.ckb_miercoles.Location = new System.Drawing.Point(149, 422);
             this.ckb_miercoles.Name = "ckb_miercoles";
-            this.ckb_miercoles.Size = new System.Drawing.Size(84, 20);
+            this.ckb_miercoles.Size = new System.Drawing.Size(80, 19);
             this.ckb_miercoles.TabIndex = 17;
             this.ckb_miercoles.Text = "Miércoles";
             this.ckb_miercoles.UseVisualStyleBackColor = true;
@@ -206,11 +206,11 @@ namespace CapaPresentacion.Forms
             // 
             this.ckb_jueves.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_jueves.AutoSize = true;
-            this.ckb_jueves.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.ckb_jueves.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ckb_jueves.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.ckb_jueves.Location = new System.Drawing.Point(234, 422);
             this.ckb_jueves.Name = "ckb_jueves";
-            this.ckb_jueves.Size = new System.Drawing.Size(68, 20);
+            this.ckb_jueves.Size = new System.Drawing.Size(64, 19);
             this.ckb_jueves.TabIndex = 18;
             this.ckb_jueves.Text = "Jueves";
             this.ckb_jueves.UseVisualStyleBackColor = true;
@@ -219,11 +219,11 @@ namespace CapaPresentacion.Forms
             // 
             this.ckb_viernes.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.ckb_viernes.AutoSize = true;
-            this.ckb_viernes.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.ckb_viernes.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.ckb_viernes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.ckb_viernes.Location = new System.Drawing.Point(301, 422);
             this.ckb_viernes.Name = "ckb_viernes";
-            this.ckb_viernes.Size = new System.Drawing.Size(71, 20);
+            this.ckb_viernes.Size = new System.Drawing.Size(67, 19);
             this.ckb_viernes.TabIndex = 19;
             this.ckb_viernes.Text = "Viernes";
             this.ckb_viernes.UseVisualStyleBackColor = true;
@@ -232,11 +232,11 @@ namespace CapaPresentacion.Forms
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label6.Location = new System.Drawing.Point(17, 392);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(111, 20);
+            this.label6.Size = new System.Drawing.Size(103, 17);
             this.label6.TabIndex = 20;
             this.label6.Text = "Días Laborales";
             // 
@@ -245,7 +245,7 @@ namespace CapaPresentacion.Forms
             this.cmb_dispDoctor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmb_dispDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.cmb_dispDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_dispDoctor.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.cmb_dispDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmb_dispDoctor.ForeColor = System.Drawing.Color.White;
             this.cmb_dispDoctor.FormattingEnabled = true;
             this.cmb_dispDoctor.Items.AddRange(new object[] {
@@ -253,18 +253,18 @@ namespace CapaPresentacion.Forms
             "n"});
             this.cmb_dispDoctor.Location = new System.Drawing.Point(148, 357);
             this.cmb_dispDoctor.Name = "cmb_dispDoctor";
-            this.cmb_dispDoctor.Size = new System.Drawing.Size(121, 24);
+            this.cmb_dispDoctor.Size = new System.Drawing.Size(121, 23);
             this.cmb_dispDoctor.TabIndex = 22;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label7.Location = new System.Drawing.Point(148, 324);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(110, 20);
+            this.label7.Size = new System.Drawing.Size(96, 17);
             this.label7.TabIndex = 21;
             this.label7.Text = "Disponibilidad";
             // 
@@ -273,7 +273,7 @@ namespace CapaPresentacion.Forms
             this.cmb_estadoDoctor.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.cmb_estadoDoctor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.cmb_estadoDoctor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cmb_estadoDoctor.Font = new System.Drawing.Font("Montserrat", 9F);
+            this.cmb_estadoDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
             this.cmb_estadoDoctor.ForeColor = System.Drawing.Color.White;
             this.cmb_estadoDoctor.FormattingEnabled = true;
             this.cmb_estadoDoctor.Items.AddRange(new object[] {
@@ -281,18 +281,18 @@ namespace CapaPresentacion.Forms
             "I"});
             this.cmb_estadoDoctor.Location = new System.Drawing.Point(280, 357);
             this.cmb_estadoDoctor.Name = "cmb_estadoDoctor";
-            this.cmb_estadoDoctor.Size = new System.Drawing.Size(121, 24);
+            this.cmb_estadoDoctor.Size = new System.Drawing.Size(121, 23);
             this.cmb_estadoDoctor.TabIndex = 24;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Montserrat", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(13)))), ((int)(((byte)(27)))), ((int)(((byte)(42)))));
             this.label8.Location = new System.Drawing.Point(280, 324);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 20);
+            this.label8.Size = new System.Drawing.Size(52, 17);
             this.label8.TabIndex = 23;
             this.label8.Text = "Estado";
             // 
@@ -331,7 +331,7 @@ namespace CapaPresentacion.Forms
             this.txt_searchD.BorderThickness = 2;
             this.txt_searchD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_searchD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_searchD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
+            this.txt_searchD.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_searchD.DefaultText = "";
             this.txt_searchD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.txt_searchD.ForeColor = System.Drawing.Color.White;
@@ -421,7 +421,7 @@ namespace CapaPresentacion.Forms
             this.btn_eliminarDoctor.DisabledFillColor = System.Drawing.Color.Empty;
             this.btn_eliminarDoctor.DisabledForecolor = System.Drawing.Color.Empty;
             this.btn_eliminarDoctor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
-            this.btn_eliminarDoctor.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_eliminarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btn_eliminarDoctor.ForeColor = System.Drawing.Color.White;
             this.btn_eliminarDoctor.IconLeft = null;
             this.btn_eliminarDoctor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -514,7 +514,7 @@ namespace CapaPresentacion.Forms
             this.btn_modificarDoctor.DisabledFillColor = System.Drawing.Color.Empty;
             this.btn_modificarDoctor.DisabledForecolor = System.Drawing.Color.Empty;
             this.btn_modificarDoctor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
-            this.btn_modificarDoctor.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_modificarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btn_modificarDoctor.ForeColor = System.Drawing.Color.White;
             this.btn_modificarDoctor.IconLeft = null;
             this.btn_modificarDoctor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -607,7 +607,7 @@ namespace CapaPresentacion.Forms
             this.btn_buscarDoctor.DisabledFillColor = System.Drawing.Color.Empty;
             this.btn_buscarDoctor.DisabledForecolor = System.Drawing.Color.Empty;
             this.btn_buscarDoctor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
-            this.btn_buscarDoctor.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_buscarDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btn_buscarDoctor.ForeColor = System.Drawing.Color.White;
             this.btn_buscarDoctor.IconLeft = null;
             this.btn_buscarDoctor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -700,7 +700,7 @@ namespace CapaPresentacion.Forms
             this.btn_registroDoctor.DisabledFillColor = System.Drawing.Color.Empty;
             this.btn_registroDoctor.DisabledForecolor = System.Drawing.Color.Empty;
             this.btn_registroDoctor.FocusState = Bunifu.UI.WinForms.BunifuButton.BunifuButton.ButtonStates.Disabled;
-            this.btn_registroDoctor.Font = new System.Drawing.Font("Montserrat", 8F, System.Drawing.FontStyle.Bold);
+            this.btn_registroDoctor.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold);
             this.btn_registroDoctor.ForeColor = System.Drawing.Color.White;
             this.btn_registroDoctor.IconLeft = null;
             this.btn_registroDoctor.IconLeftAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -847,7 +847,7 @@ namespace CapaPresentacion.Forms
             this.txt_identificacionD.BorderThickness = 2;
             this.txt_identificacionD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_identificacionD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_identificacionD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
+            this.txt_identificacionD.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_identificacionD.DefaultText = "";
             this.txt_identificacionD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.txt_identificacionD.ForeColor = System.Drawing.Color.White;
@@ -925,7 +925,7 @@ namespace CapaPresentacion.Forms
             this.txt_nombreD.BorderThickness = 2;
             this.txt_nombreD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_nombreD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_nombreD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
+            this.txt_nombreD.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_nombreD.DefaultText = "";
             this.txt_nombreD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.txt_nombreD.ForeColor = System.Drawing.Color.White;
@@ -1003,7 +1003,7 @@ namespace CapaPresentacion.Forms
             this.txt_apellidoD.BorderThickness = 2;
             this.txt_apellidoD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_apellidoD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_apellidoD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
+            this.txt_apellidoD.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_apellidoD.DefaultText = "";
             this.txt_apellidoD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.txt_apellidoD.ForeColor = System.Drawing.Color.White;
@@ -1081,7 +1081,7 @@ namespace CapaPresentacion.Forms
             this.txt_telefonoD.BorderThickness = 2;
             this.txt_telefonoD.CharacterCasing = System.Windows.Forms.CharacterCasing.Normal;
             this.txt_telefonoD.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txt_telefonoD.DefaultFont = new System.Drawing.Font("Montserrat", 11F);
+            this.txt_telefonoD.DefaultFont = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.txt_telefonoD.DefaultText = "";
             this.txt_telefonoD.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(141)))), ((int)(((byte)(169)))));
             this.txt_telefonoD.ForeColor = System.Drawing.Color.White;
