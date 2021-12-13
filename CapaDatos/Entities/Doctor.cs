@@ -12,7 +12,7 @@ namespace CapaDatos.Entities
         public int idDoctor { get; set; }
         public int idArea { get; set; }
         public string diasLaborales { get; set; }
-        public char disponibilidad { get; set; }
-        public char activo { get; set; }
+        public string disponibilidad { get; set; }
+        public string activo { get; set; }
     }
 }
