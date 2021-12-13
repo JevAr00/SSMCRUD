@@ -16,7 +16,7 @@ namespace CapaLogica.Models
         private string descripcion;
         private string doctor;
         private string correo;
-        private DateTime fecha;
+        private string fecha;
         private string hora;
 
         private List<CitaModel> listaCitas;
@@ -27,7 +27,7 @@ namespace CapaLogica.Models
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Doctor { get => doctor; set => doctor = value; }
         public string Correo { get => correo; set => correo = value; }
-        public DateTime Fecha { get => fecha; set => fecha = value; }
+        public string Fecha { get => fecha; set => fecha = value; }
         public string Hora { get => hora; set => hora = value; }
 
         public CitaModel()
@@ -52,7 +52,7 @@ namespace CapaLogica.Models
                 citaDataModel.nombre = Nombre;
                 citaDataModel.telefono = Telefono;
                 citaDataModel.correoPaciente = correo;
-                citaDataModel.fecha = fecha;
+                citaDataModel.fecha = Convert.ToDateTime(Convert.ToDateTime(fecha).ToString("MM/dd/yyyy"));
                 citaDataModel.hora = hora;
 
                 switch (estadoEntidad)
