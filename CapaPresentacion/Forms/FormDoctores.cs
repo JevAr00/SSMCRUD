@@ -20,6 +20,8 @@ namespace CapaPresentacion.Forms
 
         List<AreaModel> listaArea = new List<AreaModel>();
 
+        int ID;
+
         public FormDoctores()
         {
             InitializeComponent();
@@ -44,18 +46,40 @@ namespace CapaPresentacion.Forms
             {
                 MessageBox.Show("Seleccionar día laboral");
             }
-
-
         }
 
         private void btn_modificarDoctor_Click(object sender, EventArgs e)
         {
+            if ((ckb_lunes.Checked || ckb_martes.Checked || ckb_miercoles.Checked || ckb_jueves.Checked || ckb_viernes.Checked) == true)
+            {
 
+                Modificar();
+
+                string mensaje = doctor.ejecutarAccion();
+                MessageBox.Show(mensaje);
+
+                Limpiar();
+                Refrescar();
+
+            }
+            else
+            {
+                MessageBox.Show("Seleccionar día laboral");
+            }
         }
 
         private void btn_eliminarDoctor_Click(object sender, EventArgs e)
         {
+            if (ID != null)
+            {
+                Eliminar();
 
+                string mensaje = doctor.ejecutarAccion();
+                MessageBox.Show(mensaje);
+
+                Limpiar();
+                Refrescar();
+            }
         }
         private void btn_buscarDoctor_Click(object sender, EventArgs e)
         {
@@ -72,7 +96,6 @@ namespace CapaPresentacion.Forms
         }
 
         #endregion
-
 
         #region Métodos adicionales
 
@@ -177,7 +200,7 @@ namespace CapaPresentacion.Forms
         private void asignacionDGV()
         {
 
-            int ID = Convert.ToInt32(this.dgv_doctores.SelectedRows[0].Cells[0].Value);
+            ID = Convert.ToInt32(this.dgv_doctores.SelectedRows[0].Cells[0].Value);
             string IDarea = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[1].Value);
             string dias = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[2].Value);
             string disponibilidad = Convert.ToString(this.dgv_doctores.SelectedRows[0].Cells[3].Value);
@@ -229,6 +252,26 @@ namespace CapaPresentacion.Forms
             doctor.DiasLaborales = DiaLaboral();
             doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
 
+        }
+        private void Modificar()
+        {
+            doctor.estadoEntidad = EntityState.Modified;
+
+            doctor.Cedula = txt_identificacionD.Text;
+            doctor.Nombre = txt_nombreD.Text;
+            doctor.Apellidos = txt_apellidoD.Text;
+            doctor.Telefono = txt_telefonoD.Text;
+            doctor.Disponibilidad = cmb_dispDoctor.Text;
+            doctor.Activo = cmb_estadoDoctor.Text;
+            doctor.DiasLaborales = DiaLaboral();
+            doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
+        }
+
+        private void Eliminar()
+        {
+            doctor.estadoEntidad = EntityState.Deleted;
+
+            doctor.IdDoctor = ID;
         }
 
         private void txt_searchD_TextChanged(object sender, EventArgs e)

@@ -28,11 +28,7 @@ namespace CapaPresentacion.Forms
 
         private void btn_registroArea_Click(object sender, EventArgs e)
         {
-            area.estadoEntidad = EntityState.Added;
-
-            area.Nombre = txt_nombreArea.Text;
-            area.Edificio = txt_edificioArea.Text;
-            area.Habilitada = cmb_dispArea.Text;
+            Registrar();
 
             string mensaje = area.ejecutarAccion();
 
@@ -44,12 +40,7 @@ namespace CapaPresentacion.Forms
 
         private void btn_modificarArea_Click(object sender, EventArgs e)
         {
-            area.estadoEntidad = EntityState.Modified;
-
-            area.IdArea = ID;
-            area.Nombre = txt_nombreArea.Text;
-            area.Edificio = txt_edificioArea.Text;
-            area.Habilitada = cmb_dispArea.Text;
+            Modificar();
 
             string mensaje = area.ejecutarAccion();
 
@@ -61,9 +52,7 @@ namespace CapaPresentacion.Forms
 
         private void btn_eliminarArea_Click(object sender, EventArgs e)
         {
-            area.estadoEntidad = EntityState.Deleted;
-
-            area.IdArea = ID;
+            Eliminar();
 
             string mensaje = area.ejecutarAccion();
 
@@ -138,6 +127,32 @@ namespace CapaPresentacion.Forms
         private void txt_searchA_TextChanged(object sender, EventArgs e)
         {
             dgv_areas.DataSource = area.Buscar(txt_searchA.Text);
+        }
+
+        private void Registrar()
+        {
+            area.estadoEntidad = EntityState.Added;
+
+            area.Nombre = txt_nombreArea.Text;
+            area.Edificio = txt_edificioArea.Text;
+            area.Habilitada = cmb_dispArea.Text;
+        }
+
+        private void Modificar()
+        {
+            area.estadoEntidad = EntityState.Modified;
+
+            area.IdArea = ID;
+            area.Nombre = txt_nombreArea.Text;
+            area.Edificio = txt_edificioArea.Text;
+            area.Habilitada = cmb_dispArea.Text;
+        }
+
+        private void Eliminar()
+        {
+            area.estadoEntidad = EntityState.Deleted;
+
+            area.IdArea = ID;
         }
 
         private void Limpiar()
