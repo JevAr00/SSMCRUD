@@ -21,7 +21,7 @@ namespace CapaDatos.Repositories
         {
             selectAll = "select * from citas";
             insert = "insert into citas values(default,@descripcion,@nombreDoctor,@cedulaPaciente,@nombrePaciente,@correoPaciente,@telefonoPaciente,@fecha,@hora)";
-            update = "update citas set @descripcion,@nombreDoctor,@cedulaPaciente,@nombrePaciente,@correoPaciente,@telefonoPaciente,@fecha,@hora where idCita=@id";
+            update = "update citas set descripcion=@descripcion, nombreDoctor=@nombreDoctor, cedula=@cedulaPaciente, nombre=@nombrePaciente, correoPaciente=@correoPaciente, telefono=@telefonoPaciente, fecha=@fecha, hora=@hora where idCita=@id";
             delete = "delete from citas where idCita=@id";
         }
 
