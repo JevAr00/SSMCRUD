@@ -48,8 +48,8 @@ namespace CapaLogica.Models
                 doctorDataModel.apellidos = Apellidos;
                 doctorDataModel.telefono = Telefono;
                 doctorDataModel.diasLaborales = diasLaborales;
-                doctorDataModel.disponibilidad = char.Parse(disponibilidad);
-                doctorDataModel.activo = char.Parse(activo);
+                doctorDataModel.disponibilidad = disponibilidad;
+                doctorDataModel.activo = activo;
 
                 switch (estadoEntidad)
                 {
