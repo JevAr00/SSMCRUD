@@ -24,7 +24,7 @@ namespace CapaPresentacion
             Size = new Size(354, 451);
         }
 
-        private void bunifuImageButton1_Click(object sender, EventArgs e)
+        private void btn_salir_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -37,13 +37,10 @@ namespace CapaPresentacion
             lbl_registrar.Visible = false;
             lbl_titulo.Visible = false;
             btn_sesion.Visible = false;
-            btn_sesion.Enabled = false;
             lbl_registro.Visible = true;
             lbl_ini.Visible = true;
             btn_registro.Visible = true;
-            btn_registro.Enabled = true;
             txt_confContraseña.Visible = true;
-            txt_confContraseña.Enabled = true;
             pnl_login.BackgroundImage = Properties.Resources.light_wave;
 
         }
@@ -55,13 +52,10 @@ namespace CapaPresentacion
             lbl_registrar.Visible = true;
             lbl_titulo.Visible = true;
             btn_sesion.Visible = true;
-            btn_sesion.Enabled = true;
             lbl_registro.Visible = false;
             lbl_ini.Visible = false;
             btn_registro.Visible = false;
-            btn_registro.Enabled = false;
             txt_confContraseña.Visible = false;
-            txt_confContraseña.Enabled = false;
             pnl_login.BackgroundImage = Properties.Resources.wave;
 
         }
@@ -70,8 +64,8 @@ namespace CapaPresentacion
         #region botones inicio sesión y registro
         private void btn_sesion_Click(object sender, EventArgs e)
         {
+            
             Inicio_Sesion();
-
 
         }
 
@@ -87,13 +81,12 @@ namespace CapaPresentacion
             }
             else
             {
-                MessageBox.Show("Su Solicitud está siendo procesada");
+                MessageBox.Show("Registro en proceso");
                 Registro();
 
             }
         }
         #endregion
-
 
         #region métodos de inicio sesión y registro
 
@@ -132,8 +125,6 @@ namespace CapaPresentacion
 
         }
 
-
-
         #endregion
 
         #region Métodos de los txt contraseña
@@ -170,8 +161,8 @@ namespace CapaPresentacion
             txt_contraseña.Clear();
             txt_confContraseña.Clear();
         }
-        #endregion
 
+        #endregion
 
     }
 }

@@ -60,7 +60,7 @@ namespace CapaDatos.Repositories
                     cedula = item[3].ToString(),
                     nombre = item[4].ToString(),
                     correoPaciente = item[5].ToString(),
-                    telefono = Convert.ToInt32(item[6]),
+                    telefono = item[6].ToString(),
                     fecha = Convert.ToDateTime(item[7]),
                     hora = item[8].ToString()
 

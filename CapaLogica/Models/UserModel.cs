@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Security.Cryptography;
-using CapaDatos.Contracts;
+﻿using CapaDatos.Contracts;
 using CapaDatos.Entities;
 using CapaDatos.Repositories;
 using CapaLogica.ValueObjects;
+using System;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace CapaLogica.Models
 {
@@ -30,7 +28,7 @@ namespace CapaLogica.Models
         }
 
         /// <summary>
-        /// Observa cual es el <see cref="EntityState"/> de AreaModel, luego se encarga de ejecutar los metodos insert, update o delete segun corresponda.
+        /// Observa cual es el <see cref="EntityState"/> de UserModel, luego se encarga de ejecutar los metodos insert, update o delete segun corresponda.
         /// </summary>
         /// <returns>Mensaja con respuesta</returns>
         public async Task<string> ejecutarAccion()
@@ -73,6 +71,10 @@ namespace CapaLogica.Models
             });
         }
 
+        /// <summary>
+        /// Comprobacion de datos para iniciar sesion en la aplicacion
+        /// </summary>
+        /// <returns></returns>
         public bool validarUsuario()
         {
             var usuarioDataModel = new Usuario();
@@ -89,6 +91,11 @@ namespace CapaLogica.Models
             }
         }
 
+        /// <summary>
+        /// Cifra la contraseña del usuario por metodo <see cref="SHA512"/>
+        /// </summary>
+        /// <param name="pwrd">Contraseña en texto plano</param>
+        /// <returns>Contraseña en base64</returns>
         public string Encrypt(string pwrd)
         {
             SHA512 hashSvc = SHA512.Create();

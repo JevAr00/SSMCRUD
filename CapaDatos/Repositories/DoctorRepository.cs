@@ -16,13 +16,20 @@ namespace CapaDatos.Repositories
         private string update;
         private string delete;
         private string selectAll;
+        private string selectByName;
 
         public DoctorRepository()
         {
             selectAll = "select * from doctores";
+            selectByName = "select id_doctor, nombre from doctores";
             insert = "insert into doctores values(default,@idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo)";
+<<<<<<< HEAD
             update = "update doctores set idArea=@idArea, cedula=@cedula, nombre=@nombre, apellidos=@apellido, telefono=@telefono, diaslaborales=@diasLaborales, disponibilidad=@disponibilidad, activo=@activo where idDoctor=@id";
             delete = "delete from doctores where idDoctor=@id";
+=======
+            update = "update doctores set @idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo where id_doctor=@id";
+            delete = "delete from doctores where id_doctor=@id";
+>>>>>>> 299ff969f1b292712a3da5a6a066e7b91ee21c52
         }
         public int Create(Doctor Entity)
         {
@@ -31,7 +38,7 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@cedula",Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
-            parametros.Add(new MySqlParameter("@telefonp", Entity.telefono));
+            parametros.Add(new MySqlParameter("@telefono", Entity.telefono));
             parametros.Add(new MySqlParameter("@diasLaborales", Entity.diasLaborales));
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));
             parametros.Add(new MySqlParameter("@activo", Entity.activo));
@@ -58,7 +65,7 @@ namespace CapaDatos.Repositories
                     cedula = item[2].ToString(),
                     nombre = item[3].ToString(),
                     apellidos = item[4].ToString(),
-                    telefono = Convert.ToInt32(item[5]),
+                    telefono = item[5].ToString(),
                     diasLaborales = item[6].ToString(),
                     disponibilidad = Convert.ToChar(item[7]),
                     activo = Convert.ToChar(item[8])
@@ -76,11 +83,26 @@ namespace CapaDatos.Repositories
             parametros.Add(new MySqlParameter("@cedula", Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
-            parametros.Add(new MySqlParameter("@telefonp", Entity.telefono));
+            parametros.Add(new MySqlParameter("@telefono", Entity.telefono));
             parametros.Add(new MySqlParameter("@diasLaborales", Entity.diasLaborales));
             parametros.Add(new MySqlParameter("@disponibilidad", Entity.disponibilidad));
             parametros.Add(new MySqlParameter("@activo", Entity.activo));
             return ExecuteNonQuery(update);
+        }
+
+        public IEnumerable<Doctor> GetNames()
+        {
+            DataTable resultadoTabla = ExecuteReader(selectByName);
+            var listaDoctor = new List<Doctor>();
+            foreach (DataRow item in resultadoTabla.Rows)
+            {
+                listaDoctor.Add(new Doctor
+                {
+                    idDoctor = Convert.ToInt32(item[0].ToString()),
+                    nombre = item[1].ToString(),
+                });
+            }
+            return listaDoctor;
         }
     }
 }

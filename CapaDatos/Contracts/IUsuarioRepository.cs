@@ -8,7 +8,7 @@ using CapaDatos.Entities;
 namespace CapaDatos.Contracts
 {
     /// <summary>
-    /// Declara metodos adicionales que debe contener AreaRepository. 
+    /// Declara metodos adicionales que debe contener UsuarioRepository. 
     /// </summary>
     /// <remarks>Implementa <see cref="IGenericRepository{Entity}"/></remarks>
     public interface IUsuarioRepository:IGenericRepository<Usuario>

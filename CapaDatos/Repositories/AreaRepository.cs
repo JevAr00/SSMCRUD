@@ -16,13 +16,15 @@ namespace CapaDatos.Repositories
         private string update;
         private string delete;
         private string selectAll;
+        private string selectByName;
 
         public AreaRepository()
         {
             selectAll = "select * from areas";
+            selectByName = "select id_area, nombre from areas";
             insert = "insert into areas values(default,@nombre,@edificio,@habilitada)";
-            update = "update areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where idArea=@id";
-            delete = "delete from areas where idArea=@id";
+            update = "update areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where id_area=@id";
+            delete = "delete from areas where id_area=@id";
         }
 
         public int Create(Area Entity)
@@ -68,6 +70,21 @@ namespace CapaDatos.Repositories
             
             return ExecuteNonQuery(update);
            
+        }
+
+        public IEnumerable<Area> GetNames()
+        {
+            DataTable resultadoTabla = ExecuteReader(selectByName);
+            var listaAreas = new List<Area>();
+            foreach (DataRow item in resultadoTabla.Rows)
+            {
+                listaAreas.Add(new Area
+                {
+                    idArea = Convert.ToInt32(item[0]),
+                    nombre = item[1].ToString(),
+                });
+            }
+            return listaAreas;
         }
     }
 }

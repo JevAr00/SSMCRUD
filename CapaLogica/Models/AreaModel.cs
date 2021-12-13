@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using CapaDatos.Contracts;
+﻿using CapaDatos.Contracts;
 using CapaDatos.Entities;
 using CapaDatos.Repositories;
 using CapaLogica.ValueObjects;
+using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace CapaLogica.Models
 {
@@ -94,6 +92,66 @@ namespace CapaLogica.Models
                 }
                 return listaAreas;
             });
+        }
+
+        /// <summary>
+        /// Obtiene todos los nombres de areas que se encuentran en una tabla de la base de datos
+        /// </summary>
+        /// <returns>Lista con nombres de areas de la tabla de la base de datos</returns>
+        public async Task<List<AreaModel>> GetNombres()
+        {
+            return await Task.Run(() =>
+            {
+                var areaDataModel = areaRepositorio.GetNames();
+                listaAreas = new List<AreaModel>();
+                foreach (Area item in areaDataModel)
+                {
+                    listaAreas.Add(new AreaModel
+                    {
+                        idArea = item.idArea,
+                        nombre = item.nombre,
+                    });
+                }
+                return listaAreas;
+            });
+        }
+
+        /// <summary>
+        /// Compara el nombre recibido con la lista recibida de <see cref="GetNombres"/> para obtener su id
+        /// </summary>
+        /// <param name="lista">Lista que contiene todos los ID y nombre desde <see cref="GetNombres"/> </param>
+        /// <param name="nombre">Nombre que recibe para compararse</param>
+        /// <returns>ID de nombre que coincide</returns>
+        public int GetID(List<AreaModel> lista, string nombre)
+        {
+            int id = 0;
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if(nombre == lista[i].nombre)
+                {
+                    id = lista[i].idArea;
+                }
+            }
+            return id;
+        }
+
+        /// <summary>
+        /// Compara el ID recibido con la lista recibida de <see cref="GetNombres"/> para obtener su nombre
+        /// </summary>
+        /// <param name="lista">Lista que contiene todos los ID y nombre desde <see cref="GetNombres"/> </param>
+        /// <param name="ID">ID que recibe para compararse</param>
+        /// <returns>Nombre de ID que coincide</returns>
+        public string GetNameByID(List<AreaModel> lista, int ID)
+        {
+            string nombre = "";
+            for (int i = 0; i < lista.Count; i++)
+            {
+                if (ID == lista[i].idArea)
+                {
+                    nombre = lista[i].Nombre;
+                }
+            }
+            return nombre;
         }
 
         /// <summary>
