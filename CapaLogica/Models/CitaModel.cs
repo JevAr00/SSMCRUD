@@ -102,7 +102,7 @@ namespace CapaLogica.Models
                         Nombre = item.nombre,
                         Telefono = item.telefono,
                         correo = item.correoPaciente,
-                        fecha = item.fecha,
+                        fecha = item.fecha.ToString(),
                         hora = item.hora
                     });
                 }
