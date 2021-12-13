@@ -23,13 +23,10 @@ namespace CapaDatos.Repositories
             selectAll = "select * from doctores";
             selectByName = "select id_doctor, nombre from doctores";
             insert = "insert into doctores values(default,@idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo)";
-<<<<<<< HEAD
             update = "update doctores set idArea=@idArea, cedula=@cedula, nombre=@nombre, apellidos=@apellido, telefono=@telefono, diaslaborales=@diasLaborales, disponibilidad=@disponibilidad, activo=@activo where idDoctor=@id";
             delete = "delete from doctores where idDoctor=@id";
-=======
-            update = "update doctores set @idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo where id_doctor=@id";
-            delete = "delete from doctores where id_doctor=@id";
->>>>>>> 299ff969f1b292712a3da5a6a066e7b91ee21c52
+
+            
         }
         public int Create(Doctor Entity)
         {
