@@ -23,8 +23,8 @@ namespace CapaDatos.Repositories
             selectAll = "select * from areas";
             selectByName = "select id_area, nombre from areas";
             insert = "insert into areas values(default,@nombre,@edificio,@habilitada)";
-            update = "update areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where idArea=@id";
-            delete = "delete from areas where idArea=@id";
+            update = "update areas set nombre=@nombre, edificio=@edificio, habilitada=@habilitada where id_area=@id";
+            delete = "delete from areas where id_area=@id";
         }
 
         public int Create(Area Entity)
