@@ -23,15 +23,15 @@ namespace CapaDatos.Repositories
             selectAll = "select * from doctores";
             selectByName = "select id_doctor, nombre from doctores";
             insert = "insert into doctores values(default,@idArea,@cedula,@nombre,@apellido,@telefono,@diasLaborales,@disponibilidad,@activo)";
-            update = "update doctores set idArea=@idArea, cedula=@cedula, nombre=@nombre, apellidos=@apellido, telefono=@telefono, diaslaborales=@diasLaborales, disponibilidad=@disponibilidad, activo=@activo where idDoctor=@id";
-            delete = "delete from doctores where idDoctor=@id";
+            update = "update doctores set idArea=@id, cedula=@cedula, nombre=@nombre, apellidos=@apellido, telefono=@telefono, diaslaborales=@diasLaborales, disponibilidad=@disponibilidad, activo=@activo where idDoctor=@id_doctor";
+            delete = "delete from doctores where idDoctor=@id_doctor";
 
             
         }
         public int Create(Doctor Entity)
         {
             parametros = new List<MySqlParameter>();
-            parametros.Add(new MySqlParameter("@idArea", Entity.idArea));
+            parametros.Add(new MySqlParameter("@id", Entity.idArea));
             parametros.Add(new MySqlParameter("@cedula",Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
@@ -45,7 +45,7 @@ namespace CapaDatos.Repositories
         public int Delete(int EntityID)
         {
             parametros = new List<MySqlParameter>();
-            parametros.Add(new MySqlParameter("@id", EntityID));
+            parametros.Add(new MySqlParameter("@id_doctor", EntityID));
             return ExecuteNonQuery(delete);
         }
 
@@ -75,8 +75,8 @@ namespace CapaDatos.Repositories
         public int Update(Doctor Entity)
         {
             parametros = new List<MySqlParameter>();
-            parametros.Add(new MySqlParameter("@id", Entity.idDoctor));
-            parametros.Add(new MySqlParameter("@idArea", Entity.idArea));
+            parametros.Add(new MySqlParameter("@id_doctor", Entity.idDoctor));
+            parametros.Add(new MySqlParameter("@id", Entity.idArea));
             parametros.Add(new MySqlParameter("@cedula", Entity.cedula));
             parametros.Add(new MySqlParameter("@nombre", Entity.nombre));
             parametros.Add(new MySqlParameter("@apellido", Entity.apellidos));
