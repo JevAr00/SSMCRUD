@@ -78,7 +78,6 @@ namespace CapaPresentacion.Forms
 
         #endregion
 
-
         #region Métodos Adicionales
         private void FormAreas_Load(object sender, EventArgs e)
         {

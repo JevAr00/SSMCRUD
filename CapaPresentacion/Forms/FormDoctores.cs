@@ -253,10 +253,12 @@ namespace CapaPresentacion.Forms
             doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
 
         }
+
         private void Modificar()
         {
             doctor.estadoEntidad = EntityState.Modified;
 
+            doctor.IdDoctor = ID;
             doctor.Cedula = txt_identificacionD.Text;
             doctor.Nombre = txt_nombreD.Text;
             doctor.Apellidos = txt_apellidoD.Text;
