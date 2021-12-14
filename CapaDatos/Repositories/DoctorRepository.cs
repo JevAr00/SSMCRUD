@@ -64,8 +64,8 @@ namespace CapaDatos.Repositories
                     apellidos = item[4].ToString(),
                     telefono = item[5].ToString(),
                     diasLaborales = item[6].ToString(),
-                    disponibilidad = Convert.ToChar(item[7]),
-                    activo = Convert.ToChar(item[8])
+                    disponibilidad = item[7].ToString(),
+                    activo = item[8].ToString()
 
                 });
             }
