@@ -104,6 +104,7 @@ namespace CapaPresentacion.Forms
                         dgv_citas.DataSource = datos;
                     }));
                 });
+                Fecha_Hora();
             }
             catch
             {
@@ -127,6 +128,7 @@ namespace CapaPresentacion.Forms
         {
             Refrescar();
             comboDoctor();
+            Fecha_Hora();
         }
 
         private void Registrar()
@@ -150,6 +152,31 @@ namespace CapaPresentacion.Forms
         private void Eliminar()
         {
 
+        }
+
+        private void dgv_citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                asignacionDGV();
+
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        private void asignacionDGV()
+        {
+            ID = Convert.ToInt32(this.dgv_citas.SelectedRows[0].Cells[0].Value);
+
+        }
+
+        private void Fecha_Hora()
+        {
+            dtp_fechaCita.Value = DateTime.Now;
+            dtp_horaCita.Value = Convert.ToDateTime(DateTime.Now.ToString("HH:mm"));
         }
 
         #endregion
@@ -185,24 +212,7 @@ namespace CapaPresentacion.Forms
 
         #endregion
 
-        private void dgv_citas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            try
-            {
-                asignacionDGV();
 
-            }
-            catch (Exception)
-            {
-                return;
-            }
-        }
-
-        private void asignacionDGV()
-        {
-            ID = Convert.ToInt32(this.dgv_citas.SelectedRows[0].Cells[0].Value);
-
-        }
 
     }
 }
