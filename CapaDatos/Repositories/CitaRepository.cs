@@ -61,7 +61,7 @@ namespace CapaDatos.Repositories
                     nombre = item[4].ToString(),
                     correoPaciente = item[5].ToString(),
                     telefono = item[6].ToString(),
-                    fecha = Convert.ToDateTime(item[7]),
+                    fecha = item[7].ToString(),
                     hora = item[8].ToString()
 
                 });

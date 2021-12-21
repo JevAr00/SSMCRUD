@@ -13,7 +13,7 @@ namespace CapaDatos.Entities
         public string descripcion { get; set; }
         public string nombreDoctor { get; set; }
         public string correoPaciente { get; set; }
-        public DateTime fecha { get; set; }
+        public string fecha { get; set; }
         public string hora { get; set; }
 
     }
