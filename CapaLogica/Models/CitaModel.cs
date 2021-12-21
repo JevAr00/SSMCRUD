@@ -108,7 +108,7 @@ namespace CapaLogica.Models
                         Nombre = item.nombre,
                         Telefono = item.telefono,
                         Correo = item.correoPaciente,
-                        Fecha = item.fecha,
+                        Fecha = Convert.ToDateTime(item.fecha).ToString("dd/MM/yyyy"),
                         Hora = item.hora
                     });
                 }
