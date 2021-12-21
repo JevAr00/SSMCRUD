@@ -10,11 +10,14 @@ using System.Threading.Tasks;
 
 namespace CapaLogica.Models
 {
-    public class CitaModel : PersonaModel
+    public class CitaModel
     {
         private int idCita;
         private string descripcion;
         private string doctor;
+        private string cedula;
+        private string nombre;
+        private string telefono;
         private string correo;
         private string fecha;
         private string hora;
@@ -26,6 +29,9 @@ namespace CapaLogica.Models
         public int IdCita { get => idCita; set => idCita = value; }
         public string Descripcion { get => descripcion; set => descripcion = value; }
         public string Doctor { get => doctor; set => doctor = value; }
+        public string Cedula { get => cedula; set => cedula = value; }
+        public string Nombre { get => nombre; set => nombre = value; }
+        public string Telefono { get => telefono; set => telefono = value; }
         public string Correo { get => correo; set => correo = value; }
         public string Fecha { get => fecha; set => fecha = value; }
         public string Hora { get => hora; set => hora = value; }
@@ -45,15 +51,15 @@ namespace CapaLogica.Models
             try
             {
                 var citaDataModel = new Cita();
-                citaDataModel.idCita = idCita;
-                citaDataModel.descripcion = descripcion;
-                citaDataModel.nombreDoctor = doctor;
+                citaDataModel.idCita = IdCita;
+                citaDataModel.descripcion = Descripcion;
+                citaDataModel.nombreDoctor = Doctor;
                 citaDataModel.cedula = Cedula;
                 citaDataModel.nombre = Nombre;
                 citaDataModel.telefono = Telefono;
-                citaDataModel.correoPaciente = correo;
-                citaDataModel.fecha = Convert.ToDateTime(Convert.ToDateTime(fecha).ToString("MM/dd/yyyy"));
-                citaDataModel.hora = hora;
+                citaDataModel.correoPaciente = Correo;
+                citaDataModel.fecha = Convert.ToDateTime(Convert.ToDateTime(Fecha).ToString("MM/dd/yyyy"));
+                citaDataModel.hora = Hora;
 
                 switch (estadoEntidad)
                 {
@@ -68,7 +74,7 @@ namespace CapaLogica.Models
                         break;
 
                     case EntityState.Deleted:
-                        citasRepositorio.Delete(idCita);
+                        citasRepositorio.Delete(IdCita);
                         message = "Se ha elimiando correctamente";
                         break;
                 }
@@ -95,15 +101,15 @@ namespace CapaLogica.Models
                 {
                     listaCitas.Add(new CitaModel
                     {
-                        idCita = item.idCita,
-                        descripcion = item.descripcion,
-                        doctor = item.nombreDoctor,
+                        IdCita = item.idCita,
+                        Descripcion = item.descripcion,
+                        Doctor = item.nombreDoctor,
                         Cedula = item.cedula,
                         Nombre = item.nombre,
                         Telefono = item.telefono,
-                        correo = item.correoPaciente,
-                        fecha = item.fecha.ToString(),
-                        hora = item.hora
+                        Correo = item.correoPaciente,
+                        Fecha = item.fecha.ToString(),
+                        Hora = item.hora
                     });
                 }
                 return listaCitas;
