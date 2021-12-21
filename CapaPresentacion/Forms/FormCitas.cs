@@ -46,10 +46,7 @@ namespace CapaPresentacion.Forms
         {
 
         }
-        private void btn_buscarCita_Click(object sender, EventArgs e)
-        {
 
-        }
         #endregion
 
         #region Métodos Adicionales
@@ -210,8 +207,28 @@ namespace CapaPresentacion.Forms
             }
         }
 
+
+
         #endregion
 
+        private void txt_searchC_TextChanged(object sender, EventArgs e)
+        {
+            dgv_citas.DataSource = cita.Buscar(txt_searchC.Text);
+        }
+
+        private void btn_buscarCitas_Click(object sender, EventArgs e)
+        {
+            if (txt_searchC.Visible == false)
+            {
+                txt_searchC.Visible = true;
+                txt_searchC.Clear();
+            }
+            else
+            {
+                txt_searchC.Visible = false;
+                txt_searchC.Clear();
+            }
+        }
 
 
     }
