@@ -58,7 +58,7 @@ namespace CapaLogica.Models
                 citaDataModel.nombre = Nombre;
                 citaDataModel.telefono = Telefono;
                 citaDataModel.correoPaciente = Correo;
-                citaDataModel.fecha = Convert.ToDateTime(Convert.ToDateTime(Fecha).ToString("MM/dd/yyyy"));
+                citaDataModel.fecha = Fecha;
                 citaDataModel.hora = Hora;
 
                 switch (estadoEntidad)
@@ -108,7 +108,7 @@ namespace CapaLogica.Models
                         Nombre = item.nombre,
                         Telefono = item.telefono,
                         Correo = item.correoPaciente,
-                        Fecha = item.fecha.ToString(),
+                        Fecha = item.fecha,
                         Hora = item.hora
                     });
                 }
