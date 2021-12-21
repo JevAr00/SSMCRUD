@@ -38,8 +38,6 @@ namespace CapaPresentacion
 
 
 
-
-
         }
 
         private void timerHora_Tick(object sender, EventArgs e)

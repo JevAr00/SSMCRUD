@@ -97,6 +97,47 @@ namespace CapaPresentacion.Forms
 
         #endregion
 
+        #region Métodos Principales
+
+        private void Registrar()
+        {
+
+            doctor.estadoEntidad = EntityState.Added;
+            doctor.Cedula = txt_identificacionD.Text;
+            doctor.Nombre = txt_nombreD.Text;
+            doctor.Apellidos = txt_apellidoD.Text;
+            doctor.Telefono = txt_telefonoD.Text;
+            doctor.Disponibilidad = cmb_dispDoctor.Text;
+            doctor.Activo = cmb_estadoDoctor.Text;
+            doctor.DiasLaborales = DiaLaboral();
+            doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
+
+        }
+
+        private void Modificar()
+        {
+            doctor.estadoEntidad = EntityState.Modified;
+
+            doctor.IdDoctor = ID;
+            doctor.Cedula = txt_identificacionD.Text;
+            doctor.Nombre = txt_nombreD.Text;
+            doctor.Apellidos = txt_apellidoD.Text;
+            doctor.Telefono = txt_telefonoD.Text;
+            doctor.Disponibilidad = cmb_dispDoctor.Text;
+            doctor.Activo = cmb_estadoDoctor.Text;
+            doctor.DiasLaborales = DiaLaboral();
+            doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
+        }
+
+        private void Eliminar()
+        {
+            doctor.estadoEntidad = EntityState.Deleted;
+
+            doctor.IdDoctor = ID;
+        }
+
+        #endregion
+
         #region Métodos adicionales
 
         private async void Refrescar()
@@ -239,49 +280,10 @@ namespace CapaPresentacion.Forms
 
         }
 
-        private void Registrar()
-        {
-
-            doctor.estadoEntidad = EntityState.Added;
-            doctor.Cedula = txt_identificacionD.Text;
-            doctor.Nombre = txt_nombreD.Text;
-            doctor.Apellidos = txt_apellidoD.Text;
-            doctor.Telefono = txt_telefonoD.Text;
-            doctor.Disponibilidad = cmb_dispDoctor.Text;
-            doctor.Activo = cmb_estadoDoctor.Text;
-            doctor.DiasLaborales = DiaLaboral();
-            doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
-
-        }
-
-        private void Modificar()
-        {
-            doctor.estadoEntidad = EntityState.Modified;
-
-            doctor.IdDoctor = ID;
-            doctor.Cedula = txt_identificacionD.Text;
-            doctor.Nombre = txt_nombreD.Text;
-            doctor.Apellidos = txt_apellidoD.Text;
-            doctor.Telefono = txt_telefonoD.Text;
-            doctor.Disponibilidad = cmb_dispDoctor.Text;
-            doctor.Activo = cmb_estadoDoctor.Text;
-            doctor.DiasLaborales = DiaLaboral();
-            doctor.IdArea = area.GetID(listaArea, cmb_areaDoctor.SelectedItem.ToString());
-        }
-
-        private void Eliminar()
-        {
-            doctor.estadoEntidad = EntityState.Deleted;
-
-            doctor.IdDoctor = ID;
-        }
-
         private void txt_searchD_TextChanged(object sender, EventArgs e)
         {
             dgv_doctores.DataSource = doctor.Buscar(txt_searchD.Text);
         }
-
-
 
         #endregion
 

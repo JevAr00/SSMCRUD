@@ -143,7 +143,7 @@ namespace CapaPresentacion.Forms
             this.txt_searchA.Padding = new System.Windows.Forms.Padding(3);
             this.txt_searchA.PasswordChar = '\0';
             this.txt_searchA.PlaceholderForeColor = System.Drawing.Color.White;
-            this.txt_searchA.PlaceholderText = "";
+            this.txt_searchA.PlaceholderText = "Buscar";
             this.txt_searchA.ReadOnly = false;
             this.txt_searchA.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.txt_searchA.SelectedText = "";
@@ -157,7 +157,7 @@ namespace CapaPresentacion.Forms
             this.txt_searchA.TextMarginBottom = 0;
             this.txt_searchA.TextMarginLeft = 3;
             this.txt_searchA.TextMarginTop = 1;
-            this.txt_searchA.TextPlaceholder = "";
+            this.txt_searchA.TextPlaceholder = "Buscar";
             this.txt_searchA.UseSystemPasswordChar = false;
             this.txt_searchA.Visible = false;
             this.txt_searchA.WordWrap = true;
