@@ -72,7 +72,6 @@ namespace CapaPresentacion.Forms
 
         #endregion
 
-
         #region Métodos Principales
 
         private void Registrar()
@@ -111,7 +110,6 @@ namespace CapaPresentacion.Forms
         }
 
         #endregion
-
 
         #region Métodos Adicionales
 
@@ -253,7 +251,6 @@ namespace CapaPresentacion.Forms
         }
 
         #endregion
-
 
         #region Métodos números y letras textbox
         private void txt_identCliente_KeyPress(object sender, KeyPressEventArgs e)
