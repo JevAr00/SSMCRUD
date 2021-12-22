@@ -28,7 +28,7 @@ namespace CapaPresentacion.Forms
             string mensaje = cita.ejecutarAccion();
             MessageBox.Show(mensaje);
 
-            //Limpiar();
+            Limpiar();
             Refrescar();
         }
 
