@@ -2,8 +2,8 @@
 
 Proyecto de Analisis y diseño de sistemas 2
 
-Se esperaba que en el proyecto se implementara una estructura concreta para desarrolar un CRUD
-Y aplicara las mejores maneras para hacer conexion con una base de datos local u online
+Se esperaba que en el proyecto se implementara una estructura concreta para desarrollar un CRUD
+Y aplicara las mejores maneras para hacer conexión con una base de datos local u online.
 
 Se realizo documentacion acerca del proyecto y se puede econtrar <a href="https://docs.google.com/document/d/1Z-rRCbqLI3XPSLnmLAnAUPxcFXAA5wZX/edit?usp=sharing&ouid=113288613802986628407&rtpof=true&sd=true">aqui</a>
 
